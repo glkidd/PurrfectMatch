@@ -2,11 +2,11 @@
     background-color: white;
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    width: 820px;
+    width: 850px;
     height: 80px;
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 20 40px;
     position: relative;
 }
 
@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    text-indent: 80px;
 }
 
 .menu__list {
@@ -57,11 +58,12 @@
 }
 
 .menu__logo {
-    text-indent: -9999999px;
+    text-indent: 160px;
+    
     display: inline-block;
     height: 100%;
-    width: 70px;
-    background-size: cover 100%;
+    width: 150px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
