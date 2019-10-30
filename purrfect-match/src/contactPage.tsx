@@ -9,10 +9,10 @@ export class Input extends React.Component<inputProps, {}> {
     
     public render() {
         return (
-        <div class="row">
+        <div className="row">
             {this.props.prompt} 
             <div>
-                <input type="text" name="fname" class="textBox small"/>
+                <input type="text" name="fname" className="textBox small"/>
             </div>
         </div>
         );
@@ -23,10 +23,10 @@ export class Message extends React.Component<inputProps, {}> {
     
     public render() {
         return (
-        <div class="row">
+        <div className="row">
             {this.props.prompt} 
             <div>
-                <textarea name="message" rows="20" cols="40" class="textBox message">Type your message here...
+                <textarea name="message" rows={20} cols={40} className="textBox message">Type your message here...
                 </textarea>
             </div>
         </div>
