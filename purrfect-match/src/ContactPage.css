@@ -1,4 +1,4 @@
-#textBox {
+.textBox {
     background-color: #D1F9FE;
     border-color: black;
     background: solid;
@@ -14,14 +14,14 @@
     border-radius: 3px;
 }
 
-#textBox.small {
+.textBox.small {
     position: relative;
     width: 10em;
     height: 1.3em;
     border-radius: 5px;
 }
 
-#textBox.message{
+.textBox.message{
     position: relative;
     width: 30em;
     height: 14em;

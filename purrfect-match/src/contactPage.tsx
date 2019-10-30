@@ -12,7 +12,7 @@ export class Input extends React.Component<inputProps, {}> {
         <div class="row">
             {this.props.prompt} 
             <div>
-                <input type="text" name="fname" id="textBox" class="small"/>
+                <input type="text" name="fname" class="textBox small"/>
             </div>
         </div>
         );
@@ -26,21 +26,7 @@ export class Message extends React.Component<inputProps, {}> {
         <div class="row">
             {this.props.prompt} 
             <div>
-                <textarea name="message" rows="20" cols="40" id="textBox" class="message">Type your message here...
-                </textarea>
-            </div>
-        </div>
-        );
-    }
-}
-export class Message extends React.Component<inputProps, {}> {
-    
-    public render() {
-        return (
-        <div class="row">
-            {this.props.prompt} 
-            <div>
-                <textarea name="message" rows="20" cols="40" id="textBox" class="message">Type your message here...
+                <textarea name="message" rows="20" cols="40" class="textBox message">Type your message here...
                 </textarea>
             </div>
         </div>
@@ -54,5 +40,5 @@ export class Send extends React.Component<{},{}> {
         return (
             <button id="send">Send</button>
         );
-    };
+    }
 }
