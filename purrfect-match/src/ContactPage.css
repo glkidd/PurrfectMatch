@@ -1,0 +1,33 @@
+.textBox {
+    background-color: #D1F9FE;
+    border-color: black;
+    background: solid;
+    border: solid;
+}
+#send{
+    background-color: lightgrey;
+    border-color: black;
+    background: solid;
+    border: solid;
+    width: 3.3em;
+    height: 1.4em;
+    border-radius: 3px;
+}
+
+.textBox.small {
+    position: relative;
+    width: 10em;
+    height: 1.3em;
+    border-radius: 5px;
+}
+
+.textBox.message{
+    position: relative;
+    width: 30em;
+    height: 14em;
+    border-radius: 10px;
+}
+
+.row{
+    margin-left: 1 em;
+}
