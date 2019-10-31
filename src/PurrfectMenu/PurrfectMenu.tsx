@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
 import './PurrfectMenu.css';
 
+interface MenuProps {
+    links : Link[];
+    logo : string;
+};
 
-class PurrfectMenu extends Component {
-    constructor() {
-        super();
+interface Link {
+    label : string;
+    link : string;
+    active? : boolean;
+};
+
+interface MenuState {
+    showForm : boolean;
+};
+
+class PurrfectMenu extends Component<MenuProps, MenuState> {
+    constructor(props : any) {
+        super(props);
 
         this.state = {
             showForm: false
