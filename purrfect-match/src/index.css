@@ -12,15 +12,6 @@ code {
     monospace;
 }
 
-div {
-    border: solid black 2px;
-    margin: 2px;
-}
-
-div:hover {
-    border-color: red;
-}
-
 .bgred {
     background-color: red;
     height: 30em;
@@ -37,5 +28,24 @@ div:hover {
 
 .modal {
     background-color: white;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 0.1em;
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 25%;
+    min-height: 15%;
 }
 
+.modal-close {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+}

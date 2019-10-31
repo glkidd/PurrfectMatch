@@ -1,18 +1,24 @@
 import React from 'react';
 
-interface TestProps {
+interface ModalProps {
+    display: boolean;
+    onClose: () => void
 };
 
-interface TestState {
+interface ModalState {
 
 };
 
-export class Modal extends React.Component<TestProps, TestState> {
+export class Modal extends React.Component<ModalProps, ModalState> {
 
     public render() {
-        return (<div className="modal-overlay">
-            <div className="modal">
-                text here
+        if (!this.props.display) {
+            return null;
+        }
+        return (<div className="modal-overlay" onClick={() => this.props.onClose()}>
+            <div className="modal" onClick={(e) => e.stopPropagation() }>
+                <button className="modal-close" onClick={() => this.props.onClose()} >X</button>
+                {this.props.children}
             </div>
         </div>);
     }
