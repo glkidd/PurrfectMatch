@@ -6,8 +6,8 @@ import logo from './logo.png';
 class App extends Component {
   render() {
     let links = [
-      { label: 'Success Stories', link: '#portfolio', active: true },
-      { label: 'Contact Us', link: '#contact-us' },
+      { label: 'Success Stories', link: '#Success-Stories', active: true },
+      { label: 'Contact Us', link: '#Contact-Us' },
     ];
 
     return (
