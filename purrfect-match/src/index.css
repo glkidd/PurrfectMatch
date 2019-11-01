@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightblue;
 }
 
 code {
@@ -12,11 +13,27 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'Varela';
+  src: local('Varela'), url(./fonts/Varela-Regular.ttf) format('truetype');
+}
+/*
 .bgred {
     background-color: red;
     height: 30em;
 }
+*/
 
+.topBar {
+  background-color: purple;
+  height: 100px;
+  text-align: left;
+  color: white;
+}
+
+#logo {
+  height: 100px;
+}
 .modal-overlay {
     background: rgba(225, 255, 255, .5);
     position: absolute;
@@ -28,24 +45,46 @@ code {
 
 .modal {
     background-color: white;
-    border: solid black 1px;
-    border-radius: 10px;
+    border: solid grey 1px;
+    border-radius: 20px;
     padding: 0.1em;
     
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     min-width: 25%;
     min-height: 15%;
+
+    box-shadow: 5px 5px 8px grey;
+}
+
+#successStoryImage {
+  float: left;
+  width: 250px;
+  height: 125%;
+  padding: 10px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+#successStoryText {
+  margin-left: 270px;
+  min-height: 15%;
+  width: 400px;
+  padding: 5px;
+  font-size: 0.875em;
+  white-space: pre-line;
+  font-family: Varela;
 }
 
 .modal-close {
-    position: absolute;
-    right: 1px;
-    top: 1px;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 5px;
     border: none;
-    border-radius: 10px;
-    background-color: red;
+    border-radius: 20px;
+    background-color: lightblue;
 }
