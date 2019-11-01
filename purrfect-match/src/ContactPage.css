@@ -3,6 +3,8 @@
     border-color: black;
     background: solid;
     border: solid;
+    border-radius: 5px;
+    margin: 5px;
 }
 #send{
     background-color: lightgrey;
@@ -24,10 +26,15 @@
 .textBox.message{
     position: relative;
     width: 30em;
-    height: 14em;
+    height: 15em;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .row{
     margin-left: 1 em;
+}
+
+.float{
+    float: left;
 }

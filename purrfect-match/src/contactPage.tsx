@@ -12,7 +12,7 @@ export class Input extends React.Component<inputProps, {}> {
         <div className="row">
             {this.props.prompt} 
             <div>
-                <input type="text" name="fname" className="textBox small"/>
+                <input type="text" name="fname" className="textBox"/>
             </div>
         </div>
         );
@@ -26,7 +26,7 @@ export class Message extends React.Component<inputProps, {}> {
         <div className="row">
             {this.props.prompt} 
             <div>
-                <textarea name="message" rows={20} cols={40} className="textBox message">Type your message here...
+                <textarea name="message" rows={20} cols={40} className="textBox message" placeholder = "Type your message here...">
                 </textarea>
             </div>
         </div>
