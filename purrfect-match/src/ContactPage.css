@@ -10,11 +10,15 @@
     background-color: lightgrey;
     border-color: black;
     background: solid;
-    border: solid;
+    text-align: center;
+    display: inline-block;
+    border: none;
     width: 3.3em;
     height: 1.4em;
     border-radius: 3px;
 }
+
+#send:hover {background-color: grey}
 
 .textBox.small {
     position: relative;
