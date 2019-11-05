@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PurrfectMenu.css';
+import './PurrfectMenu.tsx';
 
 interface MenuProps {
     links : Link[];
