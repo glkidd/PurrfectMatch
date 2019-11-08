@@ -18,7 +18,11 @@ class PurrfectMenu extends Component {
     }
 
     render() {
-      
+        let searchForm = this.state.showForm ? (
+            <form className="menu__search-form" method="POST">
+                <input className="menu__search-input" placeholder="Type and hit enter" />
+            </form>
+        ) : '';
 
         let linksMarkup = this.props.links.map((link, index) => {
             let linkMarkup = link.active ? (
@@ -35,22 +39,17 @@ class PurrfectMenu extends Component {
         });
 
         return (
-            //This has Purrfect Match Text
             <nav className="menu">
                 <h1 style={{
                 backgroundImage: 'url(' + this.props.logo + ')'
-                }} className="menu__logo">Purrfect</h1>
-                
+                }} className="menu__logo">Epic Co.</h1>
 
                 <div className="menu__right">
-                <h1> Match </h1>
-               
-                    
                     <ul className="menu__list">
                         {linksMarkup}
                     </ul>
 
-
+                    {searchForm}
                 </div>
             </nav>
         );
