@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Page1 } from "./Page1";
+import ContactPage from './contactPage';
 
 interface AppState {
     page: JSX.Element | null;
@@ -24,6 +25,11 @@ class App extends React.Component<{}, AppState> {
                             this.setState({ page: (<Page1 />) });
                         }}
                     >Test Page 1</button>
+                    <button
+                        onClick={() => {
+                            this.setState({ page: (<ContactPage />) });
+                        }}
+                    >Contact Us</button>
                 </div>
             );
         }
