@@ -1,43 +1,40 @@
 import React from 'react';
-import './ContactPage.css';
-import { Input, Message, Send } from './contactPage';
+import './App.css';
+import { Page1 } from "./Page1";
+import ContactPage from './contactPage';
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <div>
-      CONTACT US PLS :)
-      </div>
-      <div className = "float">
-      <Input 
-        prompt = "First Name:">
-      </Input> 
-      </div>
-      <div className = "float">
-      <Input 
-        prompt = "Last Name:">
-      </Input>
-      </div>
-      <Input 
-        prompt = "Email Address:">
-      </Input> 
-      <div className = "float">
-      <Input 
-        prompt = "Subject:">
-      </Input> 
-      </div>
-      <div className = "float">
-      <Input 
-        prompt = "Shelter employee?">
-      </Input>
-      </div>
-      <Message
-        prompt = " ">
-      </Message>
-      <Send>
-      </Send>
-    </div>
-  );
+interface AppState {
+    page: JSX.Element | null;
+}
+
+class App extends React.Component<{}, AppState> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            page: null
+        };
+    }
+
+    public render() {
+        if (this.state.page === null) {
+            return (
+                <div className="App">
+                    <button
+                        onClick={() => {
+                            this.setState({ page: (<Page1 />) });
+                        }}
+                    >Test Page 1</button>
+                    <button
+                        onClick={() => {
+                            this.setState({ page: (<ContactPage />) });
+                        }}
+                    >Contact Us</button>
+                </div>
+            );
+        }
+        return this.state.page;
+    }
 }
 
 export default App;
