@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.tsx';
+import './Card.css';
 
 interface CardProps {
     title : string;
