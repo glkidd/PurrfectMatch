@@ -1,44 +1,43 @@
 import React from 'react';
-import "./ContactPage.css"
+import './ContactPage.css';
+import { Input, Message, Send } from './inputBoxes';
 
-interface inputProps {
-    prompt: string;
+const ContactPage: React.FC = () => {
+  return (
+    <div>
+      <div>
+      CONTACT US PLS :)
+      </div>
+      <div className = "float">
+      <Input 
+        prompt = "First Name:">
+      </Input> 
+      </div>
+      <div className = "float">
+      <Input 
+        prompt = "Last Name:">
+      </Input>
+      </div>
+      <Input 
+        prompt = "Email Address:">
+      </Input> 
+      <div className = "float">
+      <Input 
+        prompt = "Subject:">
+      </Input> 
+      </div>
+      <div className = "float">
+      <Input 
+        prompt = "Shelter employee?">
+      </Input>
+      </div>
+      <Message
+        prompt = " ">
+      </Message>
+      <Send>
+      </Send>
+    </div>
+  );
 }
 
-export class Input extends React.Component<inputProps, {}> {
-    
-    public render() {
-        return (
-        <div className="row">
-            {this.props.prompt} 
-            <div>
-                <input type="text" name="fname" className="textBox"/>
-            </div>
-        </div>
-        );
-    }
-}
-
-export class Message extends React.Component<inputProps, {}> {
-    
-    public render() {
-        return (
-        <div className="row">
-            {this.props.prompt} 
-            <div>
-                <textarea name="message" rows={20} cols={40} className="textBox message" placeholder = "Type your message here...">
-                </textarea>
-            </div>
-        </div>
-        );
-    }
-}
-
-export class Send extends React.Component<{},{}> {
-
-    public render() {
-        return (
-            <button id="send">Send</button>
-        );
-    }
-}
+export default ContactPage;
