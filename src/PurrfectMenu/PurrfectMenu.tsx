@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PurrfectMenu.css';
+import './PurrfectMenu.tsx';
 
 interface MenuProps {
     links : Link[];
@@ -53,11 +53,11 @@ class PurrfectMenu extends Component<MenuProps, MenuState> {
             <nav className="menu">
                 <h1 style={{
                 backgroundImage: 'url(' + this.props.logo + ')'
-                }} className="menu__logo">Purrfect Match</h1>
+                }} className="menu__logo">Purrfect</h1>
                 
 
                 <div className="menu__right">
-                <h1>  </h1>
+                <h1> Match </h1>
                
                     
                     <ul className="menu__list">
