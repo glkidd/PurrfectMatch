@@ -1,16 +1,16 @@
 import React from 'react';
 import { Modal } from "./Modal";
 import cat from "./pictures/cat.jpg";
-import logo from "./pictures/purrfectmatch.jpeg";
+import { Redirect } from "react-router-dom";
 
-interface PageProps {
+interface SuccessPageProps {
 };
 
-interface PageState {
+interface SuccessPageState {
     modalOpen: boolean;
 };
 
-export class Page1 extends React.Component<PageProps, PageState> {
+export class SuccessPage extends React.Component<SuccessPageProps, SuccessPageState> {
 
     constructor(props: any) {
         super(props);
@@ -22,10 +22,6 @@ export class Page1 extends React.Component<PageProps, PageState> {
     public render() {
         return (
             <div className="bgred">
-                <h1 className="topBar">
-                    <img id="logo" src={logo} alt="Purrfect Match Logo" />
-                    Purrfect Match
-                </h1>
                 <Modal display={this.state.modalOpen} onClose={() => this.setState({ modalOpen: false })}>
                     <img id="successStoryImage" src={cat} alt="Cat"/> 
                     <div id="successStoryText">
