@@ -3,14 +3,14 @@ import { Modal } from "./Modal";
 import cat from "./pictures/cat.jpg";
 import { Redirect } from "react-router-dom";
 
-interface SuccessPageProps {
+interface SuccessStoryPageProps {
 };
 
-interface SuccessPageState {
+interface SuccessStoryPageState {
     modalOpen: boolean;
 };
 
-export class SuccessPage extends React.Component<SuccessPageProps, SuccessPageState> {
+export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, SuccessStoryPageState> {
 
     constructor(props: any) {
         super(props);
@@ -23,9 +23,9 @@ export class SuccessPage extends React.Component<SuccessPageProps, SuccessPageSt
         return (
             <div className="bgred">
                 <Modal display={this.state.modalOpen} onClose={() => this.setState({ modalOpen: false })}>
-                    <img id="successStoryImage" src={cat} alt="Cat"/> 
-                    <div id="successStoryText">
-                        <h1 id="successStoryHeader"> 
+                    <img id="successStoryPageImage" src={cat} alt="Cat"/> 
+                    <div id="successStoryPageText">
+                        <h1 id="successStoryPageHeader"> 
                             Name: Ollie
                             <br />Age: 3 years
                             <br />Breed: American Shorthair
