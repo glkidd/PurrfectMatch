@@ -18,11 +18,6 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
     }
 
     public render() {
-        let links = [
-            { label: 'Success Stories', link: '#success-stories', active: true },
-            { label: 'Contact Us', link: '#contact-us' },
-        ];
-
         return (
             <div className="Cards">
                 <div className="CardGroup">
