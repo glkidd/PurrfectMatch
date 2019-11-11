@@ -29,6 +29,12 @@ code {
   height: 100px;
   text-align: left;
   color: white;
+  margin: 0px;
+}
+
+.topBar a {
+  color: white;
+  text-decoration: none;
 }
 
 #logo {
