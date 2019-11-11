@@ -4,7 +4,7 @@ import logo from "./pictures/purrfectmatch.jpeg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { SuccessStoryPage } from "./SuccessStoryPage";
 import { ContactPage } from './ContactPage';
-import { HomePage } from "./HomePage";
+import { HomePage } from "./HomePage/HomePage";
 import { SearchPage } from "./SearchPage";
 import { DonatePage } from "./DonatePage";
 
