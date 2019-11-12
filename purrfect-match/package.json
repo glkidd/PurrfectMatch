@@ -8,16 +8,20 @@
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
     "@types/react-router-dom": "^5.1.2",
+    "@types/react-test-renderer": "^16.9.1",
+    "jest": "^24.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-test-renderer": "^16.11.0",
+    "ts-jest": "^24.1.0",
     "typescript": "3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,6 +37,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "\\.tsx": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|png|jpe?g)": "<rootDir>/test/__mocks__/staticMock.js"
+    },
+    "modulePaths": [
+      "<rootDir>/src"
     ]
   }
 }

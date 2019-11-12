@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+Array [
+  <h1
+    className="topBar"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Purrfect Match Logo"
+        id="logo"
+        src="test-file-stub"
+      />
+      <span>
+        Purrfect Match
+      </span>
+    </a>
+  </h1>,
+  <div>
+    <a
+      href="/home"
+      onClick={[Function]}
+    >
+      Real Home page
+    </a>
+    <br />
+    <a
+      href="/contact"
+      onClick={[Function]}
+    >
+      Contact Page
+    </a>
+    <br />
+    <a
+      href="/success"
+      onClick={[Function]}
+    >
+      Success Stories
+    </a>
+    <br />
+    <a
+      href="/search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+    <br />
+    <a
+      href="/donate"
+      onClick={[Function]}
+    >
+      Donation page
+    </a>
+    <br />
+  </div>,
+]
+`;
