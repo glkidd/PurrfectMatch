@@ -1,10 +1,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { App } from 'App';
 
+configure({ adapter: new Adapter() });
+
 test("Renders correctly", () => {
-    const app = renderer.create(<App />);
-    expect(app.toJSON()).toMatchSnapshot();
+    const wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot();
 });

@@ -1,13 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders correctly 1`] = `
-Array [
+<BrowserRouter>
   <h1
     className="topBar"
   >
-    <a
-      href="/"
-      onClick={[Function]}
+    <Link
+      to=""
     >
       <img
         alt="Purrfect Match Logo"
@@ -17,44 +16,70 @@ Array [
       <span>
         Purrfect Match
       </span>
-    </a>
-  </h1>,
-  <div>
-    <a
-      href="/home"
-      onClick={[Function]}
+    </Link>
+  </h1>
+  <Switch>
+    <Route
+      path="/home"
     >
-      Real Home page
-    </a>
-    <br />
-    <a
-      href="/contact"
-      onClick={[Function]}
+      <HomePage />
+    </Route>
+    <Route
+      path="/contact"
     >
-      Contact Page
-    </a>
-    <br />
-    <a
-      href="/success"
-      onClick={[Function]}
+      <Component />
+    </Route>
+    <Route
+      path="/success"
     >
-      Success Stories
-    </a>
-    <br />
-    <a
-      href="/search"
-      onClick={[Function]}
+      <SuccessStoryPage />
+    </Route>
+    <Route
+      path="/search"
     >
-      Search
-    </a>
-    <br />
-    <a
-      href="/donate"
-      onClick={[Function]}
+      <SearchPage />
+    </Route>
+    <Route
+      path="/donate"
     >
-      Donation page
-    </a>
-    <br />
-  </div>,
-]
+      <DonatePage />
+    </Route>
+    <Route
+      path="/"
+    >
+      <div>
+        <Link
+          to="home"
+        >
+          Real Home page
+        </Link>
+        <br />
+        <Link
+          to="contact"
+        >
+          Contact Page
+        </Link>
+        <br />
+        <Link
+          to="success"
+        >
+          Success Stories
+        </Link>
+        <br />
+        <Link
+          to="search"
+        >
+          Search
+        </Link>
+        <br />
+        <Link
+          to="donate"
+        >
+          Donation page
+        </Link>
+        <br />
+      </div>
+    </Route>
+  </Switch>
+</BrowserRouter>
 `;
