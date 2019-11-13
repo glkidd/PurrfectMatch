@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<BrowserRouter>
+  <h1
+    className="topBar"
+  >
+    <Link
+      to=""
+    >
+      <img
+        alt="Purrfect Match Logo"
+        id="logo"
+        src="test-file-stub"
+      />
+      <span>
+        Purrfect Match
+      </span>
+    </Link>
+  </h1>
+  <Switch>
+    <Route
+      path="/home"
+    >
+      <HomePage />
+    </Route>
+    <Route
+      path="/contact"
+    >
+      <Component />
+    </Route>
+    <Route
+      path="/success"
+    >
+      <SuccessStoryPage />
+    </Route>
+    <Route
+      path="/search"
+    >
+      <SearchPage />
+    </Route>
+    <Route
+      path="/donate"
+    >
+      <DonatePage />
+    </Route>
+    <Route
+      path="/"
+    >
+      <div>
+        <Link
+          to="home"
+        >
+          Real Home page
+        </Link>
+        <br />
+        <Link
+          to="contact"
+        >
+          Contact Page
+        </Link>
+        <br />
+        <Link
+          to="success"
+        >
+          Success Stories
+        </Link>
+        <br />
+        <Link
+          to="search"
+        >
+          Search
+        </Link>
+        <br />
+        <Link
+          to="donate"
+        >
+          Donation page
+        </Link>
+        <br />
+      </div>
+    </Route>
+  </Switch>
+</BrowserRouter>
+`;
