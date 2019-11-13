@@ -3,6 +3,7 @@ import { Modal } from "./Modal";
 import cat from "./pictures/cat.jpg";
 import { Redirect } from "react-router-dom";
 
+// interfaces = structs
 interface SuccessStoryPageProps {
 };
 
@@ -12,6 +13,7 @@ interface SuccessStoryPageState {
 
 export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, SuccessStoryPageState> {
 
+    // if state is nonempty we want to have state stuff in constructor
     constructor(props: any) {
         super(props);
 
@@ -19,6 +21,8 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
             modalOpen: false
         };
     }
+
+    // react components need to have render function
     public render() {
         return (
             <div className="bgred">
@@ -42,7 +46,10 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
                 <div> Open popup: <button onClick={() => { this.setState({ modalOpen: true }) }}>button</button> </div>
             </div>);
     }
-
 }
+
+
+
+
 
 

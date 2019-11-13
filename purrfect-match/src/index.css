@@ -17,12 +17,6 @@ code {
   font-family: 'Varela';
   src: local('Varela'), url(./fonts/Varela-Regular.ttf) format('truetype');
 }
-/*
-.bgred {
-    background-color: red;
-    height: 30em;
-}
-*/
 
 .topBar {
   background-color: purple;
@@ -40,6 +34,7 @@ code {
 #logo {
   height: 100px;
 }
+
 .modal-overlay {
     background: rgba(225, 255, 255, .5);
     position: absolute;
@@ -66,7 +61,7 @@ code {
     box-shadow: 5px 5px 8px grey;
 }
 
-#successStoryImage {
+#successStoryPageImage {
   float: left;
   width: 250px;
   height: 125%;
@@ -75,7 +70,7 @@ code {
   object-fit: contain;
 }
 
-#successStoryText {
+#successStoryPageText {
   margin-left: 270px;
   min-height: 15%;
   width: 400px;
@@ -83,6 +78,16 @@ code {
   font-size: 0.875em;
   white-space: pre-line;
   font-family: Varela;
+}
+
+.compactView {
+  height: 380px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#animalImage {
+  width: 
 }
 
 .modal-close {
@@ -105,7 +110,6 @@ code {
 .Cards h3 {
   color: #000000;
 }
-
 
 .CardGroup {
   margin: 50px 40px 100px;
