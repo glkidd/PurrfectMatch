@@ -1,0 +1,37 @@
+.textBox {
+    background-color: #D1F9FE;
+    border-color: black;
+    background: solid;
+    border: solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+#send{
+    background-color: lightgrey;
+    border-color: black;
+    background: solid;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    width: 3.3em;
+    height: 1.4em;
+    border-radius: 3px;
+}
+
+#send:hover {background-color: grey}
+
+.textBox.message{
+    position: relative;
+    width: 30em;
+    height: 15em;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.row{
+    margin-left: 1 em;
+}
+
+.float{
+    float: left;
+}
