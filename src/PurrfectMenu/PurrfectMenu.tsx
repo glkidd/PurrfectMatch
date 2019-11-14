@@ -49,15 +49,15 @@ class PurrfectMenu extends Component<MenuProps, MenuState> {
         });
 
         return (
-            //This has Purrfect Match Text
+      
             <nav className="menu">
                 <h1 style={{
                 backgroundImage: 'url(' + this.props.logo + ')'
-                }} className="menu__logo">Purrfect</h1>
+                }} className="menu__logo"></h1>
                 
 
                 <div className="menu__right">
-                <h1> Match </h1>
+                <h1>PurrfectMatch </h1>
                
                     
                     <ul className="menu__list">

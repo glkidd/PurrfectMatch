@@ -27,11 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-<<<<<<< HEAD:package.json
-    "test": "react-scripts test --env=jsdom",
-=======
     "test": "jest --coverage",
->>>>>>> 1c0b41f442a9bcbe25fb81bf84e29f67ca073275:purrfect-match/package.json
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -56,6 +52,8 @@
     "modulePaths": [
       "<rootDir>/src"
     ],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

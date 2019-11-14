@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     let links = [
       { label: 'Success Stories', link: '#success-stories', active: true },
-      { label: 'Contact Us', link: '#contact-us' },
+      { label: 'Contact Us', link: '#contact-us',active: true  },
     ];
 
     return (
