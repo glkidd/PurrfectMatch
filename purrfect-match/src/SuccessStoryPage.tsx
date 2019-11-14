@@ -41,25 +41,25 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
                                 <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Meowasaurus" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+                                <CompactView name="Meowasaurus" breed="American Shorthair" age="3.5 years" gender="Male"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Fuzzles" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+                                <CompactView name="Fuzzles" breed="American Shorthair" age="4 years" gender="Female"></CompactView>
                             </li>
                             <li>
                                 <CompactView name="Mr. Meef" breed="American Shorthair" age="5 months" gender="Male"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Poof" breed="American Shorthair" age="50 years" gender="Female"></CompactView>
+                                <CompactView name="Poof" breed="American Shorthair" age="6 years" gender="Female"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+                                <CompactView name="Rex" breed="American Shorthair" age="1 year" gender="Male"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+                                <CompactView name="Socks" breed="American Shorthair" age="8 years" gender="Male"></CompactView>
                             </li>
                             <li>
-                                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+                                <CompactView name="Midnight" breed="American Shorthair" age="8 months" gender="Female"></CompactView>
                             </li>
                         </ul>
                     </div>

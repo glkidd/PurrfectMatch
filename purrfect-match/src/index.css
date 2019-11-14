@@ -38,6 +38,12 @@ code {
   text-decoration: none;
 }
 
+.topBarLinks {
+  font-size: 20px;
+  float: right;
+  margin-top: 10px;
+}
+
 #logo {
   height: 70px;
   padding: 10px;
@@ -103,20 +109,12 @@ code {
   font-family: Montserrat;
   font-size: 25px;
   color: #9f5cfd;
-  width: 90%;
+  width: 80%;
   position: relative;
+  left: 10%;
   top: 1em;
   margin-bottom: 2em;
   text-align: center;
-}
-
-.successStoryHeaders {
-  width: 90%;
-  top: 30%;
-  left: 5%;
-  right: 5%;
-  font-family: Montserrat;
-  font-size: 25px;
 }
 
 .compactView {
@@ -125,6 +123,7 @@ code {
   border-radius: 5px;
   background-color: white;
   margin: 1em;
+  border: none;
 }
 
 #animalImage {
@@ -212,10 +211,12 @@ li {
   left: 2.3em;
   text-decoration: underline;
   font-size: x-large;
+  font-family: Montserrat;
 }
 #headerTwo {
   position: relative;
   left: 2.3em;
   text-decoration: underline;
   font-size: x-large;
+  font-family: Montserrat;
 }
