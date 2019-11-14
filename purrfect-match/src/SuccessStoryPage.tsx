@@ -1,8 +1,10 @@
 import React from 'react';
 import { Modal } from "./Modal";
+import { CompactView } from "./CompactView";
 import cat from "./pictures/cat.jpg";
 import { Redirect } from "react-router-dom";
 
+// interfaces = structs
 interface SuccessStoryPageProps {
 };
 
@@ -12,6 +14,7 @@ interface SuccessStoryPageState {
 
 export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, SuccessStoryPageState> {
 
+    // if state is nonempty we want to have state stuff in constructor
     constructor(props: any) {
         super(props);
 
@@ -19,30 +22,35 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
             modalOpen: false
         };
     }
+
+    // react components need to have render function
     public render() {
         return (
-            <div className="bgred">
-                <Modal display={this.state.modalOpen} onClose={() => this.setState({ modalOpen: false })}>
-                    <img id="successStoryPageImage" src={cat} alt="Cat"/> 
-                    <div id="successStoryPageText">
-                        <h1 id="successStoryPageHeader"> 
-                            Name: Ollie
-                            <br />Age: 3 years
-                            <br />Breed: American Shorthair
-                            <br />Adopted: 10/24/2019
-                            <br />
-                            <br />
-                            A message from Ollie's owner, Bob:
-                        </h1>
-                        <p> 
-                            Ollie has been a real friend! Coming home from a crazy day at work, I get to look forward to this goofball greeting me with lots of purring and cuddles. I found Ollie through Purrfect Match. I couldn’t go to my local shelter without first knowing if I had a specific pet in mind, because I can’t be away from work for very long during business hours. Perrfect Match helped me find Ollie, and I’m so happy he’s in my life! He’s a cutie, and I can’t imagine not having found him.
-                        </p>
+            <div>
+                <div className="welcomeMessage">
+                    Did you adopt a pet using our site? Click here to add a success story about your new pet!
+                </div>
+
+                <div className="successStoryHeaders">
+                    <div id="headerOne"> 
+                        Success Stories
                     </div>
-                </Modal>
-                <div> Open popup: <button onClick={() => { this.setState({ modalOpen: true }) }}>button</button> </div>
+                    <div id="headerTwo">
+                        Recently adopted!
+                    </div>
+                </div>
+                
+
+                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
+
             </div>);
     }
-
 }
+
+
+
+
+
+
 
 
