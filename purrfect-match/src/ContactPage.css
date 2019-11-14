@@ -1,10 +1,15 @@
 .textBox {
-    background-color: #D1F9FE;
+    background-color: rgb(255, 255, 255);
     border-color: black;
     background: solid;
     border: solid;
+    height: 1.5em;
+    width: 20em;
     border-radius: 5px;
-    margin: 5px;
+    border-width: thin;
+    margin: 10px;
+    margin-left: 70px;
+    display: block;
 }
 #send{
     background-color: lightgrey;
@@ -16,22 +21,59 @@
     width: 3.3em;
     height: 1.4em;
     border-radius: 3px;
+    margin-left: 763px;
 }
 
 #send:hover {background-color: grey}
 
 .textBox.message{
-    position: relative;
-    width: 30em;
-    height: 15em;
-    border-radius: 10px;
-    margin: 10px;
+    position: relative;  
+    width: 40em;
+    height: 20em;
+    border-radius: 5px;
+    display: block;
+}
+
+.header {
+    margin: 30px;
+    font-size: 40px;
+    font-weight: 300;
 }
 
 .row{
-    margin-left: 1 em;
+    display: block;
+}
+
+.label{
+    margin-left: 70px;
+    display: block;
+}
+
+.rightBoxes {
+    margin-right: 70px;
+    float: left;
+    text-align: left;
+}
+
+.searchLabel{
+    display: block;
+}
+
+.search {
+    margin: 10px;
+    margin-right: 147px;
+    margin-left: -46px;
+    float: left;
+    text-align: left;
+}
+
+.contactText {
+    margin-top: 50px;
+    margin-left: 100px;
+    text-align: justify;
 }
 
 .float{
     float: left;
+    text-align: left;
 }
