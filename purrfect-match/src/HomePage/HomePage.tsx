@@ -19,22 +19,32 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
 
     public render() {
         return (
-            <div className="Cards">
-                <div className="CardGroup">
-                    <Card
-                        title="Cat"
-                        image={require('../pictures/Cat_1.png')} />
-                    <Card
-                        title="Dog"
-                        image={require('../pictures/Dog_1.png')} />
-                    <Card
-                        title="Other"
-                        image={require('../pictures/Hamster_1.png')} />
+            <div>
+                <div className="Hero">
+                    <div className="PetSelectionBox">
+                        <div className="Cards">
+                            <h2>Find your perfect companion from the comfort of your own home.</h2>
+                            <h2>Choose which type of animal you would like to start with:</h2>
+                            <div className="CardGroup">
+                                <div>
+                                    <h1>Dog</h1>
+                                    <Card image={require('../pictures/dog-homepage.jpg')} />
+                                </div>
+                                <div>
+                                    <h1>Cat</h1>
+                                    <Card image={require('../pictures/cat-homepage.jpg')} />
+                                </div>
+                                <div>
+                                    <h1>Other animal</h1>
+                                    <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
     }
-
 }
 
 

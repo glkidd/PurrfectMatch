@@ -159,6 +159,7 @@ code {
   font-size: 60px;
   text-align: center;
   font-weight: 700;
+  color: #9f5cfe;
 }
 
 .Cards h3 {
@@ -171,6 +172,12 @@ code {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   justify-items: center;
+  text-align: center;
+}
+
+.CardGroup h1 {
+  color: #9f5cfe;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 1060px) {
@@ -219,4 +226,101 @@ li {
   text-decoration: underline;
   font-size: x-large;
   font-family: Montserrat;
+}
+
+.Hero {
+  background: url('./pictures/wallpaper1.jpg');
+  height: 920px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.HeroGroup {
+  max-width: 500px;
+  margin: 0 auto 0 auto;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.Hero h1 {
+  margin: 0;
+  font-size: 60px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  line-height: 1.5;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
+}
+
+.Hero a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 100px 20px;
+  }
+
+  .Hero h1 {
+    font-size: 40px;
+  }
+
+  .Hero p {
+    font-size: 24px;
+  }
+}
+
+@keyframes HeroAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.PetSelectionBox {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 4em;
+  padding: 2em;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  border-radius: 20px;
+  left: 20%;
+  position: relative;
+  top: -20%;
 }

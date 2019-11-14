@@ -55,6 +55,8 @@
     "modulePaths": [
       "<rootDir>/src"
     ],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
