@@ -1,37 +1,96 @@
 .textBox {
-    background-color: #D1F9FE;
+    background-color: rgb(255, 255, 255);
     border-color: black;
     background: solid;
     border: solid;
+    height: 1.5em;
+    width: 20em;
     border-radius: 5px;
-    margin: 5px;
+    border-width: thin;
+    margin: 10px;
+    margin-left: 70px;
+    display: block;
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
 #send{
     background-color: lightgrey;
     border-color: black;
     background: solid;
-    text-align: center;
     display: inline-block;
     border: none;
     width: 3.3em;
     height: 1.4em;
     border-radius: 3px;
+    margin-left: 763px;
+    font-family: Montserrat;
+}
+
+.sendText {
+    text-align: center;
 }
 
 #send:hover {background-color: grey}
 
 .textBox.message{
+    position: relative;  
+    width: 40em;
+    height: 20em;
+    border-radius: 5px;
+    display: block;
+    font-family: Montserrat;
+}
+
+.header {
+    margin: 30px;
+    margin-left: 65px;
     position: relative;
-    width: 30em;
-    height: 15em;
-    border-radius: 10px;
-    margin: 10px;
+    font-size: 40px;
+    font-weight: 300;
+    font-family: Montserrat;
 }
 
 .row{
-    margin-left: 1 em;
+    display: block;
+}
+
+.label{
+    margin-left: 70px;
+    display: block;
+    font-family: Montserrat;
+}
+
+.rightBoxes {
+    margin-right: 70px;
+    float: left;
+    text-align: left;
+}
+
+.searchLabel{
+    display: block;
+    font-family: Montserrat;
+}
+
+.search {
+    margin: 10px;
+    margin-right: 125px;
+    margin-left: -145px;
+    float: left;
+    text-align: left;
+}
+
+.contactText {
+    margin-top: 50px;
+    margin-left: 150px;
+    text-align: justify;
+    font-family: Montserrat;
 }
 
 .float{
     float: left;
+    text-align: left;
 }
