@@ -39,13 +39,16 @@ export class App extends React.Component<{}, AppState> {
             <Router>
                 <h1 className="topBar">   
                     <Link to=""><img id="logo" src={logo} alt="Purrfect Match Logo" /><span>Purrfect Match</span></Link>
-                    <NavigationMenu links={links} logo={logo}
-                     />
+
+                    <div className="topBarLinks">
+                            <Link to="search">Search</Link><br />
+                            <Link to="success">Success Stories</Link><br />
+                            <Link to="contact">Contact Page</Link><br />
+                            <Link to="donate">Donation page</Link><br />
+                    </div>
+
                 </h1>
                 <Switch>
-                    <Route path="/home">
-                        <HomePage />
-                    </Route>
                     <Route path="/contact">
                         <ContactPage />
                     </Route>
@@ -58,16 +61,8 @@ export class App extends React.Component<{}, AppState> {
                     <Route path="/donate">
                         <DonatePage />
                     </Route>
-
                     <Route path="/">
-                        <div>
-                            <Link to="home">Real Home page</Link><br />
-                            <Link to="contact">Contact Page</Link><br />
-                            <Link to="success">Success Stories</Link><br />
-                            <Link to="search">Search</Link><br />
-                            <Link to="donate">Donation page</Link><br />
-
-                        </div>
+                        <HomePage />
                     </Route>
                 </Switch>
             </Router>
