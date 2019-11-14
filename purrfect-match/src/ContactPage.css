@@ -11,17 +11,27 @@
     margin-left: 70px;
     display: block;
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
 #send{
     background-color: lightgrey;
     border-color: black;
     background: solid;
-    text-align: center;
     display: inline-block;
     border: none;
     width: 3.3em;
     height: 1.4em;
     border-radius: 3px;
     margin-left: 763px;
+    font-family: Montserrat;
+}
+
+.sendText {
+    text-align: center;
 }
 
 #send:hover {background-color: grey}
@@ -32,12 +42,16 @@
     height: 20em;
     border-radius: 5px;
     display: block;
+    font-family: Montserrat;
 }
 
 .header {
     margin: 30px;
+    margin-left: 65px;
+    position: relative;
     font-size: 40px;
     font-weight: 300;
+    font-family: Montserrat;
 }
 
 .row{
@@ -47,6 +61,7 @@
 .label{
     margin-left: 70px;
     display: block;
+    font-family: Montserrat;
 }
 
 .rightBoxes {
@@ -57,20 +72,22 @@
 
 .searchLabel{
     display: block;
+    font-family: Montserrat;
 }
 
 .search {
     margin: 10px;
-    margin-right: 147px;
-    margin-left: -46px;
+    margin-right: 125px;
+    margin-left: -145px;
     float: left;
     text-align: left;
 }
 
 .contactText {
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 150px;
     text-align: justify;
+    font-family: Montserrat;
 }
 
 .float{

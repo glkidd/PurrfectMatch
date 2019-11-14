@@ -5,6 +5,11 @@ interface inputProps {
     prompt: string;
 }
 
+interface optionProps{
+    prompt: string;
+    options: string[];
+}
+
 export class Input extends React.Component<inputProps, {}> {
     
     public render() {
@@ -21,18 +26,25 @@ export class Input extends React.Component<inputProps, {}> {
     }
 }
 
-export class Select extends React.Component<inputProps, {}> {
+export class Select extends React.Component<optionProps, {}> {
+
+    constructor(props : any) {
+        super(props);
+    }
     
     public render() {
+        let optionArray = this.props.options.map(function(option) {
+                                return <option> {option} </option>;
+                            }
+                        );
         return (
         <div className="row">
             <div className="searchLabel">
                 {this.props.prompt} 
             </div>
             <select name="Shelter Employee" style={{width:"150px", height:"1.5em"}}>
-                <option value="select"></option>
-                <option value="yes">Yes, I am!</option>
-                <option value="no">No, I am not.</option>
+                <option disabled selected> Select an option </option>
+                {optionArray}
             </select>
         </div>
         );
@@ -61,7 +73,9 @@ export class Send extends React.Component<{},{}> {
 
     public render() {
         return (
-            <button onClick={this.handleSubmit} id="send"> Send </button>
+            <button onClick={this.handleSubmit} id="send"> 
+            <div className="sendText"> Send </div>
+            </button>
         );
     }
 }
