@@ -7,6 +7,7 @@ import { ContactPage } from 'ContactPage';
 import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { DonatePage } from "DonatePage";
+import NavigationMenu from "NavigationMenu/NavigationMenu";
 
 interface AppState {
     page: JSX.Element | null;
@@ -22,10 +23,24 @@ export class App extends React.Component<{}, AppState> {
     }
 
     public render() {
+        let links = [
+            { label: 'Success Stories', link: '#success-stories',},
+            { label: 'Contact Us', link: '#contact-us',  },
+          ];
+        
         return (
+          
+             
+            
+           
+
+
+
             <Router>
-                <h1 className="topBar">
+                <h1 className="topBar">   
                     <Link to=""><img id="logo" src={logo} alt="Purrfect Match Logo" /><span>Purrfect Match</span></Link>
+                    <NavigationMenu links={links} logo={logo}
+                     />
                 </h1>
                 <Switch>
                     <Route path="/home">
