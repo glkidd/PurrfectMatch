@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightblue;
+  background-color: #f3effe;
 }
 
 code {
@@ -18,25 +18,33 @@ code {
   src: local('Varela'), url(./fonts/Varela-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
 .topBar {
-  background-color: purple;
   height: 100px;
+  width: 90%;
   text-align: left;
-  color: white;
   margin: 0px;
+  position: relative;
+  left: 5%;
 }
 
 .topBar a {
-  color: white;
+  color: black;
+  font-family: Montserrat;
   text-decoration: none;
 }
 
 #logo {
-  height: 100px;
+  height: 70px;
+  padding: 10px;
 }
 
 .modal-overlay {
-    background: rgba(225, 255, 255, .5);
+    background: rgba(243, 239, 254, .8);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -45,9 +53,8 @@ code {
 }
 
 .modal {
-    background-color: white;
-    border: solid grey 1px;
-    border-radius: 20px;
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 5px;
     padding: 0.1em;
     
     position: absolute;
@@ -65,8 +72,8 @@ code {
   float: left;
   width: 250px;
   height: 125%;
-  padding: 10px;
-  border-radius: 20px;
+  margin: 10px;
+  border-radius: 5px;
   object-fit: contain;
 }
 
@@ -77,27 +84,86 @@ code {
   padding: 5px;
   font-size: 0.875em;
   white-space: pre-line;
-  font-family: Varela;
-}
-
-.compactView {
-  height: 380px;
-  border-radius: 5px;
-  background-color: white;
-}
-
-#animalImage {
-  width: 
+  font-family: Montserrat;
 }
 
 .modal-close {
-    position: relative;
-    float: right;
-    right: 10px;
-    top: 5px;
-    border: none;
-    border-radius: 20px;
-    background-color: lightblue;
+  position: relative;
+  float: right;
+  right: 10px;
+  top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+.welcomeMessage {
+  font-family: Montserrat;
+  font-size: 25px;
+  color: #9f5cfd;
+  width: 90%;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  text-align: center;
+}
+
+.successStoryHeaders {
+  width: 90%;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  font-family: Montserrat;
+  font-size: 25px;
+}
+
+#headerOne {
+  text-decoration: underline;
+  float: left;
+}
+
+#headerTwo {
+  text-decoration: underline;
+  float: right;
+}
+
+.compactView {
+  height: 400px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: white;
+  position: absolute;
+  left: 5%;
+  top: 36%;
+}
+
+#animalImage {
+  width: 90%;
+  height: 70%;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  border-radius: 5px;
+}
+
+#animalName {
+  font-family: Montserrat;
+  font-size: 20px;
+  height: 5%;
+  position: relative;
+  text-align: center;
+}
+
+#animalInfo {
+  font-family: Montserrat;
+  font-size: 14px;
+  height: 10%;
+  width: 80%;
+  position: relative;
+  text-align: left;
+  left: 5%;
 }
 
 .Cards h2 {

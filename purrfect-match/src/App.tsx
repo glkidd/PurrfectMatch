@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from "pictures/purrfectmatch.jpeg";
+import logo from "pictures/doglogo.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { SuccessStoryPage } from "SuccessStoryPage";
 import { ContactPage } from 'ContactPage';
