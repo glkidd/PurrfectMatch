@@ -9,6 +9,8 @@ import { SearchPage } from "SearchPage";
 import { DonatePage } from "DonatePage";
 import NavigationMenu from "NavigationMenu/NavigationMenu";
 
+
+
 interface AppState {
     page: JSX.Element | null;
 }
@@ -37,15 +39,13 @@ export class App extends React.Component<{}, AppState> {
 
 
             <Router>
-                <h1 className="topBar">   
-                    <Link to=""><img id="logo" src={logo} alt="Purrfect Match Logo" /><span>Purrfect Match</span></Link>
+                <h1 className="topBar">  
+              
+                    <Link to=""><img id="logo"                   
+                    src={logo} alt="Purrfect Match Logo"/>                   
+                    <NavigationMenu  logo={logo} />           
+                    </Link>
 
-                    <div className="topBarLinks">
-                            <Link to="search">Search</Link><br />
-                            <Link to="success">Success Stories</Link><br />
-                            <Link to="contact">Contact Page</Link><br />
-                            <Link to="donate">Donation page</Link><br />
-                    </div>
 
                 </h1>
                 <Switch>

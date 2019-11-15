@@ -25,11 +25,12 @@ code {
 
 .topBar {
   height: 100px;
-  width: 90%;
+  width: 95%;
   text-align: left;
   margin: 0px;
   position: relative;
   left: 5%;
+  
 }
 
 .topBar a {
@@ -38,6 +39,10 @@ code {
   text-decoration: none;
 }
 
+
+
+
+
 .topBarLinks {
   font-size: 20px;
   float: right;
@@ -45,7 +50,7 @@ code {
 }
 
 #logo {
-  height: 70px;
+  height: 40px;
   padding: 10px;
 }
 

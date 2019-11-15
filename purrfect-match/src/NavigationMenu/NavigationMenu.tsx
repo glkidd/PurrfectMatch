@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './NavigationMenu.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 interface MenuProps {
-    links : Link[];
+    
     logo : string;
 };
 
-interface Link {
-    label : string;
-    link : string;
-    active? : boolean;
-};
+
 
 interface MenuState {
     showForm : boolean;
@@ -34,19 +31,7 @@ class NavigationMenu extends Component<MenuProps, MenuState> {
     render() {
       
 
-        let linksMarkup = this.props.links.map((link, index) => {
-            let linkMarkup = link.active ? (
-                <a className="menu__link menu__link--active" href={link.link}>{link.label}</a>
-            ) : (
-                <a className="menu__link" href={link.link}>{link.label}</a>
-            );
-
-            return (
-                <li key={index} className="menu__list-item">
-                    {linkMarkup}
-                </li>
-            );
-        });
+        
 
         return (
       
@@ -55,14 +40,23 @@ class NavigationMenu extends Component<MenuProps, MenuState> {
                 backgroundImage: 'url(' + this.props.logo + ')'
                 }} className="menu__logo"></h1>
                 
+                
 
-                <div className="menu__right">
-                <h1>Purrfect Match </h1>
+                <div className="menu__right ">
+                    
+                <div className="menu__logos">
+                <h1>PurrfectMatch </h1>
+                </div>
+               
+                
                 
                
                     
-                    <ul className="menu__list">
-                        {linksMarkup}
+                    <ul className="menu__link ">
+                            <Link to="search">Search</Link>
+                            <Link to="success"> SuccessStories</Link>
+                            <Link to="contact"> ContactUs</Link>
+                            <Link to="donate"> Donate</Link> 
                     </ul>
 
 
