@@ -3,7 +3,7 @@
   height: 1em;
 
   border: 0.3em solid rgba(0, 0, 0, 0.1);
-  border-top: 0.3em solid purple;
+  border-top: 0.3em solid #9f5cfe;
   border-radius: 50%;
 
   animation: spin 2s linear infinite;
