@@ -1,69 +1,71 @@
-import React, { Component } from 'react';
+import * as React from "react";
 import './NavigationMenu.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import logo from "pictures/doglogo.png";
+
 
 interface MenuProps {
     
-    logo : string;
+  
 };
 
 
+interface isScrolling{
+  hasScrolled:boolean;
 
-interface MenuState {
-    showForm : boolean;
-};
-
-class NavigationMenu extends Component<MenuProps, MenuState> {
-    constructor(props : any) {
-        super(props);
-
-        this.state = {
-            showForm: false
-        };
-    }
-
-    showForm() {
-        this.setState({
-            showForm: !this.state.showForm
-        });
-    }
-
-    render() {
-      
-
-        
-
-        return (
-      
-            <nav className="menu">
-                <h1 style={{
-                backgroundImage: 'url(' + this.props.logo + ')'
-                }} className="menu__logo"></h1>
-                
-                
-
-                <div className="menu__right ">
-                    
-                <div className="menu__logos">
-                <h1>PurrfectMatch </h1>
-                </div>
-               
-                
-                
-               
-                    
-                    <ul className="menu__link ">
-                            <Link to="search">Search</Link>
-                            <Link to="success"> SuccessStories</Link>
-                            <Link to="contact"> ContactUs</Link>
-                            <Link to="donate"> Donate</Link> 
-                    </ul>
-
-
-                </div>
-            </nav>
-        );
-    }
 }
 
-export default NavigationMenu;
+
+
+
+class NavigationMenu extends React.Component< MenuProps,isScrolling> {
+  constructor(props:any) {
+    super(props)
+
+    this.state = {
+      hasScrolled: false
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = (event:any) => {
+    const scrollTop = window.pageYOffset
+
+    if (scrollTop > 50) {
+      this.setState({ hasScrolled: true})
+    } else {
+      this.setState({ hasScrolled: false})
+    }
+  }
+
+ 
+
+  render() {
+    return (
+      <nav className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
+        <div className="HeaderGroup ">
+        
+        <Link to=""><img id="logo"src={logo} alt="Purrfect Match Logo"/></Link>
+        
+       
+         
+        <h1>PurrfectMatch </h1>
+        <button>
+        <Link to="success"> Success Stories</Link>
+        </button>
+        
+        <button>
+        <Link to="contact"> Contact Us</Link>
+        </button>
+        
+        </div>
+    
+      </nav>
+    );
+  }
+}
+
+export default NavigationMenu

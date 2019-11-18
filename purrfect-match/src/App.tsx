@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from "pictures/doglogo.png";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { SuccessStoryPage } from "SuccessStoryPage";
 import { ContactPage } from 'ContactPage';
 import { HomePage } from "HomePage/HomePage";
@@ -25,10 +24,7 @@ export class App extends React.Component<{}, AppState> {
     }
 
     public render() {
-        let links = [
-            { label: 'Success Stories', link: '#success-stories',},
-            { label: 'Contact Us', link: '#contact-us',  },
-          ];
+      
         
         return (
           
@@ -39,15 +35,17 @@ export class App extends React.Component<{}, AppState> {
 
 
             <Router>
-                <h1 className="topBar">  
-              
-                    <Link to=""><img id="logo"                   
-                    src={logo} alt="Purrfect Match Logo"/>                   
-                    <NavigationMenu  logo={logo} />           
-                    </Link>
+                
+                <NavigationMenu /> 
+               
 
+                <div className="topBar">
+                    
 
-                </h1>
+                </div>
+    
+               
+               
                 <Switch>
                     <Route path="/contact">
                         <ContactPage />

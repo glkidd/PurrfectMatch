@@ -25,7 +25,7 @@ code {
 
 .topBar {
   height: 100px;
-  width: 95%;
+  width: 100%;
   text-align: left;
   margin: 0px;
   position: relative;
@@ -33,7 +33,7 @@ code {
   
 }
 
-.topBar a {
+a {
   color: black;
   font-family: Montserrat;
   text-decoration: none;
