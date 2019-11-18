@@ -1,15 +1,5 @@
-.textBox {
-    background-color: rgb(255, 255, 255);
-    border-color: black;
-    background: solid;
-    border: solid;
-    height: 1.5em;
-    width: 20em;
-    border-radius: 5px;
-    border-width: thin;
-    margin: 10px;
-    margin-left: 70px;
-    display: block;
+* {
+    font-family: Montserrat;
 }
 
 @font-face {
@@ -17,80 +7,44 @@
     src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
 }
 
-#send{
-    background-color: lightgrey;
-    border-color: black;
-    background: solid;
-    display: inline-block;
-    border: none;
-    width: 3.3em;
-    height: 1.4em;
-    border-radius: 3px;
-    margin-left: 763px;
-    font-family: Montserrat;
+.contactPage {
+    padding-left: 1em;
+}
+.contactBoxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 3em;
+}
+.contactBoxes > div {
+    padding: 0.3em;
+    padding-right: 3em;
+    display: flex;
 }
 
-.sendText {
-    text-align: center;
+.contactBoxes > .contactText {
+    padding-right: 1.6em;
+}
+.inputElem {
+    display: flex;
+    flex-direction: column;
 }
 
-#send:hover {background-color: grey}
-
-.textBox.message{
-    position: relative;  
-    width: 40em;
-    height: 20em;
-    border-radius: 5px;
-    display: block;
-    font-family: Montserrat;
+.inputElem .inputField {
+    margin-top: 0.5em;
 }
 
-.header {
-    margin: 30px;
-    margin-left: 65px;
-    position: relative;
-    font-size: 40px;
-    font-weight: 300;
-    font-family: Montserrat;
+.inputElem select {
+    margin-top: 0.5em;
 }
 
-.row{
-    display: block;
+.inputElem .inputError {
+    font-size: small;
+    color: red;
 }
 
-.label{
-    margin-left: 70px;
-    display: block;
-    font-family: Montserrat;
-}
-
-.rightBoxes {
-    margin-right: 70px;
-    float: left;
-    text-align: left;
-}
-
-.searchLabel{
-    display: block;
-    font-family: Montserrat;
-}
-
-.search {
-    margin: 10px;
-    margin-right: 125px;
-    margin-left: -145px;
-    float: left;
-    text-align: left;
-}
-
-.contactText {
-    margin-top: 50px;
-    margin-left: 150px;
-    text-align: justify;
-    font-family: Montserrat;
-}
-
-.float{
-    float: left;
-    text-align: left;
+.contactPage button {
+    width: 5em;
+    margin-top: 1em;
+    margin-left: 4em;
 }
