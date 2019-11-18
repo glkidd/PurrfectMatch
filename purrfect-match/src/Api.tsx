@@ -36,4 +36,9 @@ export class Api {
         let fakeApiResult = ALL_SUCCESS_STORIES.slice(SUCCESS_STORY_PAGE_SIZE * breakpoint, SUCCESS_STORY_PAGE_SIZE * breakpoint + SUCCESS_STORY_PAGE_SIZE);
         return Promise.resolve(fakeApiResult);
     }
+
+    public static submitContactInfo = (firstName: string, lastName: string, subject: string, email: string, shelterEmployee: string, message: string): Promise<void> => {
+        // Normally, we'd actually submit to the backend and resolve or reject the promise based off of the response (was there an error submitting?)
+        return Promise.resolve();
+    }
 }
