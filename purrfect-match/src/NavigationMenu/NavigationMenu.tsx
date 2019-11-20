@@ -10,7 +10,7 @@ interface MenuProps {
 };
 
 
-interface isScrolling{
+interface MenuState{
   hasScrolled:boolean;
 
 }
@@ -18,7 +18,7 @@ interface isScrolling{
 
 
 
-class NavigationMenu extends React.Component< MenuProps,isScrolling> {
+class NavigationMenu extends React.Component< MenuProps,MenuState> {
   constructor(props:any) {
     super(props)
 
@@ -33,12 +33,7 @@ class NavigationMenu extends React.Component< MenuProps,isScrolling> {
 
   handleScroll = (event:any) => {
     const scrollTop = window.pageYOffset
-
-    if (scrollTop > 50) {
-      this.setState({ hasScrolled: true})
-    } else {
-      this.setState({ hasScrolled: false})
-    }
+    this.setState({ hasScrolled: scrollTop > 50 });
   }
 
  
@@ -48,7 +43,7 @@ class NavigationMenu extends React.Component< MenuProps,isScrolling> {
       <nav className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
         <div className="HeaderGroup ">
         
-        <Link to=""><img id="logo"src={logo} alt="Purrfect Match Logo"/></Link>
+        <Link to="home"><img id="logo"src={logo} alt="Purrfect Match Logo"/></Link>
         
        
          

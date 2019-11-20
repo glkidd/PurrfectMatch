@@ -22,30 +22,12 @@ export class App extends React.Component<{}, AppState> {
             page: null
         };
     }
-
-    public render() {
-      
-        
+    public render() {       
         return (
-          
-             
-            
-           
-
-
-
-            <Router>
-                
+            <Router>              
                 <NavigationMenu /> 
-               
-
                 <div className="topBar">
-                    
-
                 </div>
-    
-               
-               
                 <Switch>
                     <Route path="/contact">
                         <ContactPage />
