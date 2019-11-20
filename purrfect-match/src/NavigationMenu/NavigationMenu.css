@@ -5,6 +5,7 @@
     transition: 0.8s cubic-bezier(0.1, 0.8, 0.2, 1);
     right:0px;
     padding: 15px 0;
+    top: 0;
 }
 
 .HeaderScrolled {

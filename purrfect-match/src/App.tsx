@@ -6,7 +6,7 @@ import { ContactPage } from 'ContactPage';
 import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { DonatePage } from "DonatePage";
-import NavigationMenu from "NavigationMenu/NavigationMenu";
+import { NavigationMenu } from "NavigationMenu/NavigationMenu";
 
 
 
@@ -15,19 +15,18 @@ interface AppState {
 }
 
 export class App extends React.Component<{}, AppState> {
-
     constructor(props: any) {
         super(props);
         this.state = {
             page: null
         };
     }
+
     public render() {       
         return (
             <Router>              
                 <NavigationMenu /> 
-                <div className="topBar">
-                </div>
+                <div className="topBar"/>  
                 <Switch>
                     <Route path="/contact">
                         <ContactPage />
