@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
     align-items: center;
-    justify-items: center;
+    justify-items: center;  
 }
 
 .Header a {
