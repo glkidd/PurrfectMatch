@@ -25,18 +25,23 @@ code {
 
 .topBar {
   height: 100px;
-  width: 90%;
+  width: 100%;
   text-align: left;
   margin: 0px;
   position: relative;
   left: 5%;
+  
 }
 
-.topBar a {
+a {
   color: black;
   font-family: Montserrat;
   text-decoration: none;
 }
+
+
+
+
 
 .topBarLinks {
   font-size: 20px;
@@ -45,7 +50,7 @@ code {
 }
 
 #logo {
-  height: 70px;
+  height: 40px;
   padding: 10px;
 }
 
