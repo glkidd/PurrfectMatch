@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+<div>
+  <div
+    className="welcomeMessage"
+  >
+    Did you adopt a pet using our site? Click here to add a success story about your new pet!
+  </div>
+  <div
+    className="successStoryHolder"
+  >
+    <div
+      id="successStories"
+    >
+      <div
+        id="headerOne"
+      >
+        Success Stories
+      </div>
+      <ul>
+        <li>
+          <CompactView
+            age="5 years"
+            breed="American Shorthair"
+            gender="Male"
+            name="Ollie"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="3.5 years"
+            breed="American Shorthair"
+            gender="Male"
+            name="Meowasaurus"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="4 years"
+            breed="American Shorthair"
+            gender="Female"
+            name="Fuzzles"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="5 months"
+            breed="American Shorthair"
+            gender="Male"
+            name="Mr. Meef"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="6 years"
+            breed="American Shorthair"
+            gender="Female"
+            name="Poof"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="1 year"
+            breed="American Shorthair"
+            gender="Male"
+            name="Rex"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="8 years"
+            breed="American Shorthair"
+            gender="Male"
+            name="Socks"
+          />
+        </li>
+        <li>
+          <CompactView
+            age="8 months"
+            breed="American Shorthair"
+            gender="Female"
+            name="Midnight"
+          />
+        </li>
+      </ul>
+    </div>
+    <div
+      id="recentlyAdopted"
+    >
+      <div
+        id="headerTwo"
+      >
+        Recently adopted!
+      </div>
+      <ul>
+        <li>
+          <CompactView
+            age="5 years"
+            breed="American Shorthair"
+            gender="Male"
+            name="Ollie"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

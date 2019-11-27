@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input tests Snapshot test 1`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <div
+    className="inputField"
+  >
+    <input
+      className="textBox"
+      name="fname"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Input tests Snapshot test 2`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <div
+    className="inputField"
+  >
+    <input
+      className="textBox"
+      name="fname"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <div
+    className="inputError"
+  >
+    mockErr 
+  </div>
+</div>
+`;
+
+exports[`Message tests Snapshot test 1`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <div
+    className="inputField"
+  >
+    <textarea
+      className="textBox message"
+      cols={60}
+      onChange={[Function]}
+      placeholder="Type your message here..."
+      rows={20}
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Message tests Snapshot test 2`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <div
+    className="inputField"
+  >
+    <textarea
+      className="textBox message"
+      cols={60}
+      onChange={[Function]}
+      placeholder="Type your message here..."
+      rows={20}
+    />
+  </div>
+  <div
+    className="inputError"
+  >
+    mockErr 
+  </div>
+</div>
+`;
+
+exports[`Select tests Snapshot test 1`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <select
+    onChange={[Function]}
+    style={
+      Object {
+        "height": "1.5em",
+        "width": "150px",
+      }
+    }
+  >
+    <option
+      disabled={true}
+      selected={true}
+    >
+       Select an option 
+    </option>
+    <option>
+      op1
+    </option>
+    <option>
+      op2
+    </option>
+  </select>
+  <div />
+</div>
+`;
+
+exports[`Select tests Snapshot test 2`] = `
+<div
+  className="inputElem"
+>
+  <div
+    className="label"
+  >
+    mockPrompt
+  </div>
+  <select
+    onChange={[Function]}
+    style={
+      Object {
+        "height": "1.5em",
+        "width": "150px",
+      }
+    }
+  >
+    <option
+      disabled={true}
+      selected={true}
+    >
+       Select an option 
+    </option>
+    <option>
+      op1
+    </option>
+    <option>
+      op2
+    </option>
+  </select>
+  <div
+    className="inputError"
+  >
+    mockErr 
+  </div>
+</div>
+`;
+
+exports[`Send tests Snapshot test 1`] = `
+<div
+  className="inputElem"
+>
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</div>
+`;
+
+exports[`Send tests Snapshot test 2`] = `
+<div
+  className="inputElem"
+>
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</div>
+`;

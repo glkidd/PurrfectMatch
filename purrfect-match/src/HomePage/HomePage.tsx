@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
-import Card from './Card';
+import { Card } from './Card';
 
 
 interface HomePageProps {
