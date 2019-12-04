@@ -3,18 +3,18 @@ import { Modal } from "./Modal";
 import { Redirect } from "react-router-dom";
 import cat from "./pictures/cat5.jpg";
 
-interface compactViewProps {
+interface CompactViewProps {
     name: string;
     breed: string;
     age: string;
     gender: string;
 };
 
-interface compactViewState {
+interface CompactViewState {
     modalOpen: boolean;
 };
 
-export class CompactView extends React.Component<compactViewProps, compactViewState> {
+export class CompactView extends React.Component<CompactViewProps, CompactViewState> {
    
     constructor(props: any) {
         super(props);
@@ -27,7 +27,7 @@ export class CompactView extends React.Component<compactViewProps, compactViewSt
     public render() {
         return (
             <div>
-                <button className="compactView" onClick={() => { this.setState({ modalOpen: true }) }}>
+                <button className="CompactView" onClick={() => { this.setState({ modalOpen: true }) }}>
                     <img id="animalImage" src={cat} alt="Image of animal"/>
                     <h1 id="animalName">
                         {this.props.name}

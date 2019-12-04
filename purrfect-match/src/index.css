@@ -112,7 +112,7 @@ a {
 
 .welcomeMessage {
   font-family: Montserrat;
-  font-size: 25px;
+  font-size: 30px;
   color: #9f5cfd;
   width: 80%;
   position: relative;
@@ -120,6 +120,7 @@ a {
   top: 1em;
   margin-bottom: 2em;
   text-align: center;
+  font-weight: bold;
 }
 
 .compactView {
@@ -328,4 +329,118 @@ li {
   left: 20%;
   position: relative;
   top: -20%;
+}
+
+.sideBarTitle {
+  font-family: Montserrat;
+  font-size: 20px;
+  height: 5%;
+  position: relative;
+  text-align: center;
+}
+
+.sideBarContainer {
+  /*height: 400px;*/
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: white;
+  margin: 1em;
+  border: none;
+}
+
+.filterHolder {
+  width: 100em;
+  height: 3em;
+  border: solid;
+  border-color: rgb(159, 92, 253);
+  border-width: .05em;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  
+}
+
+.sortHolder {
+  width: 100em;
+  height: 3em;
+  border: solid;
+  border-color: rgb(159, 92, 253);
+  border-top-width: 0em;
+  border-right-width: 0.05em;
+  border-left-width: 0.05em;
+  border-bottom-width: 0.05em;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  
+}
+
+.compactSearch {
+  height: 400px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 1em;
+  border: transparent;
+  border-width: .1em;
+}
+
+.compactSearchRisk {
+  height: 400px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 1em;
+  border: solid;
+  border-width: .1em;
+  border-color: red;
+}
+
+.unclicked {
+  color: rgb(159, 92, 253);
+  background: solid;
+  background-color: whitesmoke;
+  border: solid;
+  border-color: rgb(159, 92, 253);
+  border-width: .05em;
+  border-radius: .3em;
+  text-emphasis-color: rgb(159, 92, 253);
+  font-family: Montserrat;
+  font-size: 16px;
+  margin-right: .5em;
+  float: left;
+}
+
+.clicked {
+  color: black;
+  background: solid;
+  background-color: rgb(159, 92, 253);
+  border: solid;
+  border-color: rgb(159, 92, 253);
+  border-width: .05em;
+  border-radius: .3em;
+  text-emphasis-color: rgb(159, 92, 253);
+  font-family: Montserrat;
+  font-size: 16px;
+  margin-right: .5em;
+  
+}
+
+.filterText {
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-right: .5em;
+  margin-left: .5em;
+  vertical-align: center;
+}
+
+#searchResultPageText {
+  margin-left: 270px;
+  min-height: 15%;
+  width: 400px;
+  padding: 5px;
+  font-size: 0.875em;
+  font-family: Montserrat;
 }
