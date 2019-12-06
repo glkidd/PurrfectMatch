@@ -8,7 +8,7 @@ interface CardProps {
 interface CardState {
 };
 
-class Card extends React.Component<CardProps, CardState> {
+export class Card extends React.Component<CardProps, CardState> {
   constructor(props: any) {
     super(props);
 
@@ -24,5 +24,3 @@ class Card extends React.Component<CardProps, CardState> {
     )
   }
 }
-
-export default Card;

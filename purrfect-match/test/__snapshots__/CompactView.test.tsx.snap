@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+<div>
+  <button
+    className="compactView"
+    onClick={[Function]}
+  >
+    <img
+      alt="Image of animal"
+      id="animalImage"
+      src="test-file-stub"
+    />
+    <h1
+      id="animalName"
+    >
+      mockName
+    </h1>
+    <p
+      id="animalInfo"
+    >
+      Breed: 
+      someBreed
+      <br />
+       Age: 
+      mockAge
+      <br />
+       Gender: 
+      mockGender
+    </p>
+  </button>
+  <Modal
+    display={false}
+    onClose={[Function]}
+  >
+    <img
+      alt="Cat"
+      id="successStoryPageImage"
+      src="test-file-stub"
+    />
+    <div
+      id="successStoryPageText"
+    >
+      <h1
+        id="successStoryPageHeader"
+      >
+        Name: Ollie
+        <br />
+        Age: 3 years
+        <br />
+        Breed: American Shorthair
+        <br />
+        Adopted: 10/24/2019
+        <br />
+        <br />
+        A message from Ollie's owner, Bob:
+      </h1>
+      <p>
+        Ollie has been a real friend! Coming home from a crazy day at work, I get to look forward to this goofball greeting me with lots of purring and cuddles. I found Olliethrough    Purrfect Match. I couldn’t go to my local shelter without first knowing if I had a specific pet in mind, because I can’t be away from work for very longduring business          hours. Perrfect Match helped me find Ollie, and I’m so happy he’s in my life! He’s a cutie, and I can’t imagine not having found him.
+      </p>
+    </div>
+  </Modal>
+</div>
+`;

@@ -2,32 +2,15 @@
 
 exports[`Renders correctly 1`] = `
 <BrowserRouter>
-  <h1
+  <NavigationMenu />
+  <div
     className="topBar"
-  >
-    <Link
-      to=""
-    >
-      <img
-        alt="Purrfect Match Logo"
-        id="logo"
-        src="test-file-stub"
-      />
-      <span>
-        Purrfect Match
-      </span>
-    </Link>
-  </h1>
+  />
   <Switch>
-    <Route
-      path="/home"
-    >
-      <HomePage />
-    </Route>
     <Route
       path="/contact"
     >
-      <Component />
+      <ContactPage />
     </Route>
     <Route
       path="/success"
@@ -40,45 +23,9 @@ exports[`Renders correctly 1`] = `
       <SearchPage />
     </Route>
     <Route
-      path="/donate"
-    >
-      <DonatePage />
-    </Route>
-    <Route
       path="/"
     >
-      <div>
-        <Link
-          to="home"
-        >
-          Real Home page
-        </Link>
-        <br />
-        <Link
-          to="contact"
-        >
-          Contact Page
-        </Link>
-        <br />
-        <Link
-          to="success"
-        >
-          Success Stories
-        </Link>
-        <br />
-        <Link
-          to="search"
-        >
-          Search
-        </Link>
-        <br />
-        <Link
-          to="donate"
-        >
-          Donation page
-        </Link>
-        <br />
-      </div>
+      <HomePage />
     </Route>
   </Switch>
 </BrowserRouter>

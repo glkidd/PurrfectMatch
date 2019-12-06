@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { configure, shallow } from 'enzyme';
+import { configure, shallow, ShallowWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { App } from 'App';
+import { HomePage } from 'HomePage/HomePage';
 
 configure({ adapter: new Adapter() });
 
+let wrapper: ShallowWrapper<any, any, any>;
+beforeEach(() => {
+    wrapper = shallow(<HomePage />);
+});
+
 test("Renders correctly", () => {
-    const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
 });

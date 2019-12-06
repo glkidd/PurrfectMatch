@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<nav
+  className="Header"
+>
+  <div
+    className="HeaderGroup "
+  >
+    <Link
+      to="/"
+    >
+       
+      <img
+        alt="Purrfect Match Logo"
+        id="logo"
+        src="test-file-stub"
+      />
+       
+    </Link>
+    <Link
+      to="/"
+    >
+       Purrfect Match 
+    </Link>
+    <button>
+      <Link
+        to="success"
+      >
+         Success Stories
+      </Link>
+    </button>
+    <button>
+      <Link
+        to="contact"
+      >
+         Contact Us
+      </Link>
+    </button>
+  </div>
+</nav>
+`;
+
+exports[`Renders correctly 2`] = `
+<nav
+  className="Header HeaderScrolled"
+>
+  <div
+    className="HeaderGroup "
+  >
+    <Link
+      to="/"
+    >
+       
+      <img
+        alt="Purrfect Match Logo"
+        id="logo"
+        src="test-file-stub"
+      />
+       
+    </Link>
+    <Link
+      to="/"
+    >
+       Purrfect Match 
+    </Link>
+    <button>
+      <Link
+        to="success"
+      >
+         Success Stories
+      </Link>
+    </button>
+    <button>
+      <Link
+        to="contact"
+      >
+         Contact Us
+      </Link>
+    </button>
+  </div>
+</nav>
+`;

@@ -5,10 +5,7 @@ import { SuccessStoryPage } from "SuccessStoryPage";
 import { ContactPage } from 'ContactPage';
 import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
-import { DonatePage } from "DonatePage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
-
-
 
 interface AppState {
     page: JSX.Element | null;
@@ -36,9 +33,6 @@ export class App extends React.Component<{}, AppState> {
                     </Route>
                     <Route path="/search">
                         <SearchPage />
-                    </Route>
-                    <Route path="/donate">
-                        <DonatePage />
                     </Route>
                     <Route path="/">
                         <HomePage />

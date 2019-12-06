@@ -7,7 +7,7 @@ interface inputProps {
     onchange?: (newVal: string) => void;
 }
 
-interface optionProps{
+interface optionProps {
     prompt: string;
     options: string[];
     error?: string;

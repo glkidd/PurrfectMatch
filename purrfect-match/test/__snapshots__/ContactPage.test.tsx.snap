@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="contactPage"
+>
+  <h2
+    className="header"
+  >
+    Contact Us!
+  </h2>
+  <div
+    className="contactBoxes"
+  >
+    <Input
+      onchange={[Function]}
+      prompt="First Name:"
+    />
+    <Input
+      onchange={[Function]}
+      prompt="Last Name:"
+    />
+    <Input
+      onchange={[Function]}
+      prompt="Subject:"
+    />
+    <Input
+      onchange={[Function]}
+      prompt="Email Address:"
+    />
+  </div>
+  <div
+    className="contactBoxes"
+  >
+    <div
+      className="contactText"
+    >
+      <p>
+        Are you a shelter and need help with your account?
+        <br />
+        Are you a potential pet owner with comments or
+        <br />
+        concerns? Send us a note here! 
+        <br />
+        Or you can reach us at purrfectmatch@gmail.com
+      </p>
+    </div>
+    <Select
+      onchange={[Function]}
+      options={
+        Array [
+          "Yes",
+          "No",
+        ]
+      }
+      prompt="Are you a shelter employee?"
+    />
+  </div>
+  <div
+    className="contactBoxes"
+  >
+    <Message
+      onchange={[Function]}
+      prompt="Message:"
+    />
+  </div>
+  <Send
+    onclick={[Function]}
+  />
+</div>
+`;
+
+exports[`Renders correctly 2`] = `
+<div
+  className="contactPage"
+>
+  <h2
+    className="header"
+  >
+    Contact Us!
+  </h2>
+  <div
+    className="contactBoxes"
+  >
+    <Input
+      error="Provide your first name."
+      onchange={[Function]}
+      prompt="First Name:"
+    />
+    <Input
+      error="Provide your last name."
+      onchange={[Function]}
+      prompt="Last Name:"
+    />
+    <Input
+      error="Provide a subject."
+      onchange={[Function]}
+      prompt="Subject:"
+    />
+    <Input
+      error="Provide your email."
+      onchange={[Function]}
+      prompt="Email Address:"
+    />
+  </div>
+  <div
+    className="contactBoxes"
+  >
+    <div
+      className="contactText"
+    >
+      <p>
+        Are you a shelter and need help with your account?
+        <br />
+        Are you a potential pet owner with comments or
+        <br />
+        concerns? Send us a note here! 
+        <br />
+        Or you can reach us at purrfectmatch@gmail.com
+      </p>
+    </div>
+    <Select
+      error="Choose an option."
+      onchange={[Function]}
+      options={
+        Array [
+          "Yes",
+          "No",
+        ]
+      }
+      prompt="Are you a shelter employee?"
+    />
+  </div>
+  <div
+    className="contactBoxes"
+  >
+    <Message
+      error="Please write a message."
+      onchange={[Function]}
+      prompt="Message:"
+    />
+  </div>
+  <Send
+    onclick={[Function]}
+  />
+</div>
+`;

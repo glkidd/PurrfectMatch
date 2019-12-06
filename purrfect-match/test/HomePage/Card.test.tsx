@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { configure, shallow } from 'enzyme';
+import { configure, shallow, ShallowWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { App } from 'App';
+import { Card } from 'HomePage/Card';
 
 configure({ adapter: new Adapter() });
 
+let wrapper: ShallowWrapper<any, any, any>;
+beforeEach(() => {
+    wrapper = shallow(<Card image="mockImage" />);
+});
+
 test("Renders correctly", () => {
-    const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
 });

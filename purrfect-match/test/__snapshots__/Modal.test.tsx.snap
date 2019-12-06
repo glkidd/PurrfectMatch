@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="modal-overlay"
+  onClick={[Function]}
+>
+  <div
+    className="modal"
+    onClick={[Function]}
+  >
+    <button
+      className="modal-close"
+      onClick={[Function]}
+    >
+      X
+    </button>
+    <div>
+      mockContent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders correctly 2`] = `""`;
