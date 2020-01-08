@@ -15,10 +15,9 @@
 }
 
 .HeaderGroup {
-    max-width: 800;
     margin: 0px auto;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
     align-items: center;
     justify-items: center;  
 }
@@ -26,6 +25,10 @@
 .Header a {
     color: black;
     font-weight: 300;
+}
+
+#purrfectMatch {
+    font-size: 25px;
 }
 
 .Header button {
