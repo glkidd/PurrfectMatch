@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="998d5216-8fef-4177-ac0e-62d7d38c0b5f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ProjectId" id="1WE18SU9sPEtklY6IvQPSbuD1tM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GreetingKata" type="JUnit" factoryName="JUnit">
+      <module name="GreetingKata" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GreetingKataTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="998d5216-8fef-4177-ac0e-62d7d38c0b5f" name="Default Changelist" comment="" />
+      <created>1578699780901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578699780901</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="338" y="27" key="#" timestamp="1578700057515">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="338" y="27" key="#/0.23.1280.726@0.23.1280.726" timestamp="1578700057515" />
+    <state x="338" y="27" key="#Unnamed" timestamp="1578699996491">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="338" y="27" key="#Unnamed/0.23.1280.726@0.23.1280.726" timestamp="1578699996491" />
+    <state x="165" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578701113286">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="165" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.725@0.23.1280.725" timestamp="1578701113286" />
+    <state x="201" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.726@0.23.1280.726" timestamp="1578700769372" />
+  </component>
+</project>
