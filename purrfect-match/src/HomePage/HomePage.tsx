@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
 import { Card } from './Card';
+import Footer from 'Footer/Footer';
 
 
 interface HomePageProps {
@@ -42,6 +43,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                             </div>
                         </div>
                     </div>
+                    <Footer />
                 </div>
             </div>
         );

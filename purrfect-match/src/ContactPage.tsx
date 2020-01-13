@@ -2,6 +2,7 @@ import React from 'react';
 import './ContactPage.css';
 import { Input, Select, Message, Send } from './inputBoxes';
 import { Api } from "Api";
+import Footer from 'Footer/Footer';
 interface ContactPageProps {
 };
 
@@ -18,7 +19,7 @@ const OPTION_ARRAY = ["Yes", "No"];
 
 export class ContactPage extends React.Component<ContactPageProps, ContactPageState> {
 
-    constructor(props : any) {
+    constructor(props: any) {
         super(props);
 
         this.state = {
@@ -42,7 +43,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
     }
 
-    handleSubmit = ()  => {
+    handleSubmit = () => {
         let formValid = true;
         // Validate all fields filled
         for (let elem of ["firstName", "lastName", "subject", "email", "shelterEmployee", "message"]) {
@@ -114,7 +115,6 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                 </div>
                 <Send onclick={this.handleSubmit} />
             </div>
-
         );
     }
 }

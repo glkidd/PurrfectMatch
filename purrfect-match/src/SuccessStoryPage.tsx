@@ -3,6 +3,7 @@ import { Modal } from "./Modal";
 import { CompactView } from "./CompactView";
 import cat from "./pictures/cat.jpg";
 import { Redirect } from "react-router-dom";
+import Footer from 'Footer/Footer';
 
 // interfaces = structs
 interface SuccessStoryPageProps {
@@ -75,10 +76,6 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
                     </div>
 
                 </div>
-                
-
-
-
             </div>);
     }
 }
