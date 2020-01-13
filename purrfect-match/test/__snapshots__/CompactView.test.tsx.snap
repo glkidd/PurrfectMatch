@@ -20,7 +20,7 @@ exports[`Snapshot test 1`] = `
       id="animalInfo"
     >
       Breed: 
-      someBreed
+      mockBreed
       <br />
        Age: 
       mockAge
@@ -41,22 +41,28 @@ exports[`Snapshot test 1`] = `
     <div
       id="successStoryPageText"
     >
-      <h1
-        id="successStoryPageHeader"
-      >
-        Name: Ollie
+      <h1>
+        Name: 
+        mockName
         <br />
-        Age: 3 years
+        Age: 
+        mockAge
         <br />
-        Breed: American Shorthair
+        Breed: 
+        mockBreed
         <br />
-        Adopted: 10/24/2019
+        Adopted: 
+        mockDate
         <br />
         <br />
-        A message from Ollie's owner, Bob:
+        A message from 
+        mockName
+        's owner, 
+        mockOwner
+        :
       </h1>
       <p>
-        Ollie has been a real friend! Coming home from a crazy day at work, I get to look forward to this goofball greeting me with lots of purring and cuddles. I found Olliethrough    Purrfect Match. I couldn’t go to my local shelter without first knowing if I had a specific pet in mind, because I can’t be away from work for very longduring business          hours. Perrfect Match helped me find Ollie, and I’m so happy he’s in my life! He’s a cutie, and I can’t imagine not having found him.
+        mockStoryText
       </p>
     </div>
   </Modal>

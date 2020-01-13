@@ -11,12 +11,12 @@ jest.mock("Modal");
 
 let wrapper: ShallowWrapper<any, any, any>;
 beforeEach(() => {
-    wrapper = shallow(<CompactView name="mockName" breed="someBreed" age="mockAge" gender="mockGender" />);
+    let CVinfo = {name: "mockName", image: "mockImg", age: "mockAge", storyText: "mockStoryText", breed: "mockBreed", gender: "mockGender", adoptionDate: "mockDate", owner: "mockOwner"};
+    wrapper = shallow(<CompactView info={CVinfo} />);
 });
 
 test("Snapshot test", () => {
     expect(wrapper).toMatchSnapshot();
-    expect("Test failure: we still need to populate the modal. ").toBeFalsy();
 });
 
 test("Modal opens when clicked", () => {

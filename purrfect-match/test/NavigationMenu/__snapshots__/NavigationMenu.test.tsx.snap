@@ -19,6 +19,7 @@ exports[`Renders correctly 1`] = `
        
     </Link>
     <Link
+      id="purrfectMatch"
       to="/"
     >
        Purrfect Match 
@@ -60,6 +61,7 @@ exports[`Renders correctly 2`] = `
        
     </Link>
     <Link
+      id="purrfectMatch"
       to="/"
     >
        Purrfect Match 
