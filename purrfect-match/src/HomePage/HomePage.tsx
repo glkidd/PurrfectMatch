@@ -31,6 +31,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                     <Card image={require('../pictures/dog-homepage.jpg')} />
                                 </div>
                                 <div>
+
                                     <h1>Cat</h1>
                                     <Card image={require('../pictures/cat-homepage.jpg')} />
                                 </div>

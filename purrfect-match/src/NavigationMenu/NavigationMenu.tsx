@@ -32,7 +32,7 @@ export class NavigationMenu extends React.Component< MenuProps,MenuState> {
             <nav className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
                 <div className="HeaderGroup ">
                         <Link to="/"> <img id="logo"src={logo} alt="Purrfect Match Logo"/> </Link>  
-                        <Link to="/"> Purrfect Match </Link>      
+                        <Link to="/" id="purrfectMatch"> Purrfect Match </Link>      
                     <button>
                         <Link to="success"> Success Stories</Link>
                     </button> 
