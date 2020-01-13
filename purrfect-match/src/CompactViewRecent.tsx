@@ -1,17 +1,17 @@
 import React from 'react';
 import { Modal } from "./Modal";
-import { SuccessStoryInfo } from "Definitions"
+import { RecentlyAdoptedInfo } from "Definitions"
 import cat from "./pictures/cat5.jpg";
 
 interface compactViewProps {
-    info: SuccessStoryInfo;
+    info: RecentlyAdoptedInfo;
 };
 
 interface compactViewState {
     modalOpen: boolean;
 };
 
-export class CompactView extends React.Component<compactViewProps, compactViewState> {
+export class CompactViewRecent extends React.Component<compactViewProps, compactViewState> {
    
     constructor(props: any) {
         super(props);
@@ -45,12 +45,7 @@ export class CompactView extends React.Component<compactViewProps, compactViewSt
                             <br />Breed: {this.props.info.breed}
                             <br />Adopted: {this.props.info.adoptionDate}
                             <br />
-                            <br />
-                            A message from {this.props.info.name}'s owner, {this.props.info.owner}:
                         </h1>
-                        <p> 
-                            {this.props.info.storyText}
-                        </p>
                     </div>
                 </Modal>
             </div>
