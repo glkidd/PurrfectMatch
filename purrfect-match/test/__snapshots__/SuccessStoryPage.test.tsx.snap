@@ -5,7 +5,10 @@ exports[`Snapshot test 1`] = `
   <div
     className="welcomeMessage"
   >
-    Did you adopt a pet using our site? Click here to add a success story about your new pet!
+    Did you adopt a pet using our site? Share your story here!
+  </div>
+  <div>
+    <SubmissionBox />
   </div>
   <div
     className="successStoryHolder"
@@ -19,69 +22,60 @@ exports[`Snapshot test 1`] = `
         Success Stories
       </div>
       <ul>
+         
         <li>
+           
           <CompactView
-            age="5 years"
-            breed="American Shorthair"
-            gender="Male"
-            name="Ollie"
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "4 years",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "cat.jpg",
+                "name": "Mittens",
+                "owner": "Bob",
+                "storyText": "Some story about how this cat was saved from horrible living conditions and is doing much better now.",
+              }
+            }
           />
+           
         </li>
         <li>
+           
           <CompactView
-            age="3.5 years"
-            breed="American Shorthair"
-            gender="Male"
-            name="Meowasaurus"
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "2 months",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "Cat_1.png",
+                "name": "Fluffy",
+                "owner": "Bob",
+                "storyText": "Another success story here",
+              }
+            }
           />
+           
         </li>
         <li>
+           
           <CompactView
-            age="4 years"
-            breed="American Shorthair"
-            gender="Female"
-            name="Fuzzles"
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "10 years",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "Dog_1.png",
+                "name": "Mr. Woof",
+                "owner": "Bob",
+                "storyText": "Okay, success stories really should be longer but eh. ",
+              }
+            }
           />
-        </li>
-        <li>
-          <CompactView
-            age="5 months"
-            breed="American Shorthair"
-            gender="Male"
-            name="Mr. Meef"
-          />
-        </li>
-        <li>
-          <CompactView
-            age="6 years"
-            breed="American Shorthair"
-            gender="Female"
-            name="Poof"
-          />
-        </li>
-        <li>
-          <CompactView
-            age="1 year"
-            breed="American Shorthair"
-            gender="Male"
-            name="Rex"
-          />
-        </li>
-        <li>
-          <CompactView
-            age="8 years"
-            breed="American Shorthair"
-            gender="Male"
-            name="Socks"
-          />
-        </li>
-        <li>
-          <CompactView
-            age="8 months"
-            breed="American Shorthair"
-            gender="Female"
-            name="Midnight"
-          />
+           
         </li>
       </ul>
     </div>
@@ -93,14 +87,60 @@ exports[`Snapshot test 1`] = `
       >
         Recently adopted!
       </div>
-      <ul>
+      <ul
+        id="recentAdoptList"
+      >
+         
         <li>
-          <CompactView
-            age="5 years"
-            breed="American Shorthair"
-            gender="Male"
-            name="Ollie"
+           
+          <CompactViewRecent
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "4 years",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "cat.jpg",
+                "name": "Mittens",
+                "owner": "Bob",
+              }
+            }
           />
+           
+        </li>
+        <li>
+           
+          <CompactViewRecent
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "2 months",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "Cat_1.png",
+                "name": "Fluffy",
+                "owner": "Bob",
+              }
+            }
+          />
+           
+        </li>
+        <li>
+           
+          <CompactViewRecent
+            info={
+              Object {
+                "adoptionDate": "10/24/19",
+                "age": "10 years",
+                "breed": "American shorthair",
+                "gender": "Female",
+                "image": "Dog_1.png",
+                "name": "Mr. Woof",
+                "owner": "Bob",
+              }
+            }
+          />
+           
         </li>
       </ul>
     </div>

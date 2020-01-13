@@ -1,34 +1,70 @@
 import React from 'react';
 import { Modal } from "./Modal";
 import { CompactView } from "./CompactView";
-import cat from "./pictures/cat.jpg";
+import { CompactViewRecent } from "./CompactViewRecent";
+import { SubmissionBox } from "./SubmissionBox";
 import { Redirect } from "react-router-dom";
+import { SuccessStoryInfo } from "Definitions";
+import { RecentlyAdoptedInfo } from "Definitions";
+import { Spinner } from "Spinner";
+import { Api } from "Api";
+import cat from "./pictures/cat.jpg";
 
-// interfaces = structs
 interface SuccessStoryPageProps {
 };
 
 interface SuccessStoryPageState {
     modalOpen: boolean;
+    stories: SuccessStoryInfo[] | undefined
+    recentAdopt: RecentlyAdoptedInfo[] | undefined; 
 };
 
 export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, SuccessStoryPageState> {
 
-    // if state is nonempty we want to have state stuff in constructor
     constructor(props: any) {
         super(props);
 
         this.state = {
-            modalOpen: false
+            modalOpen: false,
+            stories: undefined,
+            recentAdopt: undefined
         };
     }
 
-    // react components need to have render function
+    public componentWillMount() {
+        Api.getSuccessStories(0).then((successStories: SuccessStoryInfo[]) => {
+            this.setState( { stories: successStories } ); 
+        });
+
+        Api.getRecentlyAdopted(0).then((recentlyAdopted: RecentlyAdoptedInfo[]) => {
+            this.setState( { recentAdopt: recentlyAdopted} );
+        });
+    }
+
     public render() {
+        let successStories = <div className="storiesSpinner"> <Spinner/> </div>;
+        let recentlyAdopted = <div className="storiesSpinner"> <Spinner/> </div>;
+
+        if (this.state.stories !== undefined) {
+            successStories = <ul> { this.state.stories.map( (story: SuccessStoryInfo) => {
+                return ( <li> <CompactView info={story}/> </li> ) } ) } 
+                </ul>;
+        }
+
+        if (this.state.recentAdopt !== undefined) {
+            recentlyAdopted = <ul id="recentAdoptList" > { this.state.recentAdopt.map( (animal: RecentlyAdoptedInfo) => {
+                return ( <li> <CompactViewRecent info={animal} /> </li> ) } ) }
+                </ul>;
+        }
+
         return (
             <div>
                 <div className="welcomeMessage">
-                    Did you adopt a pet using our site? Click here to add a success story about your new pet!
+                    Did you adopt a pet using our site? Share your story here!
+                </div>
+
+                <div>
+                    <SubmissionBox/>
                 </div>
 
                 <div className="successStoryHolder">
@@ -36,49 +72,15 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
                         <div id="headerOne">
                             Success Stories
                         </div>
-                        <ul>
-                            <li>
-                                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Meowasaurus" breed="American Shorthair" age="3.5 years" gender="Male"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Fuzzles" breed="American Shorthair" age="4 years" gender="Female"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Mr. Meef" breed="American Shorthair" age="5 months" gender="Male"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Poof" breed="American Shorthair" age="6 years" gender="Female"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Rex" breed="American Shorthair" age="1 year" gender="Male"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Socks" breed="American Shorthair" age="8 years" gender="Male"></CompactView>
-                            </li>
-                            <li>
-                                <CompactView name="Midnight" breed="American Shorthair" age="8 months" gender="Female"></CompactView>
-                            </li>
-                        </ul>
+                        { successStories }
                     </div>
                     <div id="recentlyAdopted">
                         <div id="headerTwo">
                             Recently adopted!
                         </div>
-                        <ul>
-                            <li>
-                                <CompactView name="Ollie" breed="American Shorthair" age="5 years" gender="Male"></CompactView>
-                            </li>
-                        </ul>
+                        { recentlyAdopted } 
                     </div>
-
                 </div>
-                
-
-
-
             </div>);
     }
 }

@@ -172,6 +172,10 @@ ul {
   list-style-type: none;
 }
 
+#recentAdoptList {
+  width: 1em;
+}
+
 li {
   float: left;
 }
