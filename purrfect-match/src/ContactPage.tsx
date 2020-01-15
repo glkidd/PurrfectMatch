@@ -104,15 +104,16 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                             Or you can reach us at purrfectmatch@gmail.com
                         </p>
                     </div>
-                    <Message
-                        prompt="Message:"
-                        error={this.checkField(this.state.message, "Please write a message.")}
-                        onchange={(newValue: string) => this.setState({ message: newValue })}
-                    />
+                    <div className="contactBoxes">
+                        <Message
+                            prompt="Message:"
+                            error={this.checkField(this.state.message, "Please write a message.")}
+                            onchange={(newValue: string) => this.setState({ message: newValue })}
+                        />
+                    </div>
                 </div>
-                <div><Send onclick={this.handleSubmit} /></div>
+                <Send onclick={this.handleSubmit} />
             </div>
-
         );
     }
 }
