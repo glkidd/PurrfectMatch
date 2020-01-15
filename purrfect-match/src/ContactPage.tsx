@@ -78,15 +78,21 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                         error={this.checkField(this.state.lastName, "Provide your last name.")}
                         onchange={(newValue: string) => this.setState({ lastName: newValue })}
                     />
-                    <Input
-                        prompt="Subject:"
-                        error={this.checkField(this.state.subject, "Provide a subject.")}
-                        onchange={(newValue: string) => this.setState({ subject: newValue })}
+                    <Select
+                        prompt="Are you a shelter employee?"
+                        options={OPTION_ARRAY}
+                        error={this.checkField(this.state.shelterEmployee, "Choose an option.")}
+                        onchange={(newValue: any) => this.setState({ shelterEmployee: newValue })}
                     />
                     <Input
                         prompt="Email Address:"
                         error={this.checkField(this.state.email, "Provide your email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
+                    />
+                    <Input
+                        prompt="Subject:"
+                        error={this.checkField(this.state.subject, "Provide a subject.")}
+                        onchange={(newValue: string) => this.setState({ subject: newValue })}
                     />
                 </div>
                 <div className="contactBoxes">
@@ -98,23 +104,16 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                             Or you can reach us at purrfectmatch@gmail.com
                         </p>
                     </div>
-                    <Select
-                        prompt="Are you a shelter employee?"
-                        options={OPTION_ARRAY}
-                        error={this.checkField(this.state.shelterEmployee, "Choose an option.")}
-                        onchange={(newValue: any) => this.setState({ shelterEmployee: newValue })}
-                    />
-                </div>
-                <div className="contactBoxes">
-                    <Message
-                        prompt="Message:"
-                        error={this.checkField(this.state.message, "Please write a message.")}
-                        onchange={(newValue: string) => this.setState({ message: newValue })}
-                    />
+                    <div className="contactBoxes">
+                        <Message
+                            prompt="Message:"
+                            error={this.checkField(this.state.message, "Please write a message.")}
+                            onchange={(newValue: string) => this.setState({ message: newValue })}
+                        />
+                    </div>
                 </div>
                 <Send onclick={this.handleSubmit} />
             </div>
-
         );
     }
 }
