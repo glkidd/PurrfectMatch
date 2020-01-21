@@ -30,10 +30,10 @@ code {
 
 /* top bar */
 .topBar {
-  height: 100px;
-  width: 80%;
+  height: 5em;
+  width: 100%;
   text-align: left;
-  margin: 0px;
+  margin: 0;
   position: relative;
 }
 
@@ -42,15 +42,9 @@ a {
   text-decoration: none;
 }
 
-.topBarLinks {
-  font-size: 20px;
-  float: right;
-  margin-top: 10px;
-}
-
 #logo {
-  height: 40px;
-  padding: 10px;
+  height: 2em;
+  padding: 0.3em;
 }
 
 
@@ -71,28 +65,28 @@ a {
 
 .modal {
     background-color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 0.5em;
     padding: 0.1em;
     
     min-width: 25%;
     min-height: 15%;
     max-height: 90%;
-    max-width: 80%;
+    max-width: 60%;
 
-    box-shadow: 5px 5px 8px grey;
+    box-shadow: 0.5em 0.5em 0.6em grey;
 
     z-index: 999;
 
-    overflow: scroll;
+    overflow: auto;
 }
 
 .modal-close {
   position: relative;
   float: right;
-  right: 10px;
-  top: 10px;
+  right: 0.2em;
+  top: 0.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3em;
   background-color: lightblue;
 }
 
@@ -100,50 +94,44 @@ a {
 /* compact view of success story post */
 #successStoryPageImage {
   float: left;
-  width: 250px;
-  height: 125%;
-  margin: 10px;
-  border-radius: 5px;
+  width: calc(40% - 2em);
+  margin: 1em;
+  border-radius: 0.5em;
   object-fit: contain;
 }
 
 #successStoryPageText {
-  margin-left: 270px;
+  margin-left: 40%;
   min-height: 15%;
-  width: 400px;
-  padding: 5px;
-  font-size: 0.875em;
+  width: calc(60% - 1em);
+  padding: 0.5em;
+  font-size: medium;
   white-space: pre-line;
 }
 
 .compactView {
-  height: 400px;
-  width: 250px;
-  border-radius: 5px;
+  height: 37em;
+  width: 20em;
+  border-radius: 0.5em;
   background-color: white;
   margin: 1em;
   border: none;
 }
 
 #animalImage {
-  width: 90%;
-  height: 70%;
+  width: calc(100% - 2em);
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  border-radius: 5px;
+  margin: 1em;
+  border-radius: 0.5em;
 }
 
 #animalName {
-  font-size: 20px;
   height: 5%;
   position: relative;
   text-align: center;
 }
 
 #animalInfo {
-  font-size: 14px;
   height: 10%;
   width: 80%;
   position: relative;
@@ -154,7 +142,7 @@ a {
 
 /* main header of success stories page */
 .welcomeMessage {
-  font-size: 25px;
+  font-size: x-large;
   color: #9f5cfd;
   width: 80%;
   position: relative;
@@ -164,42 +152,18 @@ a {
   text-align: center;
 }
 
-
-/* success story submissions */
-.submissionBoxButton {
-  border: none;
-  border-radius: 5px;
-  background-color: #9f5cfd;
-  position: relative;
-  left: 40%;
-  width: 20%;
-  height: 50px;
-  margin-bottom: 30px;
-  font-size: 20px;
-}
-
-.submissionBoxContent {
-  width: 500px;
-  margin: 40px;
-}
-
-#submissionBoxHeader {
-  text-align: center;
-  font-size: 20px;
-}
-
-#submissionBoxInputs {
-  font-size: 18px;
-}
-
 input {
-  border-radius: 5px;
-  border:1px solid #cccccc
+  border-radius: 0.4em;
+  border: 1px solid #cccccc
+}
+
+select {
+  border-radius: 0.4em;
 }
 
 textarea {
-  border-radius: 5px;
-  border:1px solid #cccccc
+  border-radius: 0.4em;
+  border: 1px solid #cccccc
 }
 
 
@@ -218,7 +182,7 @@ li {
 
 #successStories {
   float: left;
-  width: calc(100% - 20em);
+  width: calc(100% - 24em);
 }
 
 #recentlyAdopted {
@@ -251,8 +215,8 @@ li {
 
 /* home page stuff */
 .Cards h2 {
-  margin: 50px 20px;
-  font-size: 60px;
+  margin: 0.5em;
+  font-size: xxx-large;
   text-align: center;
   font-weight: 700;
   color: #9f5cfe;
@@ -263,34 +227,22 @@ li {
 }
 
 .CardGroup {
-  margin: 50px 40px 100px;
+  margin: 1em 0.5em 2em 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+  grid-gap: 0;
   justify-items: center;
   text-align: center;
 }
 
 .CardGroup h1 {
   color: #9f5cfe;
-  padding-bottom: 20px;
-}
-
-@media (max-width: 1060px) {
-  .CardGroup {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .CardGroup {
-      grid-template-columns: repeat(1, 1fr);
-  }
+  padding-bottom: 0.3em;
 }
 
 .Hero {
   background: url('./pictures/wallpaper1.jpg');
-  height: 920px;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -299,7 +251,7 @@ li {
 
 .Hero h1 {
   margin: 0;
-  font-size: 60px;
+  font-size: xxx-large;
   line-height: 1.2;
   opacity: 0;
   animation: HeroAnimation;
@@ -309,60 +261,18 @@ li {
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.Hero p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 30px;
-  line-height: 1.5;
-  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-  opacity: 0;
+.heroSpacer {
+  height: calc(100vh - 5em);
 }
-
-.Hero a {
-  font-size: 17px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 9px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.Hero a:hover {
-  background: white;
-  color: black;
-}
-
-@media (max-width: 640px) {
-  .HeroGroup {
-    padding: 100px 20px;
-  }
-
-  .Hero h1 {
-    font-size: 40px;
-  }
-
-  .Hero p {
-    font-size: 24px;
-  }
-}
-
 @keyframes HeroAnimation {
   0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(1em);
   }
   100% {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(0);
   }
-}
-
-.Hero svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .PetSelectionBox {
@@ -373,9 +283,9 @@ li {
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
-  border-radius: 5px;
-  left: 20%;
+  border-radius: 0.5em;
   position: relative;
-  top: -20%;
+  right: -15%;
+  top: -15%;
   width: 95%;
 }

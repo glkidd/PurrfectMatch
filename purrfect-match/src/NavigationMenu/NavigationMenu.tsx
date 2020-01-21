@@ -31,13 +31,15 @@ export class NavigationMenu extends React.Component< MenuProps,MenuState> {
         return (
             <nav className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
                 <div className="HeaderGroup ">
-                        <Link to="/"> <img id="logo"src={logo} alt="Purrfect Match Logo"/> </Link>  
-                        <Link to="/" id="purrfectMatch"> Purrfect Match </Link>      
+                    <Link to="/">
+                        <div><img id="logo" src={logo} alt="Purrfect Match Logo" /></div>
+                        <div><p className="purrfectMatch">Purrfect&nbsp;Match</p></div>
+                    </Link>  
                     <button>
-                        <Link to="success"> Success Stories</Link>
+                        <Link to="success">Success&nbsp;Stories</Link>
                     </button> 
                     <button>
-                        <Link to="contact"> Contact Us</Link>
+                        <Link to="contact">Contact&nbsp;Us</Link>
                     </button> 
                 </div>
             </nav>
