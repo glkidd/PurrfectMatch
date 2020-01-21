@@ -3,21 +3,19 @@
     width: 100%;
     z-index: 100;
     transition: 0.8s cubic-bezier(0.1, 0.8, 0.2, 1);
-    right:0px;
-    padding: 15px 0;
+    right: 0;
     top: 0;
+    height: 5em;
 }
 
 .HeaderScrolled {
-    background:#9F63F9;
-    padding: 15px 0;
-    backdrop-filter: blur(20px);
+    background: #9F63F9;
+    backdrop-filter: blur(1.2em);
 }
 
 .HeaderGroup {
-    margin: 0px auto;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    margin: 0;
+    display: flex;
     align-items: center;
     justify-items: center;  
 }
@@ -25,43 +23,33 @@
 .Header a {
     color: black;
     font-weight: 300;
+    display: flex;
 }
 
-#purrfectMatch {
-    font-size: 25px;
-}
-
-.Header button {
-    padding: 5px 5px;
-    font-size: 20px;
+.HeaderGroup > * {
+    width: 33%;
+    font-size: x-large;
     background: rgba(255,255,255,0.0);
     border: none;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 0.2em;
     outline: none;
     cursor: pointer;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1)
 }
 
-
-.Header button:hover {
-    background:  rgba(255,255,255,0.0);
-    
-    transform: translateY(-3px);
+.purrfectMatch {
+    text-align: center;
 }
 
-@media (max-width: 640px) {
-    .Header {
-        padding: 15px 0;
-    }
+#logo {
+    margin-top: .3em;
+    margin-left: .3em;
+}
 
-    .HeaderGroup {
-        grid-template-columns: repeat(4, auto);
-    }
-
-    .Header a:nth-child(4) {
-        display: none;
-    }
+.HeaderGroup > *:hover {
+    background: rgba(255,255,255,0.0);
+    transform: translateY(-0.2em);
 }
 
 
