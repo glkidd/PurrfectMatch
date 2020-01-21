@@ -74,9 +74,12 @@ a {
     max-width: 60%;
 
     box-shadow: 0.5em 0.5em 0.6em grey;
-
+    display: flex;
+    flex-direction: column;
     z-index: 999;
+}
 
+.modal-content {
     overflow: auto;
 }
 
@@ -151,6 +154,34 @@ a {
   margin-bottom: 2em;
   text-align: center;
 }
+
+/* success story submissions */
+.submissionBoxButton {
+  border: none;
+  border-radius: 5px;
+  background-color: #9f5cfd;
+  position: relative;
+  left: 40%;
+  width: 20%;
+  height: 50px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.submissionBoxContent {
+  width: 500px;
+  margin: 40px;
+}
+
+#submissionBoxHeader {
+  text-align: center;
+  font-size: 20px;
+}
+
+#submissionBoxInputs {
+  font-size: 18px;
+}
+
 
 input {
   border-radius: 0.4em;
