@@ -1,93 +1,107 @@
-CREATE TABLE `purrfect_match`.`success_stories` (
-  `id` BIGINT(255) NOT NULL AUTO_INCREMENT,
-  `image` VARCHAR(256) NOT NULL,
-  `name` VARCHAR(50) NOT NULL,
-  `birthday` DATETIME NULL,
-  `breed` INT NOT NULL,
-  `date_adopted` DATETIME NOT NULL,
-  `gender` ENUM('male', 'female', 'other') NOT NULL,
-  `message` VARCHAR(1000) NOT NULL,
+CREATE TABLE `breeds` (
+  `id` int(11) NOT NULL,
+  `breed_name` varchar(100) NOT NULL,
+  `species` enum('dog','cat','other') DEFAULT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`breed`) REFERENCES breeds (‘breed_id’),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+  UNIQUE KEY `breed_name_UNIQUE` (`breed_name`)
+);
 
-CREATE TABLE `purrfect_match`.`recently_adopted` (
-  `id` BIGINT(255) NOT NULL AUTO_INCREMENT,
-  `image` VARCHAR(256) NOT NULL,
-  `name` VARCHAR(50) NOT NULL,
-  `birthday` DATETIME NULL,
-  `breed` INT NOT NULL,
-  `date_adopted` DATETIME NULL,
-  `gender` ENUM('male', 'female', 'other') NOT NULL,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`breed`) REFERENCES breeds (‘breed_id’),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
-
-CREATE TABLE `purrfect_match`.`shelter_accounts` (
-  `id` BIGINT(255) NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(256) NOT NULL,
-  `password_hash` VARCHAR(256) NOT NULL,
-  `password_salt` VARCHAR(256) NOT NULL,
-  `shelter_name` VARCHAR(256) NOT NULL,
-  `street` VARCHAR(256) NOT NULL,
-  `city` VARCHAR(256) NOT NULL,
-  `state` ENUM('AK','AL','AR','AZ',
+CREATE TABLE `shelter_accounts` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `email` varchar(256) NOT NULL,
+  `password_hash` varchar(256) NOT NULL,
+  `password_salt` varchar(256) NOT NULL,
+  `shelter_name` varchar(256) NOT NULL,
+  `street` varchar(256) NOT NULL,
+  `city` varchar(256) NOT NULL,
+  `state` enum('AK','AL','AR','AZ',
 	       'CA','CO','CT','DE',
 	       'FL','GA','HI','IA',
-       	       'ID','IL','IN','KS',
-	       'KY','LA','MA','MD',
-	       'ME','MI','MN','MO',
-	       'MS','MT','NC','ND',
-	       'NE','NH','NJ','NM',
-	       'NV','NY','OH','OK',
-	       'OR','PA','RI','SC',
-	       'SD','TN','TX','UT',
-	       'VA','VT','WA','WI',
-	       'WV','WY') NOT NULL,
-  `zip_code` INT NOT NULL,
-  `phone_number` VARCHAR(11) NOT NULL,
-  `website` VARCHAR(256) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+               'ID','IL','IN','KS',
+               'KY','LA','MA','MD',
+               'ME','MI','MN','MO',
+               'MS','MT','NC','ND',
+               'NE','NH','NJ','NM',
+               'NV','NY','OH','OK',
+               'OR','PA','RI','SC',
+               'SD','TN','TX','UT',
+               'VA','VT','WA','WI',
+               'WV','WY') NOT NULL,
+  `zip_code` int(11) NOT NULL,
+  `phone_number` varchar(11) NOT NULL,
+  `website` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
-CREATE TABLE `purrfect_match`.`dogs` (
-  `id` BIGINT(255) NOT NULL AUTO_INCREMENT,
-  `image` VARCHAR(256) NOT NULL,
-  `name` VARCHAR(50) NOT NULL,
-  `birthday` DATETIME NULL,
-  `breed` INT NOT NULL,
-  `date_adopted` DATETIME NOT NULL,
-  `gender` ENUM('male', 'female', 'other') NOT NULL,
-  `fur_length` ENUM('no hair', 'short', 'medium', 'long') NOT NULL,
-  `bio` VARCHAR(1000) NOT NULL,
-  `shelter_id` BIGINT(255) NOT NULL,
-  `date_arrived` DATETIME NOT NULL,
-  `euthanized_date` DATETIME NULL,
-  `spayed/neutured` BOOLEAN NOT NULL,
-  `size` ENUM('small', 'medium', 'large', 'x-large') NOT NULL,
+CREATE TABLE `recently_adopted` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `image` varchar(256) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `breed` int(11) NOT NULL,
+  `date_adopted` datetime DEFAULT NULL,
+  `gender` enum('male','female','other') NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`shelter_id`) REFERENCES shelter_accounts (‘id’),
-  FOREIGN KEY (`breed`) REFERENCES breeds (‘breed_id’),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+  KEY `breed` (`breed`),
+  CONSTRAINT `recently_adopted_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+); 
 
-CREATE TABLE `purrfect_match`.`cats` (
-  `id` BIGINT(255) NOT NULL AUTO_INCREMENT,
-  `image` VARCHAR(256) NOT NULL,
-  `name` VARCHAR(50) NOT NULL,
-  `birthday` DATETIME NULL,
-  `breed` INT NOT NULL,
-  `date_adopted` DATETIME NOT NULL,
-  `gender` ENUM('male', 'female', 'other') NOT NULL,
-  `fur_length` ENUM('no hair', 'short', 'medium', 'long') NOT NULL,
-  `bio` VARCHAR(1000) NOT NULL,
-  `shelter_id` BIGINT(255) NOT NULL,
-  `date_arrived` DATETIME NOT NULL,
-  `euthanized_date` DATETIME NULL,
-  `spayed/neutured` BOOLEAN NOT NULL,
+CREATE TABLE `success_stories` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `image` varchar(256) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `breed` int(11) NOT NULL,
+  `date_adopted` datetime NOT NULL,
+  `gender` enum('male','female','other') NOT NULL,
+  `message` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`shelter_id`) REFERENCES shelter_accounts (‘id’),
-  FOREIGN KEY (`breed`) REFERENCES breeds (‘breed_id’),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+  KEY `breed` (`breed`),
+  CONSTRAINT `success_stories_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+);
+
+CREATE TABLE `dogs` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `image` varchar(256) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `breed` int(11) NOT NULL,
+  `date_adopted` datetime NOT NULL,
+  `gender` enum('male','female','other') NOT NULL,
+  `fur_length` enum('no hair','short','medium','long') NOT NULL,
+  `bio` varchar(1000) NOT NULL,
+  `shelter_id` bigint(255) NOT NULL,
+  `date_arrived` datetime NOT NULL,
+  `euthanized_date` datetime DEFAULT NULL,
+  `spayed/neutured` tinyint(1) NOT NULL,
+  `size` enum('small','medium','large','x-large') NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `shelter_id` (`shelter_id`),
+  KEY `breed` (`breed`),
+  CONSTRAINT `dogs_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `dogs_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+);
+
+CREATE TABLE `cats` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `image` varchar(256) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `breed` int(11) NOT NULL,
+  `date_adopted` datetime NOT NULL,
+  `gender` enum('male','female','other') NOT NULL,
+  `fur_length` enum('no hair','short','medium','long') NOT NULL,
+  `bio` varchar(1000) NOT NULL,
+  `shelter_id` bigint(255) NOT NULL,
+  `date_arrived` datetime NOT NULL,
+  `euthanized_date` datetime DEFAULT NULL,
+  `spayed/neutured` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `shelter_id` (`shelter_id`),
+  KEY `breed` (`breed`),
+  CONSTRAINT `cats_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `cats_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+);
 
 CREATE TABLE `other_animals` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
@@ -103,13 +117,8 @@ CREATE TABLE `other_animals` (
   `euthanized_date` datetime DEFAULT NULL,
   `spayed/neutured` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`shelter_id`) REFERENCES shelter_accounts (‘id’),
-  FOREIGN KEY (`breed`) REFERENCES breeds (‘breed_id’),
-  UNIQUE KEY `id_UNIQUE` (`id` ASC) VISIBLE);
-
-CREATE TABLE `breeds` (
-  `breed_id` int(11) NOT NULL,
-  `breed_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`breed_id`),
-  UNIQUE KEY `breed_name_UNIQUE` (`breed_name` ASC) VISIBLE,
-  UNIQUE KEY `breed_id_UNIQUE` (`breed_id` ASC) VISIBLE);
+  KEY `shelter_id` (`shelter_id`),
+  KEY `species` (`species`),
+  CONSTRAINT `other_animals_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `other_animals_species_fk` FOREIGN KEY (`species`) REFERENCES `breeds` (`id`)
+); 
