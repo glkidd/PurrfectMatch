@@ -67,8 +67,8 @@ test("Information %s propogates to page correctly", () => {
     // Input box checks
     checkPropagation(wrapper.find(Input).at(0).props().onchange, "firstName");
     checkPropagation(wrapper.find(Input).at(1).props().onchange, "lastName");
-    checkPropagation(wrapper.find(Input).at(2).props().onchange, "subject");
-    checkPropagation(wrapper.find(Input).at(3).props().onchange, "email");
+    checkPropagation(wrapper.find(Input).at(2).props().onchange, "email");
+    checkPropagation(wrapper.find(Input).at(3).props().onchange, "subject");
 
     // Dropdown check
     checkPropagation(wrapper.find(Select).at(0).props().onchange, "shelterEmployee");

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { SuccessStoryPage } from "SuccessStoryPage";
-import { ContactPage } from 'ContactPage';
+import { ContactPage } from "ContactPage";
 import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";

@@ -38,7 +38,7 @@ exports[`Renders correctly 1`] = `
           </div>
           <div>
             <h1>
-              Other animal
+              Other
             </h1>
             <Card
               image="test-file-stub"
