@@ -10,32 +10,33 @@ exports[`Renders correctly 1`] = `
     <Link
       to="/"
     >
-       
-      <img
-        alt="Purrfect Match Logo"
-        id="logo"
-        src="test-file-stub"
-      />
-       
-    </Link>
-    <Link
-      id="purrfectMatch"
-      to="/"
-    >
-       Purrfect Match 
+      <div>
+        <img
+          alt="Purrfect Match Logo"
+          id="logo"
+          src="test-file-stub"
+        />
+      </div>
+      <div>
+        <p
+          className="purrfectMatch"
+        >
+          Purrfect Match
+        </p>
+      </div>
     </Link>
     <button>
       <Link
         to="success"
       >
-         Success Stories
+        Success Stories
       </Link>
     </button>
     <button>
       <Link
         to="contact"
       >
-         Contact Us
+        Contact Us
       </Link>
     </button>
   </div>
@@ -52,32 +53,33 @@ exports[`Renders correctly 2`] = `
     <Link
       to="/"
     >
-       
-      <img
-        alt="Purrfect Match Logo"
-        id="logo"
-        src="test-file-stub"
-      />
-       
-    </Link>
-    <Link
-      id="purrfectMatch"
-      to="/"
-    >
-       Purrfect Match 
+      <div>
+        <img
+          alt="Purrfect Match Logo"
+          id="logo"
+          src="test-file-stub"
+        />
+      </div>
+      <div>
+        <p
+          className="purrfectMatch"
+        >
+          Purrfect Match
+        </p>
+      </div>
     </Link>
     <button>
       <Link
         to="success"
       >
-         Success Stories
+        Success Stories
       </Link>
     </button>
     <button>
       <Link
         to="contact"
       >
-         Contact Us
+        Contact Us
       </Link>
     </button>
   </div>

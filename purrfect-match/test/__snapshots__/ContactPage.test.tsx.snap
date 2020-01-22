@@ -20,13 +20,23 @@ exports[`Renders correctly 1`] = `
       onchange={[Function]}
       prompt="Last Name:"
     />
-    <Input
+    <Select
       onchange={[Function]}
-      prompt="Subject:"
+      options={
+        Array [
+          "Yes",
+          "No",
+        ]
+      }
+      prompt="Are you a shelter employee?"
     />
     <Input
       onchange={[Function]}
       prompt="Email Address:"
+    />
+    <Input
+      onchange={[Function]}
+      prompt="Subject:"
     />
   </div>
   <div
@@ -45,24 +55,14 @@ exports[`Renders correctly 1`] = `
         Or you can reach us at purrfectmatch@gmail.com
       </p>
     </div>
-    <Select
-      onchange={[Function]}
-      options={
-        Array [
-          "Yes",
-          "No",
-        ]
-      }
-      prompt="Are you a shelter employee?"
-    />
-  </div>
-  <div
-    className="contactBoxes"
-  >
-    <Message
-      onchange={[Function]}
-      prompt="Message:"
-    />
+    <div
+      className="contactBoxes"
+    >
+      <Message
+        onchange={[Function]}
+        prompt="Message:"
+      />
+    </div>
   </div>
   <Send
     onclick={[Function]}
@@ -92,15 +92,26 @@ exports[`Renders correctly 2`] = `
       onchange={[Function]}
       prompt="Last Name:"
     />
-    <Input
-      error="Provide a subject."
+    <Select
+      error="Choose an option."
       onchange={[Function]}
-      prompt="Subject:"
+      options={
+        Array [
+          "Yes",
+          "No",
+        ]
+      }
+      prompt="Are you a shelter employee?"
     />
     <Input
       error="Provide your email."
       onchange={[Function]}
       prompt="Email Address:"
+    />
+    <Input
+      error="Provide a subject."
+      onchange={[Function]}
+      prompt="Subject:"
     />
   </div>
   <div
@@ -119,26 +130,15 @@ exports[`Renders correctly 2`] = `
         Or you can reach us at purrfectmatch@gmail.com
       </p>
     </div>
-    <Select
-      error="Choose an option."
-      onchange={[Function]}
-      options={
-        Array [
-          "Yes",
-          "No",
-        ]
-      }
-      prompt="Are you a shelter employee?"
-    />
-  </div>
-  <div
-    className="contactBoxes"
-  >
-    <Message
-      error="Please write a message."
-      onchange={[Function]}
-      prompt="Message:"
-    />
+    <div
+      className="contactBoxes"
+    >
+      <Message
+        error="Please write a message."
+        onchange={[Function]}
+        prompt="Message:"
+      />
+    </div>
   </div>
   <Send
     onclick={[Function]}
