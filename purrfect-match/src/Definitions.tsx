@@ -1,3 +1,13 @@
+export interface SearchPageResults {
+    name: string;
+    breed: string;
+    age: number;
+    gender: string;
+    bio: string;
+    daysInShelter: number;
+    daysLeft: number;
+};
+
 export interface SuccessStoryInfo {
     image: string;
     name: string;
