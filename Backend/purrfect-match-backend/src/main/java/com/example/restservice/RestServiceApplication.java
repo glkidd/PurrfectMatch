@@ -36,7 +36,8 @@ public class RestServiceApplication implements CommandLineRunner {
         log.info("Creating tables");
 
         jdbcTemplate.execute("DROP TABLE SuccessStory IF EXISTS");
-        jdbcTemplate.execute("CREATE TABLE SuccessStory(" + "id SERIAL, imageName VARCHAR(255), name VARCHAR(255), "
+        jdbcTemplate.execute("CREATE TABLE SuccessStory(" 
+                + "id SERIAL, imageName VARCHAR(255), name VARCHAR(255), "
                 + "age VARCHAR(255), storyText VARCHAR(255), breed VARCHAR(255),"
                 + "gender VARCHAR(255), adoptionDate VARCHAR(255), owner VARCHAR(255))");
 
