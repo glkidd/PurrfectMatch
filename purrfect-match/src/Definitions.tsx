@@ -1,7 +1,7 @@
 export interface SearchPageResults {
     name: string;
     breed: string;
-    age: number;
+    age: string;
     gender: string;
     bio: string;
     daysInShelter: number;

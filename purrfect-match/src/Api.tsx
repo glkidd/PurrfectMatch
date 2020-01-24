@@ -13,43 +13,43 @@ export class Api {
 
 
     // will initialize and either resolve or reject a promise depending on the status code returned by the server
-    public static safeFetch(endpoint: string, method: string, body: JSON) {
+    private static safeFetch = (endpoint: string, method: string, body: JSON) : Promise<Object> => {
         //insert safeFetch function here
         // will use regular "fetch" function, plus BASE_URL
         // since our front end runs on 3000, let's use 3001 for our backend while running locally
         //const BASE_URL = "http://localhost:3001/";
         
-        return Promise; //temporary value, will either reject with an error or resolve with the proper data
+        return Promise.resolve({}); //temporary value, will either reject with an error or resolve with the proper data
     }
 
     // this will be used anytime data needs to be added to the backend (not idempotent)
-    public static post(endpoint: string, body: JSON) {
+    private static post = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, 'POST', body);
     }
      
     // this will be used anytime data needs to be edited (idempotent)
-    public static put(endpoint: string, body: JSON) {
+    private static put = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, 'PUT', body);
     }
      
      // this will be used anytime data needs to be retrieved from the backend (idempotent)
      // body would normally be empty
-    public static get(endpoint: string, body: JSON) {
+    private static get = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, 'GET', body);
     }
      
     // this will be useful when allowing shelters to delete pet profiles later (idempotent)
     // body would normally be empty
-    public static del(endpoint: string, body: JSON) {
+    private static del = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, "DELETE", body);
     }
     
     //should eventually connect up to safeFetch via Api.get
-    public static getSearchResults(filter: string, sort: string) {
+    public static getSearchResults = (filter: Object, sort: string) : Promise<SearchPageResults[]> => {
         //temporary values for sake of front end, but would normally call Api.get --> safeFetch will handle promises
         //would use input filter and sort info for "getting" the search results/will get sorted/filtered info from backend
 
-        const TEMP_RESULTS = [
+        const SEARCH_RESULTS: SearchPageResults[] = [
             {
                 name:"Ollie",
                 breed: "American Shorthair",
@@ -122,7 +122,7 @@ export class Api {
             }
         ];
 
-        return TEMP_RESULTS; // in actuality, will be returning resolve or reject from safeFetch via Api.get
+        return Promise.resolve(SEARCH_RESULTS); // in actuality, will be returning resolve or reject from safeFetch via Api.get
 
     }
 
@@ -214,6 +214,10 @@ export class Api {
         //let fakeApiResult = ALL_RECENTLY_ADOPTED.slice(SUCCESS_STORY_PAGE_SIZE * breakpoint, SUCCESS_STORY_PAGE_SIZE * breakpoint + SUCCESS_STORY_PAGE_SIZE);
         let fakeApiResult = ALL_RECENTLY_ADOPTED;
         return Promise.resolve(fakeApiResult);
+    }
+
+    public static submitSuccessStory = (story: SuccessStoryInfo) : Promise<void> => {
+        return Promise.resolve(); //will connect to Api.post
     }
 
     //should eventually connect up to Api.post
