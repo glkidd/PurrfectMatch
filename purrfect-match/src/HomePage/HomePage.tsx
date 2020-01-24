@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
 import { Card } from './Card';
+import Body from 'HomePage/Body';
 
 
 interface HomePageProps {
@@ -43,6 +44,8 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                         </div>
                     </div>
                 </div>
+                <div className="heroSpacer" />
+                <Body />
             </div>
         );
     }

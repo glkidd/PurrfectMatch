@@ -277,7 +277,7 @@ li {
 
 .Hero {
   background: url('./pictures/wallpaper1.jpg');
-  height: 100vh;
+  height: max(100vh, 50em);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -297,7 +297,7 @@ li {
 }
 
 .heroSpacer {
-  height: calc(100vh - 5em);
+  height: max(calc(100vh - 5em), 45em);
 }
 @keyframes HeroAnimation {
   0% {

@@ -1,0 +1,8 @@
+.body-wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
