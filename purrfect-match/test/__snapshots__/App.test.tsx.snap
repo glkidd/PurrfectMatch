@@ -28,5 +28,6 @@ exports[`Renders correctly 1`] = `
       <HomePage />
     </Route>
   </Switch>
+  <Footer />
 </BrowserRouter>
 `;

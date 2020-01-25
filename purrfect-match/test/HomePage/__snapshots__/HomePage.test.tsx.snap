@@ -48,5 +48,8 @@ exports[`Renders correctly 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="heroSpacer"
+  />
 </div>
 `;

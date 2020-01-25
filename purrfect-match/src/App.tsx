@@ -5,6 +5,7 @@ import { ContactPage } from "ContactPage";
 import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
+import Footer from "Footer/Footer";
 
 interface AppState {
     page: JSX.Element | null;
@@ -18,11 +19,11 @@ export class App extends React.Component<{}, AppState> {
         };
     }
 
-    public render() {       
+    public render() {
         return (
-            <Router>              
-                <NavigationMenu /> 
-                <div className="topBar"/>  
+            <Router>
+                <NavigationMenu />
+                <div className="topBar" />
                 <Switch>
                     <Route path="/contact">
                         <ContactPage />
@@ -37,6 +38,7 @@ export class App extends React.Component<{}, AppState> {
                         <HomePage />
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
         );
     }
