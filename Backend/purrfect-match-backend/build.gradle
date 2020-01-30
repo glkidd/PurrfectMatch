@@ -17,9 +17,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'com.h2database:h2'
 	testCompile 'com.jayway.jsonpath:json-path'
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java'
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+	testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 }
 
 test {
