@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactPage.css';
 import { Input, Select, Message, Send } from './inputBoxes';
-import { Api } from "Api";
+import { Api } from "./Api";
 interface ContactPageProps {
 };
 

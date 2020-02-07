@@ -1,0 +1,18 @@
+.searchElem {
+    color: rgb(159, 92, 253);
+    background: solid;
+    background-color: whitesmoke;
+    border: solid;
+    border-color: rgb(159, 92, 253);
+    border-width: .05em;
+    border-radius: .3em;
+    text-emphasis-color: rgb(159, 92, 253);
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-right: .5em;
+    float: left;
+}
+
+.searchField {
+    margin-top: 0.5em;
+}

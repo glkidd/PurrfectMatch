@@ -1,3 +1,17 @@
+export interface Sorter {
+    risk: boolean,
+    time: boolean,
+    ageAsc: boolean,
+    ageDesc: boolean
+}
+
+export interface Filters {
+    risk: boolean,
+    age: string,
+    gender: string,
+    location: string
+};
+
 export interface SearchPageResults {
     name: string;
     breed: string;
@@ -5,7 +19,7 @@ export interface SearchPageResults {
     gender: string;
     bio: string;
     daysInShelter: number;
-    daysLeft: number;
+    daysLeft: number | undefined;
 };
 
 export interface SuccessStoryInfo {

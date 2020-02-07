@@ -65,7 +65,7 @@ export class Api {
                 age: "3.5 years", gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 5,
-                daysLeft: Infinity
+                daysLeft: undefined
             },
             {
                 name: "Fuzzles",
@@ -100,7 +100,7 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 4,
-                daysLeft: Infinity
+                daysLeft: undefined
             },
             {
                 name: "Socks",
@@ -109,7 +109,7 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 3,
-                daysLeft: Infinity
+                daysLeft: undefined
             },
             {
                 name: "Midnight",
