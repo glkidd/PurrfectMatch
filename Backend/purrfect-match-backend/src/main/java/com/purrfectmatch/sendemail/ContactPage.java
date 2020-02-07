@@ -1,11 +1,9 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.sendemail;
+// package com.purrfectmatch.restservice;
 
-import lombok.Data;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-
-@Data
-@Entity
+@Component
 public class ContactPage {
     private String firstName;
     private String lastName;
