@@ -2,6 +2,8 @@ import React from 'react';
 import './ContactPage.css';
 import { Input, Select, Message, Send } from './inputBoxes';
 import { Api } from "Api";
+import { Modal } from "Modal";
+
 interface ContactPageProps {
 };
 
@@ -12,6 +14,8 @@ interface ContactPageState {
     email: string | undefined;
     shelterEmployee: "Yes" | "No" | "" | undefined;
     message: string | undefined;
+    modalOpen: boolean;
+    modalMessage: string;
 };
 
 const OPTION_ARRAY = ["Yes", "No"];
@@ -27,7 +31,9 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
             subject: undefined,
             email: undefined,
             shelterEmployee: undefined,
-            message: undefined
+            message: undefined,
+            modalOpen: false,
+            modalMessage: ""
         };
     }
 
@@ -52,7 +58,17 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
         if (formValid) {
             // @ts-ignore: Strict null checks, but we know they're non-null from the validation we just did
-            Api.submitContactInfo(this.state.firstName, this.state.lastName, this.state.subject, this.state.email, this.state.shelterEmployee, this.state.message);
+            Api.submitContactInfo(this.state.firstName, this.state.lastName, this.state.subject, this.state.email, this.state.shelterEmployee, this.state.message).then(() => {
+                this.setState({
+                    modalMessage: "Submitted request successfully!",
+                    modalOpen: true
+                });
+            }).catch((error: Error) => {
+                this.setState({
+                    modalMessage: "Error in submission: " + error.message,
+                    modalOpen: true
+                });
+            });
         }
     }
 
@@ -112,7 +128,8 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                         />
                     </div>
                 </div>
-                <Send onclick={this.handleSubmit} />
+                <Send className="contactPageButton" onclick={this.handleSubmit} />
+                <Modal display={this.state.modalOpen} onClose={() => { this.setState({ modalOpen: false }) }}><div className="modalSpacer">{this.state.modalMessage}</div></Modal>
             </div>
         );
     }
