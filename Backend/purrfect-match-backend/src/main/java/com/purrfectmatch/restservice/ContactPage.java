@@ -1,7 +1,11 @@
-package com.example.restservice;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+package com.purrfectmatch.restservice;
 
-@EntityScan
+import lombok.Data;
+
+import javax.persistence.Entity;
+
+@Data
+@Entity
 public class ContactPage {
     private String firstName;
     private String lastName;
@@ -10,6 +14,8 @@ public class ContactPage {
     private boolean shelterEmployee;
     private String message;
 
+    ContactPage() {}
+    
     public ContactPage(String firstName, String lastName, String subject, 
         String email, boolean shelterEmployee, String message) {
         this.firstName = firstName;
@@ -20,21 +26,15 @@ public class ContactPage {
         this.message = message;
     }
 
-    public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return this.firstName + " " + this.lastName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		String[] parts = name.split(" ");
+		this.firstName = parts[0];
+		this.lastName = parts[1];
 	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-    }
     
     public String getSubject() {
 		return subject;
@@ -71,8 +71,8 @@ public class ContactPage {
     @Override
     public String toString() {
         return "ContactInfo {" +
-            ", firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
+            ", firstName='" + firstName  + '\'' +
+            ", lastName='" + '\'' +
             ", subject='" + subject + '\'' +
             ", email='" + email + '\'' +
             ", shelterEmployee='" + shelterEmployee + '\'' +
