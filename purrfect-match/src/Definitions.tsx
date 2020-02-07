@@ -20,6 +20,7 @@ export interface SearchPageResults {
     bio: string;
     daysInShelter: number;
     daysLeft: number | undefined;
+    photo: string;
 };
 
 export interface SuccessStoryInfo {

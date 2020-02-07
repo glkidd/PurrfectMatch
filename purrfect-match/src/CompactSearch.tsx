@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal } from "./Modal";
 import { Redirect } from "react-router-dom";
-import cat from "./pictures/cat5.jpg";
 
 interface compactSearchProps {
     name: string;
@@ -10,6 +9,7 @@ interface compactSearchProps {
     gender: string;
     bio: string;
     daysLeft: number | undefined;
+    photo: string;
 };
 
 interface compactSearchState {
@@ -30,13 +30,13 @@ export class CompactSearch extends React.Component<compactSearchProps, compactSe
 
         var compactClass = "compactSearch";
         if (this.props.daysLeft) {
-            compactClass = "compactSearchRisk"
+            compactClass += " compactRisk";
         }
         
         return (
             <div>
                 <button className={compactClass} onClick={() => { this.setState({ modalOpen: true }) }}>
-                    <img id="animalImage" src={cat} alt="Image of animal"/>
+                    <img id="animalImage" src={this.props.photo} alt="Image of animal"/>
                     <h1 id="animalName">
                         {this.props.name}
                     </h1>
@@ -49,7 +49,7 @@ export class CompactSearch extends React.Component<compactSearchProps, compactSe
                 </button>
                 
                 <Modal display={this.state.modalOpen} onClose={() => this.setState({ modalOpen: false })}>
-                    <img id="successStoryPageImage" src={cat} alt="Cat"/> 
+                    <img id="successStoryPageImage" src={this.props.photo} alt="Cat"/> 
                     <div id="successStoryPageText">
                         <h1 id="successStoryPageHeader"> 
                             Name: {this.props.name}

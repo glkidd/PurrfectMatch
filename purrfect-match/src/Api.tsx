@@ -57,7 +57,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 1,
-                daysLeft: 30
+                daysLeft: 30,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Meowasaurus",
@@ -65,7 +66,8 @@ export class Api {
                 age: "3.5 years", gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 5,
-                daysLeft: undefined
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Fuzzles",
@@ -73,7 +75,8 @@ export class Api {
                 age: "4 years", gender:"Female",
                 bio:"insert bio here",
                 daysInShelter: 36,
-                daysLeft: 20
+                daysLeft: 20,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Mr. Meef",
@@ -82,7 +85,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 25,
-                daysLeft: 40
+                daysLeft: 40,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Poof",
@@ -91,7 +95,8 @@ export class Api {
                 gender: "Female",
                 bio: "insert bio here",
                 daysInShelter: 0,
-                daysLeft: 105
+                daysLeft: 105,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Rex",
@@ -100,7 +105,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 4,
-                daysLeft: undefined
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Socks",
@@ -109,7 +115,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 3,
-                daysLeft: undefined
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Midnight",
@@ -118,7 +125,8 @@ export class Api {
                 gender: "Female",
                 bio: "insert bio here",
                 daysInShelter: 32,
-                daysLeft: 2
+                daysLeft: 2,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             }
         ];
 

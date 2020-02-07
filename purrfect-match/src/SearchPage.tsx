@@ -1,14 +1,10 @@
 import React from 'react';
-import { Modal } from "./Modal";
 import { CompactSearch } from "./CompactSearch"
 import { TipsSideBar } from "./TipsSideBar";
 import { Api } from "./Api";
-import { Redirect } from "react-router-dom";
 import { Select, Input } from './FilterInputs';
 import { SearchPageResults, Filters, Sorter } from './Definitions';
 import { Spinner } from './Spinner';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
-
 
 const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla.";
 
@@ -16,7 +12,7 @@ const AGE_OPTION_ARRAY = ["< 1 year", "1-3 years", "4 years", "any"];
 
 const GENDER_OPTION_ARRAY = ["Male", "Female", "N/A"];
 
-// interfaces = structs
+
 interface SearchPageProps {
 };
 
@@ -167,6 +163,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                     gender={result.gender}
                     bio={result.bio}
                     daysLeft={result.daysLeft}
+                    photo={result.photo}
                     /> </li> ) } ) } 
                 </ul>;
         };

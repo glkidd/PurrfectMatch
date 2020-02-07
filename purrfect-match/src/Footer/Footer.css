@@ -1,0 +1,14 @@
+.column {
+  width: 33%;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.copyrightStamp {
+  margin: 0.5em;
+  text-align: center;
+}

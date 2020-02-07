@@ -43,6 +43,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                         </div>
                     </div>
                 </div>
+                <div className="heroSpacer" />
             </div>
         );
     }
