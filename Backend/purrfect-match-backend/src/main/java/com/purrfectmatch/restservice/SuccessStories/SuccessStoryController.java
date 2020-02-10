@@ -43,8 +43,7 @@ class SuccessStoryController {
   SuccessStory replaceSuccessStory(@RequestBody SuccessStory newSuccessStory, @PathVariable Long id) {
 
     return repository.findById(id).map(successStory -> {
-      successStory.setAge(newSuccessStory.getAge());
-      successStory.setGender(newSuccessStory.getGender());
+      successStory.setImage(newSuccessStory.getImage());
       return repository.save(successStory);
     }).orElseGet(() -> {
       newSuccessStory.setId(id);

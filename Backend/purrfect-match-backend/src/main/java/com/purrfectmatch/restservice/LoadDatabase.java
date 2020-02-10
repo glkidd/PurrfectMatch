@@ -11,12 +11,14 @@ import org.springframework.context.annotation.Configuration;
 class LoadDatabase {
 
   @Bean
-  CommandLineRunner initDatabase(EmployeeRepository employeeRepository, SuccessStoryRepository successStoryRepository) {
+  CommandLineRunner initDatabase(ShelterAccountRepository shelterAccountRepository,
+      SuccessStoryRepository successStoryRepository) {
     return args -> {
-      log.info("Preloading " + successStoryRepository.save(new SuccessStory("Fuzzles", "4")));
-      log.info("Preloading " + successStoryRepository.save(new SuccessStory("Phaedo", "1")));
-      log.info("Preloading " + employeeRepository.save(new Employee("Tim", "Go", "Woods Humane society")));
-      log.info("Preloading " + employeeRepository.save(new Employee("Alex", "Blah", "PET Lovers")));
+      log.info("Preloading " + successStoryRepository.save(new SuccessStory("Fuzzles", "Cute dog")));
+      log.info("Preloading " + successStoryRepository.save(new SuccessStory("Phaedo", "Lovable dog")));
+      log.info(
+          "Preloading " + shelterAccountRepository.save(new ShelterAccount("bob@google.com", "Woods Humane society")));
+      log.info("Preloading " + shelterAccountRepository.save(new ShelterAccount("tim@me.com", "PET Lovers")));
     };
   }
 }
