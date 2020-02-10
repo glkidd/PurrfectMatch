@@ -49,3 +49,5 @@ class Dog {
       this.spayedNeutured = spayedNeutured;
       this.size = size;
    }
+
+}

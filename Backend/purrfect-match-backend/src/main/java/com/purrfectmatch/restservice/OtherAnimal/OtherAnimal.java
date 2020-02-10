@@ -37,3 +37,5 @@ class OtherAnimal {
       this.euthanizeDate = euthanizeDate;
       this.spayedNeutured = spayedNeutured;
    }
+   
+}
