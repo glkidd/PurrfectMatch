@@ -2,6 +2,248 @@
 
 exports[`Snapshot test 1`] = `
 <div>
-  Search and results page.
+  <div
+    className="welcomeMessage"
+  >
+    Find you purrfect cat!
+  </div>
+  <div
+    className="filterHolder"
+  >
+    <ul>
+      <li
+        className="filterText"
+      >
+        Filter:
+      </li>
+      <li>
+        <button
+          className="clicked"
+          onClick={[Function]}
+        >
+          At Risk
+        </button>
+      </li>
+      <li>
+        <Select
+          onchange={[Function]}
+          options={
+            Array [
+              "< 1 year",
+              "1-3 years",
+              "4 years",
+              "any",
+            ]
+          }
+          prompt="Age"
+        />
+      </li>
+      <li>
+        <Select
+          onchange={[Function]}
+          options={
+            Array [
+              "Male",
+              "Female",
+              "N/A",
+            ]
+          }
+          prompt="Gender"
+        />
+      </li>
+      <li>
+        <Input
+          onchange={[Function]}
+          prompt="Location:"
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sortHolder"
+  >
+    <ul>
+      <li
+        className="filterText"
+      >
+        Sort:
+      </li>
+      <li>
+        <button
+          className="unclicked"
+          onClick={[Function]}
+        >
+          Risk Status
+        </button>
+      </li>
+      <li>
+        <button
+          className="unclicked"
+          onClick={[Function]}
+        >
+          Time in Shelter
+        </button>
+      </li>
+      <li>
+        <button
+          className="unclicked"
+          onClick={[Function]}
+        >
+          Age Asc
+        </button>
+      </li>
+      <li>
+        <button
+          className="unclicked"
+          onClick={[Function]}
+        >
+          Age Desc
+        </button>
+      </li>
+    </ul>
+  </div>
+  <br />
+  <div
+    className="successStoryHolder"
+  >
+    <div
+      id="successStories"
+    >
+      <div
+        id="headerOne"
+      >
+        Search Results
+      </div>
+      <ul>
+        <ul>
+           
+          <li>
+             
+            <CompactSearch
+              age="5 years"
+              bio="insert bio here"
+              breed="American Shorthair"
+              daysLeft={30}
+              gender="Male"
+              name="Ollie"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="3.5 years"
+              bio="insert bio here"
+              breed="American Shorthair"
+              gender="Male"
+              name="Meowasaurus"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="4 years"
+              bio="insert bio here"
+              breed="American Shorthair"
+              daysLeft={20}
+              gender="Female"
+              name="Fuzzles"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="5 months"
+              bio="insert bio here"
+              breed="American Shorthair"
+              daysLeft={40}
+              gender="Male"
+              name="Mr. Meef"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="6 years"
+              bio="insert bio here"
+              breed="American Shorthair"
+              daysLeft={105}
+              gender="Female"
+              name="Poof"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="1 year"
+              bio="insert bio here"
+              breed="American Shorthair"
+              gender="Male"
+              name="Rex"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="8 years"
+              bio="insert bio here"
+              breed="American Shorthair"
+              gender="Male"
+              name="Socks"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+          <li>
+             
+            <CompactSearch
+              age="8 months"
+              bio="insert bio here"
+              breed="American Shorthair"
+              daysLeft={2}
+              gender="Female"
+              name="Midnight"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            />
+             
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <div
+      id="tips"
+    >
+      <div
+        id="headerTwo"
+      >
+        Tips and Tricks!
+      </div>
+      <ul>
+        <li>
+          <TipsSideBar
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla."
+            title="What to Know About Cats"
+          />
+        </li>
+        <li>
+          <TipsSideBar
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla."
+            title="You might be interested in..."
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
