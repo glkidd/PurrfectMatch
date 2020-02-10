@@ -44,11 +44,5 @@ class Cat {
       this.spayedNeutured = spayedNeutured;
    }
 
-   @Override
-   public String toString() {
-      return String.format(
-         "Cat[id=%d, imageName='%s', name='%s, '")
-   }
-
 
 }
