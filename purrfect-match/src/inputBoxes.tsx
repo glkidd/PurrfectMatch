@@ -15,7 +15,7 @@ interface optionProps {
 }
 
 interface SubmitProps {
-    className: string | undefined;
+    className?: string | undefined;
     onclick?: () => void;
 }
 
