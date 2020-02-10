@@ -15,9 +15,7 @@ class ShelterAccount {
 	private String passwordHash;
 	private String passwordSalt;
 	private String shelterName;
-	private String street;
-	private String city;
-	private String state;
+	private String address;
 	private int zipCode;
 	private String phoneNumber;
 	private String website;
