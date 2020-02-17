@@ -15,7 +15,9 @@ class ShelterAccount {
 	private String passwordHash;
 	private String passwordSalt;
 	private String shelterName;
-	private String address;
+	public String street;
+	private String city;
+	private String state;
 	private int zipCode;
 	private String phoneNumber;
 	private String website;
@@ -23,6 +25,8 @@ class ShelterAccount {
 	ShelterAccount() {
 	}
 
+	// this is temporary just for testing purposes.
+	// TODO: REMOVE
 	ShelterAccount(String email, String shelterName) {
 		this.email = email;
 		this.shelterName = shelterName;
