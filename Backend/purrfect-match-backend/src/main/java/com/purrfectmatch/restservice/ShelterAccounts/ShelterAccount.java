@@ -15,9 +15,7 @@ class ShelterAccount {
 	private String passwordHash;
 	private String passwordSalt;
 	private String shelterName;
-	public String street;
-	private String city;
-	private String state;
+	private String address;
 	private int zipCode;
 	private String phoneNumber;
 	private String website;
@@ -32,15 +30,13 @@ class ShelterAccount {
 		this.shelterName = shelterName;
 	}
 
-	ShelterAccount(String email, String passwordHash, String passwordSalt, String shelterName, String street, String city,
-			String state, int zipCode, String phoneNumber, String website) {
+	ShelterAccount(String email, String passwordHash, String passwordSalt, String shelterName, String address,
+			int zipCode, String phoneNumber, String website) {
 		this.email = email;
 		this.passwordHash = passwordHash;
 		this.passwordSalt = passwordSalt;
 		this.shelterName = shelterName;
-		this.street = street;
-		this.city = city;
-		this.state = state;
+		this.address = address;
 		this.zipCode = zipCode;
 		this.phoneNumber = phoneNumber;
 		this.website = website;
