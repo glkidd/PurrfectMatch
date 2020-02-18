@@ -13,7 +13,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 
-import com.purrfectmatch.restservice.model.User;
+import com.purrfectmatch.restservice.model.ContactPage;
 
 
 @Service
@@ -30,7 +30,7 @@ public class MailService {
 	}
 
 	
-	public void sendEmail(User user) throws MailException {
+	public void sendEmail(ContactPage user) throws MailException {
 
 		//JavaMailSender Interface allows emails to be sent through Spring Boot
 		//JavaMailSender is extended through the MailSender Interface and contains send() function
@@ -49,7 +49,7 @@ public class MailService {
 	}
 
 	//Function sends an attachment
-	public void sendEmailWithAttachment(User user) throws MailException, MessagingException {
+	public void sendEmailWithAttachment(ContactPage user) throws MailException, MessagingException {
 
 		MimeMessage message = javaMailSender.createMimeMessage();
 

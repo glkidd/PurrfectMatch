@@ -61,7 +61,7 @@ public class ContactPage {
 		this.subject = subject;
     }
     
-    public String getEmail() {
+    public String getEmailAddress() {
         return email;
     }
 

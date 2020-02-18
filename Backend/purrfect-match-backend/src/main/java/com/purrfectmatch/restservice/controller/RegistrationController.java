@@ -7,7 +7,7 @@ import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.purrfectmatch.restservice.model.User;
+import com.purrfectmatch.restservice.model.ContactPage;
 import com.purrfectmatch.restservice.service.MailService;
 
 
@@ -19,7 +19,7 @@ public class RegistrationController {
 	private MailService notificationService;
 
 	@Autowired
-	private User user;
+	private ContactPage user;
 
 	
 	
