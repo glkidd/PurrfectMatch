@@ -1,6 +1,8 @@
 import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
 import { SearchPageResults } from "./Definitions";
+import { ContactPage } from "./Definitions";
+
 
 /*
     This class is used for whenever we need to get data from the server. 

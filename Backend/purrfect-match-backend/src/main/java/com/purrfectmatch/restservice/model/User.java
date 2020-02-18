@@ -2,13 +2,6 @@ package com.purrfectmatch.restservice.model;
 
 import org.springframework.stereotype.Component;
 
-/**
- * Date :July 25,2018
- * 
- * @author MukulJaiswal
- * @version 1.0
- *
- */
 @Component
 public class User {
 

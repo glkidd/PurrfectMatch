@@ -29,6 +29,16 @@ export interface RecentlyAdoptedInfo {
     owner: String;
 };
 
+export interface ContactPage{
+    firstName: string;
+    lastName: string;
+    subject: string;
+    email: string;
+    shelterEmployee:string;
+    message: string;
+
+}
+
 export let SUCCESS_STORY_PAGE_SIZE: number = 10;
 
 export let NUM_RECENTLY_ADOPTED: number = 5;

@@ -13,7 +13,8 @@ public class MailApiApplication {
 
 	
 	public static void main(String[] args) {
-		SpringApplication.run(MailApiApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(MailApiApplication.class, args);
+		
 	}
 }
  

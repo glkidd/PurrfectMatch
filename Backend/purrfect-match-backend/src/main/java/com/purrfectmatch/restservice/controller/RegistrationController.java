@@ -30,9 +30,9 @@ public class RegistrationController {
 
 		//Creating a User with the help of User class that we have declared. 
 		//Sets the First,Last and Email address of the sender.
-		user.setFirstName("AJ");
-		user.setLastName("Jiro");
-		user.setEmailAddress("ajcjjr786@gmail.com"); //Receiver's email address
+		user.setFirstName("John Doe");
+		user.setLastName("John Doe");
+		user.setEmailAddress("purrfectmatch309@gmail.com"); //Receiver's email address
 
 		 //Here we will call sendEmail() for Sending mail to the sender.
 		try {
@@ -43,14 +43,14 @@ public class RegistrationController {
 		return "Congratulations! Your mail has been send to the user.";
 	}
 
-	
+
 	@RequestMapping("send-mail-attachment")
 	public String sendWithAttachment() throws MessagingException {
 
 	
-		user.setFirstName("AJ");
-		user.setLastName("Jiro");
-		user.setEmailAddress("ajcjjr786@gmail.com"); //Receiver's email address
+		user.setFirstName("John Doe");
+		user.setLastName("John Doe");
+		user.setEmailAddress("purrfectmatch309@gmail.com"); //Receiver's email address
 
 	
 		 //Here we will call sendEmailWithAttachment() for Sending mail to the sender that contains an attachment.
