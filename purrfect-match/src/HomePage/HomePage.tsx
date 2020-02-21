@@ -28,16 +28,16 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                             <div className="CardGroup">
                                 <div>
                                     <h1>Dog</h1>
-                                    <Card image={require('../pictures/dog-homepage.jpg')} />
+                                    <Card image={require("../pictures/dog-homepage.jpg")} />
                                 </div>
                                 <div>
 
                                     <h1>Cat</h1>
-                                    <Card image={require('../pictures/cat-homepage.jpg')} />
+                                    <Card image={require("../pictures/cat-homepage.jpg")} />
                                 </div>
                                 <div>
                                     <h1>Other</h1>
-                                    <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                    <Card image={require("../pictures/other-animal-homepage.jpg")} />
                                 </div>
                             </div>
                         </div>
