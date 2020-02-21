@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "*")
 class ShelterAccountController {
 
   private final ShelterAccountRepository repository;
@@ -19,27 +21,19 @@ class ShelterAccountController {
     this.repository = repository;
   }
 
-  // Aggregate root
-
-  @GetMapping("/shelter_accounts")
-  List<ShelterAccount> all() {
-    return repository.findAll();
-  }
-
-  @PostMapping("/shelter_accounts")
+  // TODO: Stub method.
+  @PostMapping("/shelter_accounts/new")
   ShelterAccount newShelterAccount(@RequestBody ShelterAccount newShelterAccount) {
     return repository.save(newShelterAccount);
   }
 
-  // Single item
-
-  @GetMapping("/shelter_accounts/{id}")
-  ShelterAccount one(@PathVariable Long id) {
-
+  @PostMapping("/shelter_accounts/get/{id}")
+  ShelterAccount get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new ShelterAccountNotFoundException(id));
   }
 
-  @PutMapping("/shelter_accounts/{id}")
+  // This is a temporary method. It is incomplete. It is a dummy method.
+  @PostMapping("/shelter_accounts/replace/{id}")
   ShelterAccount replaceShelterAccount(@RequestBody ShelterAccount newShelterAccount, @PathVariable Long id) {
     return repository.findById(id).map(shelterAccount -> {
       shelterAccount.setEmail(newShelterAccount.getEmail());
@@ -50,7 +44,7 @@ class ShelterAccountController {
     });
   }
 
-  @DeleteMapping("/shelter_accounts/{id}")
+  @PostMapping("/shelter_accounts/delete/{id}")
   void deleteShelterAccount(@PathVariable Long id) {
     repository.deleteById(id);
   }

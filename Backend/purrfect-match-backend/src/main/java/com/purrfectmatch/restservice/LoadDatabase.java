@@ -16,9 +16,15 @@ class LoadDatabase {
     return args -> {
       log.info("Preloading " + successStoryRepository.save(new SuccessStory("Fuzzles", "Cute dog")));
       log.info("Preloading " + successStoryRepository.save(new SuccessStory("Phaedo", "Lovable dog")));
-      log.info(
-          "Preloading " + shelterAccountRepository.save(new ShelterAccount("bob@google.com", "Woods Humane society")));
-      log.info("Preloading " + shelterAccountRepository.save(new ShelterAccount("tim@me.com", "PET Lovers")));
+      log.info("Preloading " + shelterAccountRepository.save(new ShelterAccount("bob@google.com", "password", "hjhasjk",
+          "Woods Humane society", "SLO", "Mill Street", "CA", 93405, "4083487777", "www.google.com")));
     };
   }
 }
+
+// shelter account
+/*
+ * email, String passwordHash, String passwordSalt, String shelterName, String
+ * city, String street, String state, int zipCode, String phoneNumber, String
+ * website
+ */

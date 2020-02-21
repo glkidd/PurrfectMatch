@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "*")
 class SuccessStoryController {
 
   private final SuccessStoryRepository repository;
@@ -21,38 +23,21 @@ class SuccessStoryController {
 
   // Aggregate root
 
-  @GetMapping("/success_stories")
+  @PostMapping("/success_stories/all/")
   List<SuccessStory> all() {
     return repository.findAll();
   }
 
-  @PostMapping("/success_stories")
+  @PostMapping("/success_stories/new")
   SuccessStory newSuccessStory(@RequestBody SuccessStory newSuccessStory) {
     return repository.save(newSuccessStory);
   }
 
   // Single item
 
-  @GetMapping("/success_stories/{id}")
-  SuccessStory one(@PathVariable Long id) {
+  @PostMapping("/success_stories/get/{id}")
+  SuccessStory get(@PathVariable Long id) {
 
     return repository.findById(id).orElseThrow(() -> new SuccessStoryNotFoundException(id));
-  }
-
-  @PutMapping("/success_stories/{id}")
-  SuccessStory replaceSuccessStory(@RequestBody SuccessStory newSuccessStory, @PathVariable Long id) {
-
-    return repository.findById(id).map(successStory -> {
-      successStory.setImage(newSuccessStory.getImage());
-      return repository.save(successStory);
-    }).orElseGet(() -> {
-      newSuccessStory.setId(id);
-      return repository.save(newSuccessStory);
-    });
-  }
-
-  @DeleteMapping("/success_stories/{id}")
-  void deleteSuccessStory(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

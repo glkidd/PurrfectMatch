@@ -12,10 +12,10 @@ import java.time.LocalDate;
 class Dog {
 
    private @Id @GeneratedValue Long id;
-   private String imageName, name, bio, shelterLink;
+   private String imageName, name, bio, shelterId;
    private LocalDate bday, dateArrived, euthanizeDate;
-   private int breed; 
-   private Gender gender; 
+   private int breed;
+   private Gender gender;
    private FurLength furLength;
    private boolean spayedNeutured;
    private Size size;
@@ -36,8 +36,8 @@ class Dog {
 
    }
 
-   public Dog(String imageName, String name, LocalDate bday, int breed, Gender gender, FurLength furLength, 
-         String bio, LocalDate dateArrived, LocalDate euthanizeDate, boolean spayedNeutured, Size size, String shelterLink) {
+   public Dog(String imageName, String name, LocalDate bday, int breed, Gender gender, FurLength furLength, String bio,
+         LocalDate dateArrived, LocalDate euthanizeDate, boolean spayedNeutured, Size size, String shelterId) {
       this.imageName = imageName;
       this.name = name;
       this.bday = bday;
@@ -48,7 +48,7 @@ class Dog {
       this.euthanizeDate = euthanizeDate;
       this.spayedNeutured = spayedNeutured;
       this.size = size;
-      this.shelterLink = shelterLink;
+      this.shelterId = shelterId;
    }
 
 }
