@@ -1,15 +1,15 @@
 package com.purrfectmatch.restservice.service;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
+//import javax.mail.MessagingException;
+//import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.FileSystemResource;
+//import org.springframework.core.io.ClassPathResource;
+//import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
+//import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 
@@ -37,27 +37,31 @@ public class MailService {
 		//SimpleMailMessage Object is required because send() function uses object of SimpleMailMessage as a Parameter
 		
 		SimpleMailMessage mail = new SimpleMailMessage();
+		String info ="Name: "+user.getFirstName()+" "+user.getLastName()+"\n"+user.getEmailAddress()+"\n"+"ShelterEmployee: "+ user.getShelterEmployee()+"\n\nMessage: \n"+user.getMessage();
 		
-		mail.setTo(user.getEmailAddress());
-		mail.setSubject("Testing Mail API");
-		mail.setText("Hurray ! You have done that dude...");
-
+		mail.setTo("purrfectmatch309@gmail.com");
+		mail.setSubject(user.getSubject());
+		mail.setText(info);
+		
+		//mail.setText(user.getMessage()+);
 		
 		//This send() contains an Object of SimpleMailMessage as an Parameter
-		
+	
 		javaMailSender.send(mail);
 	}
 
 	//Function sends an attachment
+	/*
 	public void sendEmailWithAttachment(ContactPage user) throws MailException, MessagingException {
 
 		MimeMessage message = javaMailSender.createMimeMessage();
 
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
+		String info ="Name: "+user.getFirstName()+user.getLastName()+"\n"+user.getEmailAddress()+"\n"+"ShelterEmployee:"+ user.getShelterEmployee()+"\nMessage: \n"+user.getMessage();
 
-		helper.setTo(user.getEmailAddress());
-		helper.setSubject("Testing Mail API with Attachment");
-		helper.setText("Please find the attached document below.");
+		helper.setTo("purrfectmatch309@gmail.com");
+		helper.setSubject(user.getSubject());
+		helper.setText(info);
 
 		
 		ClassPathResource classPathResource = new ClassPathResource("Attachment.pdf");
@@ -65,5 +69,6 @@ public class MailService {
 
 		javaMailSender.send(message);
 	}
+	*/
 
 }

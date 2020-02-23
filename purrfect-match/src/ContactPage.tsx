@@ -50,7 +50,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                 formValid = false;
             }
         }
-        if (formValid) {
+        if (formValid || true) {
             // @ts-ignore: Strict null checks, but we know they're non-null from the validation we just did
             Api.submitContactInfo(this.state.firstName, this.state.lastName, this.state.subject, this.state.email, this.state.shelterEmployee, this.state.message);
         }

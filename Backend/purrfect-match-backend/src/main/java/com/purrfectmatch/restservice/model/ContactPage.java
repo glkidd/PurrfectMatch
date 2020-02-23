@@ -9,13 +9,14 @@ public class ContactPage {
     private String lastName;
     private String subject;
     private String email;
-    private boolean shelterEmployee;
+    //TOD:Change boolean to enum
+    private String shelterEmployee;
     private String message;
 
     ContactPage() {}
     
     public ContactPage(String firstName, String lastName, String subject, 
-        String email, boolean shelterEmployee, String message) {
+        String email, String shelterEmployee, String message) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.subject = subject;
@@ -24,23 +25,13 @@ public class ContactPage {
         this.message = message;
     }
 
-	public String getName() {
-		return this.firstName + " " + this.lastName;
-	}
-
-	public void setName(String name) {
-		String[] parts = name.split(" ");
-		this.firstName = parts[0];
-		this.lastName = parts[1];
-    }
-    
+  
     public String getFirstName() {
 		return firstName;
 	}
 
-	public void setFirstName(String name) {
-		String[] parts = name.split(" ");
-		this.firstName = parts[0];
+	public void setFirstName(String name) {;
+		this.firstName = name;
 	}
 
 	public String getLastName() {
@@ -48,8 +39,7 @@ public class ContactPage {
 	}
 
 	public void setLastName(String name) {
-        String[] parts = name.split(" ");
-		this.lastName = parts[1];
+		this.lastName = name;
 		
 	}
     
@@ -69,11 +59,11 @@ public class ContactPage {
         this.email = email;
     }
 
-    public boolean getShelterEmployee() {
+    public String getShelterEmployee() {
         return shelterEmployee;
     }
 
-    public void setShelterEmployee(boolean shelterEmployee) {
+    public void setShelterEmployee(String shelterEmployee) {
         this.shelterEmployee = shelterEmployee;
     }
 

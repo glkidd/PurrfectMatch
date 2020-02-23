@@ -29,7 +29,7 @@ export interface RecentlyAdoptedInfo {
     owner: String;
 };
 
-export interface ContactPage{
+export interface ContactPageInfo {
     firstName: string;
     lastName: string;
     subject: string;

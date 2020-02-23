@@ -1,7 +1,8 @@
-import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
+import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE,ContactPageInfo } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
 import { SearchPageResults } from "./Definitions";
-import { ContactPage } from "./Definitions";
+import axios from 'axios';
+
 
 
 /*
@@ -223,8 +224,44 @@ export class Api {
     }
 
     //should eventually connect up to Api.post
-    public static submitContactInfo = (firstName: string, lastName: string, subject: string, email: string, shelterEmployee: string, message: string): Promise<void> => {
+    public static submitContactInfo = (firstName: string, lastName: string, subject: string, email: string, shelterEmployee: string, message: string): Promise<any> => {
+        
+       return axios({
+            method: 'post',
+            url: 'http://localhost:8080/contact',
+            data: {
+              firstName: 'Finn',
+              lastName: 'Williams',
+              subject: 'Complaint',
+              email: 'ajcjjr@yahoo.com',
+              shelterEmployee: 'no',
+              message: 'Takes in'
+            }
+          }).catch((e)=>{
+              console.log("Hello");
+              console.log(e.message);
+          });
+
+
+          /*
+        axios({
+            method: 'post',
+            url: 'http://localhost:8080/contact',
+            data: {
+              firstName: firstName,
+              lastName: lastName,
+              subject: 'Complaint',
+              email: 'ajcjjr@yahoo.com',
+              shelterEmployee: 'no',
+              message: 'Takes in'
+            }
+          }).catch((e)=>{
+              console.log("Hello");
+              console.log(e.message);
+          });
+          */
+          
         // Normally, we'd actually submit to the backend and resolve or reject the promise based off of the response (was there an error submitting?)
-        return Promise.resolve();
+        //return Promise.resolve();
     }
 }
