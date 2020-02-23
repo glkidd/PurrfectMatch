@@ -65,8 +65,17 @@ exports[`Renders correctly 1`] = `
     </div>
   </div>
   <Send
+    className="contactPageButton"
     onclick={[Function]}
   />
+  <Modal
+    display={false}
+    onClose={[Function]}
+  >
+    <div
+      className="modalSpacer"
+    />
+  </Modal>
 </div>
 `;
 
@@ -141,7 +150,16 @@ exports[`Renders correctly 2`] = `
     </div>
   </div>
   <Send
+    className="contactPageButton"
     onclick={[Function]}
   />
+  <Modal
+    display={false}
+    onClose={[Function]}
+  >
+    <div
+      className="modalSpacer"
+    />
+  </Modal>
 </div>
 `;

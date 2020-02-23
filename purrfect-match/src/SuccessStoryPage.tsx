@@ -14,7 +14,6 @@ interface SuccessStoryPageProps {
 };
 
 interface SuccessStoryPageState {
-    modalOpen: boolean;
     stories: SuccessStoryInfo[] | undefined
     recentAdopt: RecentlyAdoptedInfo[] | undefined; 
 };
@@ -25,7 +24,6 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
         super(props);
 
         this.state = {
-            modalOpen: false,
             stories: undefined,
             recentAdopt: undefined
         };

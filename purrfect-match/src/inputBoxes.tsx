@@ -15,8 +15,10 @@ interface optionProps {
 }
 
 interface SubmitProps {
+    className?: string | undefined;
     onclick?: () => void;
 }
+
 export class Input extends React.Component<inputProps, {}> {
     constructor(props: any) {
         super(props);
@@ -133,7 +135,7 @@ export class Send extends React.Component<SubmitProps, {}> {
     public render() {
         return (
             <div className="inputElem">
-                <button onClick={this.handleSubmit}> 
+                <button onClick={this.handleSubmit} className={this.props.className}> 
                     Submit
                 </button>
             </div>
