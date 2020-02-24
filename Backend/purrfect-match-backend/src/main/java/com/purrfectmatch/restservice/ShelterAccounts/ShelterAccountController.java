@@ -24,12 +24,6 @@ class ShelterAccountController {
     this.repository = repository;
   }
 
-  @GetMapping("/shelter_accounts/all")
-  List<ShelterAccount> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllShelterAccounts(pageNumber, pageSize, sortBy);
-  }
-
   // TODO: Stub method.
   @PostMapping("/shelter_accounts/new")
   ShelterAccount newShelterAccount(@RequestBody ShelterAccount newShelterAccount) {

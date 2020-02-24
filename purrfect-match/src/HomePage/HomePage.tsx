@@ -19,6 +19,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
         };
     }
 
+    // TODO: remove. This is purely for testing purposes.
     private clickHandler = async () => {
         axios({
             method: "post",

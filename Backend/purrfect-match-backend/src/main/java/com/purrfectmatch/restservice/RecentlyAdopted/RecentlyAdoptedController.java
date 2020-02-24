@@ -24,7 +24,7 @@ class RecentlyAdoptedController {
     this.repository = repository;
   }
 
-  @GetMapping("/recently_adopted/all")
+  @PostMapping("/recently_adopted/all")
   List<RecentlyAdopted> all(@RequestParam(defaultValue = "0") Integer pageNumber,
       @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
     return service.getAllRecentlyAdopted(pageNumber, pageSize, sortBy);

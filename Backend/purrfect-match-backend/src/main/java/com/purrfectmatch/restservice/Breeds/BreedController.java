@@ -24,7 +24,7 @@ class BreedController {
     this.repository = repository;
   }
 
-  @GetMapping("/breed/all")
+  @PostMapping("/breed/all")
   List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber,
       @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
     return service.getAllBreeds(pageNumber, pageSize, sortBy);

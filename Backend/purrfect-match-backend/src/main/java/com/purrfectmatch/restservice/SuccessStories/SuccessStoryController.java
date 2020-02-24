@@ -28,7 +28,7 @@ class SuccessStoryController {
 
   // Aggregate root
 
-  @GetMapping("/success_stories/all")
+  @PostMapping("/success_stories/all")
   List<SuccessStory> all(@RequestParam(defaultValue = "0") Integer pageNumber,
       @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
     return service.getAllSuccessStories(pageNumber, pageSize, sortBy);
