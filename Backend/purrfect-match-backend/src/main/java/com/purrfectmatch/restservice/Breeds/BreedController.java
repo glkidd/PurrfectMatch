@@ -14,35 +14,35 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins = "*")
-class RecentlyAdoptedController {
+class BreedController {
   @Autowired
-  RecentlyAdoptedService service;
+  BreedService service;
 
-  private final RecentlyAdoptedRepository repository;
+  private final BreedRepository repository;
 
-  RecentlyAdoptedController(RecentlyAdoptedRepository repository) {
+  BreedController(BreedRepository repository) {
     this.repository = repository;
   }
 
-  @GetMapping("/recently_adopted/all")
-  List<RecentlyAdopted> all(@RequestParam(defaultValue = "0") Integer pageNumber,
+  @GetMapping("/breed/all")
+  List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber,
       @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllRecentlyAdopted(pageNumber, pageSize, sortBy);
+    return service.getAllBreeds(pageNumber, pageSize, sortBy);
   }
 
   // TODO: Stub method.
-  @PostMapping("/recently_adopted/new")
-  RecentlyAdopted newRecentlyAdoptedPet(@RequestBody RecentlyAdopted newRecentlyAdopted) {
-    return repository.save(newRecentlyAdopted);
+  @PostMapping("/breed/new")
+  Breed newRecentlyAdoptedPet(@RequestBody Breed newBreed) {
+    return repository.save(newBreed);
   }
 
-  @PostMapping("/recently_adopted/get/{id}")
-  RecentlyAdopted get(@PathVariable Long id) {
-    return repository.findById(id).orElseThrow(() -> new RecentlyAdoptedNotFoundException(id));
+  @PostMapping("/breed/get/{id}")
+  Breed get(@PathVariable Long id) {
+    return repository.findById(id).orElseThrow(() -> new BreedNotFoundException(id));
   }
 
-  @PostMapping("/recently_adopted/delete/{id}")
-  void deleteRecentlyAdopted(@PathVariable Long id) {
+  @PostMapping("/breed/delete/{id}")
+  void deleteBreed(@PathVariable Long id) {
     repository.deleteById(id);
   }
 }

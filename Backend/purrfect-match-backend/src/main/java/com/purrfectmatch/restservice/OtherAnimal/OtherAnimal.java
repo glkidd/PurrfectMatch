@@ -1,26 +1,23 @@
 package com.purrfectmatch.restservice;
 
 import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.purrfectmatch.restservice.Gender;
 import java.time.LocalDate;
 
 @Data
 @Entity
 class OtherAnimal {
 
-   private @Id @GeneratedValue Long id;
+   private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
    private String imageName, name, bio, shelterId;
    private LocalDate bday, dateArrived, euthanizeDate;
    private int species;
    private Gender gender;
    private boolean spayedNeutured;
-
-   private enum Gender {
-      MALE, FEMALE, OTHER
-   };
 
    public OtherAnimal() {
 

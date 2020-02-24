@@ -1,31 +1,55 @@
 package com.purrfectmatch.restservice;
 
 import lombok.Data;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import com.purrfectmatch.restservice.FurLength;
+import com.purrfectmatch.restservice.Gender;
 import java.time.LocalDate;
 
 @Data
 @Entity
+@Table(name = "cats")
 class Cat {
+   @Column(name = "id")
+   private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
-   private @Id @GeneratedValue Long id;
-   private String imageName, name, bio, shelterId;
-   private LocalDate bday, dateArrived, euthanizeDate;
+   @Column(name = "image", nullable = false)
+   private String imageName;
+
+   @Column(name = "name")
+   private String name;
+
+   @Column(name = "bio")
+   private String bio;
+
+   @Column(name = "shelter_id")
+   private String shelterId;
+
+   @Column(name = "birthday")
+   private LocalDate bday;
+
+   @Column(name = "date_arrived")
+   private LocalDate dateArrived;
+
+   @Column(name = "euthanized_date")
+   private LocalDate euthanizeDate;
+
+   @Column(name = "breed")
    private int breed;
+
+   @Column(name = "gender")
    private Gender gender;
+
+   @Column(name = "fur_length")
    private FurLength furLength;
+
+   @Column(name = "spayed/neutured")
    private boolean spayedNeutured;
-
-   private enum Gender {
-      MALE, FEMALE, OTHER
-   };
-
-   private enum FurLength {
-      NOHAIR, SHORT, MEDIUM, LONG
-   };
 
    public Cat() {
 

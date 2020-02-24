@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 @Entity
 class Dog {
 
-   private @Id @GeneratedValue Long id;
+   private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
    private String imageName, name, bio, shelterId;
    private LocalDate bday, dateArrived, euthanizeDate;
    private int breed;

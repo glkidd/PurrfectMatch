@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,25 +14,35 @@ import javax.persistence.Table;
 @Table(name = "shelter_accounts")
 class ShelterAccount {
 	@Column(name = "id")
-	private @Id @GeneratedValue Long id;
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
+
 	@Column(name = "email")
 	private String email;
+
 	@Column(name = "password_hash")
 	private String passwordHash;
+
 	@Column(name = "password_salt")
 	private String passwordSalt;
+
 	@Column(name = "shelter_name")
 	private String shelterName;
+
 	@Column(name = "city")
 	private String city;
+
 	@Column(name = "street")
 	private String street;
+
 	@Column(name = "state")
 	private String state;
+
 	@Column(name = "zip_code")
 	private int zipCode;
+
 	@Column(name = "phone_number")
 	private String phoneNumber;
+
 	@Column(name = "website")
 	private String website;
 
