@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @CrossOrigin(origins = "*")
 class ShelterAccountController {
-  @Autowired
-  ShelterAccountService service;
-
   private final ShelterAccountRepository repository;
 
   ShelterAccountController(ShelterAccountRepository repository) {
