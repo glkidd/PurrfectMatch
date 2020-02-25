@@ -23,38 +23,35 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 @SpringBootApplication
 
 public class RestServiceApplication implements CommandLineRunner {
-    private static final Logger log = LoggerFactory.getLogger(RestServiceApplication.class);
+        private static final Logger log = LoggerFactory.getLogger(RestServiceApplication.class);
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+        @Autowired
+        JdbcTemplate jdbcTemplate;
 
-    
-    public static void main(String[] args) {
-        ConfigurableApplicationContext app = SpringApplication.run(RestServiceApplication.class, args);
-       
-    }
+        public static void main(String[] args) {
+                ConfigurableApplicationContext app = SpringApplication.run(RestServiceApplication.class, args);
 
-    @Override
-    public void run(String... args) throws Exception {
-        log.info("Creating tables");
+        }
 
-        jdbcTemplate.execute("DROP TABLE SuccessStory IF EXISTS");
-        jdbcTemplate.execute("CREATE TABLE SuccessStory(" 
-                + "id SERIAL, imageName VARCHAR(255), name VARCHAR(255), "
-                + "age VARCHAR(255), storyText VARCHAR(255), breed VARCHAR(255),"
-                + "gender VARCHAR(255), adoptionDate VARCHAR(255), owner VARCHAR(255))");
+        @Override
+        public void run(String... args) throws Exception {
+                log.info("Creating tables");
 
-        List<Object[]> successStories = new ArrayList<>();
+                jdbcTemplate.execute("DROP TABLE SuccessStory IF EXISTS");
+                jdbcTemplate.execute("CREATE TABLE SuccessStory("
+                                + "id SERIAL, imageName VARCHAR(255), name VARCHAR(255), "
+                                + "age VARCHAR(255), storyText VARCHAR(255), breed VARCHAR(255),"
+                                + "gender VARCHAR(255), adoptionDate VARCHAR(255), owner VARCHAR(255))");
 
-        Object[] obj = new Object[] { "1", "cat.jpg", "Fluffles", "4", "Cute cat with a personality.", "Persian", "M",
-                "10-24-2016", "Bob" };
-        successStories.add(obj);
+                List<Object[]> successStories = new ArrayList<>();
 
-        // Uses JdbcTemplate's batchUpdate operation to bulk load data
-        jdbcTemplate.update(
-                "INSERT INTO SuccessStory(id, imageName, name, "
-                        + "age, storyText, breed, gender, adoptionDate, owner) VALUES (?,?,?,?,?,?,?,?,?)",
-                successStories.get(0));
-    }
+                Object[] obj = new Object[] { "1", "cat.jpg", "Fluffles", "4", "Cute cat with a personality.",
+                                "Persian", "M", "10-24-2016", "Bob" };
+                successStories.add(obj);
+
+                // Uses JdbcTemplate's batchUpdate operation to bulk load data
+                jdbcTemplate.update("INSERT INTO SuccessStory(id, imageName, name, "
+                                + "age, storyText, breed, gender, adoptionDate, owner) VALUES (?,?,?,?,?,?,?,?,?)",
+                                successStories.get(0));
+        }
 }
-

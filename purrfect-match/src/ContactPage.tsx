@@ -3,7 +3,7 @@ import './ContactPage.css';
 import { Input, Select, Message, Send } from './inputBoxes';
 import { Api } from "Api";
 import { Modal } from "Modal";
-import { string } from 'prop-types';
+
 
 
 

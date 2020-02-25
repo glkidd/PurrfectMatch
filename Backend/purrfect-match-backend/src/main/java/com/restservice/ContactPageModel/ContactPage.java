@@ -1,4 +1,4 @@
-package com.restservice.model;
+package com.restservice.ContactPageModel;
 
 import org.springframework.stereotype.Component;
 
@@ -11,15 +11,11 @@ public class ContactPage {
     private String shelterEmployee;
     private String message;
 
-    public enum shelterEmployees {
-        Yes,
-        No,
+    ContactPage() {
     }
 
-    ContactPage() {}
-    
-    public ContactPage(String firstName, String lastName, String subject, 
-        String email, String shelterEmployee, String message) {
+    public ContactPage(String firstName, String lastName, String subject, String email, String shelterEmployee,
+            String message) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.subject = subject;
@@ -28,32 +24,32 @@ public class ContactPage {
         this.message = message;
     }
 
-  
     public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String name) {;
-		this.firstName = name;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String name) {
-		this.lastName = name;
-		
-	}
-    
-    public String getSubject() {
-		return subject;
-	}
-
-	public void setSubject(String subject) {
-		this.subject = subject;
+        return firstName;
     }
-    
+
+    public void setFirstName(String name) {
+        ;
+        this.firstName = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String name) {
+        this.lastName = name;
+
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
     public String getEmailAddress() {
         return email;
     }
@@ -80,13 +76,8 @@ public class ContactPage {
 
     @Override
     public String toString() {
-        return "ContactInfo {" +
-            ", firstName='" + firstName  + '\'' +
-            ", lastName='" + '\'' +
-            ", subject='" + subject + '\'' +
-            ", email='" + email + '\'' +
-            ", shelterEmployee='" + shelterEmployee + '\'' +
-            ", message='" + message + '\'' +
-            '}';
+        return "ContactInfo {" + ", firstName='" + firstName + '\'' + ", lastName='" + '\'' + ", subject='" + subject
+                + '\'' + ", email='" + email + '\'' + ", shelterEmployee='" + shelterEmployee + '\'' + ", message='"
+                + message + '\'' + '}';
     }
 }
