@@ -3,6 +3,9 @@ import './ContactPage.css';
 import { Input, Select, Message, Send } from './inputBoxes';
 import { Api } from "Api";
 import { Modal } from "Modal";
+import { string } from 'prop-types';
+
+
 
 interface ContactPageProps {
 };
@@ -47,6 +50,15 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
             return this.state[field] != "";
         }
     }
+    
+  
+
+    validateEmail = (email:string)  => {
+        var re = /^(([^<>()[]\\.,;:\s@\"]+(\.[^<>()[]\\.,;:\s@\"]+)*)|(\".+\"))@(([[0-9]{1,3}\‌​.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
+        return re.test(email); 
+   }
+  
+
 
     handleSubmit = ()  => {
         let formValid = true;
@@ -56,13 +68,23 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                 formValid = false;
             }
         }
-        if (formValid || true) {
+        if (formValid) {
             // @ts-ignore: Strict null checks, but we know they're non-null from the validation we just did
             Api.submitContactInfo(this.state.firstName, this.state.lastName, this.state.subject, this.state.email, this.state.shelterEmployee, this.state.message).then(() => {
                 this.setState({
                     modalMessage: "Submitted request successfully!",
                     modalOpen: true
                 });
+             
+                if (this.validateEmail){
+                    this.setState({
+                        modalMessage: "Please submit a valid email!",
+                        modalOpen: true
+                });
+            }
+
+          
+
             }).catch((error: Error) => {
                 this.setState({
                     modalMessage: "Error in submission: " + error.message,
@@ -72,13 +94,21 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
     }
 
+
+
+
+
+
+
+
     checkField = (fieldVal: string | undefined, error: string): string | undefined => {
         if (fieldVal == "") {
             return error;
         }
         return undefined;
     }
-
+   
+    
     public render() {
         return (
             <div className="contactPage">
@@ -102,7 +132,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     />
                     <Input
                         prompt="Email Address:"
-                        error={this.checkField(this.state.email, "Provide your email.")}
+                        error={this.checkField(this.state.email, "Provide a valid email")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input
