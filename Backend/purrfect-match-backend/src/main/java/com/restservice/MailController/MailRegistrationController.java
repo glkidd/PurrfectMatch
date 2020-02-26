@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 import com.restservice.ContactPageModel.ContactPage;
 import com.restservice.MailService.MailService;
 
@@ -19,13 +21,13 @@ public class MailRegistrationController {
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/contact")
-	public String send(@RequestBody ContactPage contact) {
-
+	public String send(@RequestBody @Valid ContactPage contact) {
 		try {
 			notificationService.sendEmail(contact);
+			return "Congratulations! Your mail has been send to the user.";
 		} catch (MailException mailException) {
 			System.out.println(mailException);
+			return "Email could not be sent";
 		}
-		return "Congratulations! Your mail has been send to the user.";
 	}
 }

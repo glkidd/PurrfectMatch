@@ -2,6 +2,7 @@ package com.restservice.ContactPageModel;
 
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class ContactPage {
     private String firstName;
@@ -50,11 +51,11 @@ public class ContactPage {
         this.subject = subject;
     }
 
-    public String getEmailAddress() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmailAddress(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -76,8 +77,9 @@ public class ContactPage {
 
     @Override
     public String toString() {
-        return "ContactInfo {" + ", firstName='" + firstName + '\'' + ", lastName='" + '\'' + ", subject='" + subject
-                + '\'' + ", email='" + email + '\'' + ", shelterEmployee='" + shelterEmployee + '\'' + ", message='"
-                + message + '\'' + '}';
+
+        return String.format("First Name:%s\nLastName:%s \nEmail:%s\nShelterEmployee:%s\nMessage:%s",firstName,lastName,email,shelterEmployee,message);
+       
+        
     }
 }

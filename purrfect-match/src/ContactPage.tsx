@@ -39,7 +39,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
             modalMessage: ""
         };
     }
-
+    
     fillAndValidateField = (field: keyof ContactPageState): boolean => {
         if (this.state[field] === undefined) {
             this.setState({
@@ -52,13 +52,6 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
     }
     
   
-
-    validateEmail = (email:string)  => {
-        var re = /^(([^<>()[]\\.,;:\s@\"]+(\.[^<>()[]\\.,;:\s@\"]+)*)|(\".+\"))@(([[0-9]{1,3}\‌​.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
-        return re.test(email); 
-   }
-  
-
 
     handleSubmit = ()  => {
         let formValid = true;
@@ -76,15 +69,6 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     modalOpen: true
                 });
              
-                if (this.validateEmail){
-                    this.setState({
-                        modalMessage: "Please submit a valid email!",
-                        modalOpen: true
-                });
-            }
-
-          
-
             }).catch((error: Error) => {
                 this.setState({
                     modalMessage: "Error in submission: " + error.message,
@@ -94,20 +78,12 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
     }
 
-
-
-
-
-
-
-
     checkField = (fieldVal: string | undefined, error: string): string | undefined => {
         if (fieldVal == "") {
             return error;
         }
         return undefined;
     }
-   
     
     public render() {
         return (
