@@ -1,5 +1,5 @@
 package com.purrfectmatch.restservice;
 
 public enum Species {
-  dog, cat, other
+  DOG, CAT, OTHER
 };

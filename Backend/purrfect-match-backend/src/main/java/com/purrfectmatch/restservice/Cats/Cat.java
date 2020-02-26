@@ -28,7 +28,7 @@ class Cat {
    private String bio;
 
    @Column(name = "shelter_id")
-   private String shelterId;
+   private long shelterId;
 
    @Column(name = "birthday")
    private LocalDate bday;
@@ -56,7 +56,7 @@ class Cat {
    }
 
    public Cat(String imageName, String name, LocalDate bday, int breed, Gender gender, FurLength furLength, String bio,
-         LocalDate dateArrived, LocalDate euthanizeDate, boolean spayedNeutured, String shelterId) {
+         LocalDate dateArrived, LocalDate euthanizeDate, boolean spayedNeutured, long shelterId) {
       this.imageName = imageName;
       this.name = name;
       this.bday = bday;
