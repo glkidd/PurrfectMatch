@@ -21,6 +21,7 @@ class SuccessStoryController {
   SuccessStoryService service;
 
   private final SuccessStoryRepository repository;
+  private Integer pageSize;
 
   SuccessStoryController(SuccessStoryRepository repository) {
     this.repository = repository;
@@ -29,9 +30,8 @@ class SuccessStoryController {
   // Aggregate root
 
   @PostMapping("/success_stories/all")
-  List<SuccessStory> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllSuccessStories(pageNumber, pageSize, sortBy);
+  List<SuccessStory> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllSuccessStories(pageNumber, pageSize);
   }
 
   @PostMapping("/success_stories/new")
@@ -43,7 +43,6 @@ class SuccessStoryController {
 
   @PostMapping("/success_stories/get/{id}")
   SuccessStory get(@PathVariable Long id) {
-
     return repository.findById(id).orElseThrow(() -> new SuccessStoryNotFoundException(id));
   }
 }

@@ -19,30 +19,20 @@ class BreedController {
   BreedService service;
 
   private final BreedRepository repository;
+  private Integer pageSize;
 
   BreedController(BreedRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   @PostMapping("/breed/all")
-  List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllBreeds(pageNumber, pageSize, sortBy);
-  }
-
-  // TODO: Stub method.
-  @PostMapping("/breed/new")
-  Breed newRecentlyAdoptedPet(@RequestBody Breed newBreed) {
-    return repository.save(newBreed);
+  List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllBreeds(pageNumber, pageSize);
   }
 
   @PostMapping("/breed/get/{id}")
   Breed get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new BreedNotFoundException(id));
-  }
-
-  @PostMapping("/breed/delete/{id}")
-  void deleteBreed(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

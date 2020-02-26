@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import com.purrfectmatch.restservice.FurLength;
 import com.purrfectmatch.restservice.Gender;
 import com.purrfectmatch.restservice.Size;
@@ -41,7 +42,7 @@ class Dog {
 
    @Column(name = "date_arrived")
    private LocalDate dateArrived;
-   
+
    @Column(name = "shelter_id")
    private long shelterId;
 

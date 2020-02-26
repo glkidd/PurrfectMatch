@@ -13,8 +13,8 @@ public class DogService {
   @Autowired
   DogRepository repository;
 
-  public List<Dog> getAllDogs(Integer pageNumber, Integer pageSize, String sortBy) {
-    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy));
+  public List<Dog> getAllDogs(Integer pageNumber, Integer pageSize) {
+    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
     Page<Dog> pagedResult = repository.findAll(paging);
 

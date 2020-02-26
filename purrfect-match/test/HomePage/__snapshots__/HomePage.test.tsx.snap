@@ -19,6 +19,7 @@ exports[`Renders correctly 1`] = `
         </h2>
         <div
           className="CardGroup"
+          onClick={[Function]}
         >
           <div>
             <h1>

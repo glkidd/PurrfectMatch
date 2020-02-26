@@ -19,15 +19,16 @@ class DogController {
   DogService service;
 
   private final DogRepository repository;
+  private Integer pageSize;
 
   DogController(DogRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   @PostMapping("/dog/all")
-  List<Dog> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllDogs(pageNumber, pageSize, sortBy);
+  List<Dog> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllDogs(pageNumber, pageSize);
   }
 
   // TODO: Stub method.

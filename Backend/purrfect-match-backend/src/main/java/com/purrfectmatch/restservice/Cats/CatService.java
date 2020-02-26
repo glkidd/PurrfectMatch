@@ -13,8 +13,8 @@ public class CatService {
   @Autowired
   CatRepository repository;
 
-  public List<Cat> getAllCats(Integer pageNumber, Integer pageSize, String sortBy) {
-    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy));
+  public List<Cat> getAllCats(Integer pageNumber, Integer pageSize) {
+    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
     Page<Cat> pagedResult = repository.findAll(paging);
 

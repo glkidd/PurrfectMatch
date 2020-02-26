@@ -13,8 +13,8 @@ public class RecentlyAdoptedService {
   @Autowired
   RecentlyAdoptedRepository repository;
 
-  public List<RecentlyAdopted> getAllRecentlyAdopted(Integer pageNumber, Integer pageSize, String sortBy) {
-    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy));
+  public List<RecentlyAdopted> getAllRecentlyAdopted(Integer pageNumber, Integer pageSize) {
+    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
     Page<RecentlyAdopted> pagedResult = repository.findAll(paging);
 

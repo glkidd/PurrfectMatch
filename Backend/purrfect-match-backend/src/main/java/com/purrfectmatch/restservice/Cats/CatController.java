@@ -19,30 +19,20 @@ class CatController {
   CatService service;
 
   private final CatRepository repository;
+  private Integer pageSize;
 
   CatController(CatRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   @PostMapping("/cat/all")
-  List<Cat> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllCats(pageNumber, pageSize, sortBy);
-  }
-
-  // TODO: Stub method.
-  @PostMapping("/cat/new")
-  Cat newRecentlyAdoptedPet(@RequestBody Cat newCat) {
-    return repository.save(newCat);
+  List<Cat> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllCats(pageNumber, pageSize);
   }
 
   @PostMapping("/cat/get/{id}")
   Cat get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new CatNotFoundException(id));
-  }
-
-  @PostMapping("/cat/delete/{id}")
-  void deleteCat(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

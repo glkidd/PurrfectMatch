@@ -50,7 +50,7 @@ class SuccessStory {
     this.name = name;
     this.message = message;
     this.dateAdopted = new Date(1998, 5, 21); // dummy
-    this.gender = Gender.female; // dummy
+    this.gender = Gender.FEMALE; // dummy
     this.image = "random.png"; // dummy
     this.breed = 4;
   }

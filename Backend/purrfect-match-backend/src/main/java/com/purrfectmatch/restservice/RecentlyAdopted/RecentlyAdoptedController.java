@@ -19,30 +19,20 @@ class RecentlyAdoptedController {
   RecentlyAdoptedService service;
 
   private final RecentlyAdoptedRepository repository;
+  private Integer pageSize;
 
   RecentlyAdoptedController(RecentlyAdoptedRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   @PostMapping("/recently_adopted/all")
-  List<RecentlyAdopted> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllRecentlyAdopted(pageNumber, pageSize, sortBy);
-  }
-
-  // TODO: Stub method.
-  @PostMapping("/recently_adopted/new")
-  RecentlyAdopted newRecentlyAdoptedPet(@RequestBody RecentlyAdopted newRecentlyAdopted) {
-    return repository.save(newRecentlyAdopted);
+  List<RecentlyAdopted> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllRecentlyAdopted(pageNumber, pageSize);
   }
 
   @PostMapping("/recently_adopted/get/{id}")
   RecentlyAdopted get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new RecentlyAdoptedNotFoundException(id));
-  }
-
-  @PostMapping("/recently_adopted/delete/{id}")
-  void deleteRecentlyAdopted(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

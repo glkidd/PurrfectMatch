@@ -13,8 +13,8 @@ public class OtherAnimalService {
   @Autowired
   OtherAnimalRepository repository;
 
-  public List<OtherAnimal> getAllOtherAnimals(Integer pageNumber, Integer pageSize, String sortBy) {
-    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy));
+  public List<OtherAnimal> getAllOtherAnimals(Integer pageNumber, Integer pageSize) {
+    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
     Page<OtherAnimal> pagedResult = repository.findAll(paging);
 

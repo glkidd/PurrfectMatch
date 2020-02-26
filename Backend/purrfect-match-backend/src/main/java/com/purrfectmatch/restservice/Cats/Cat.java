@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+
 import com.purrfectmatch.restservice.FurLength;
 import com.purrfectmatch.restservice.Gender;
 import java.time.LocalDate;
@@ -15,7 +17,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "cats")
 class Cat {
-   @Column(name = "id")
+   @Column(name = "id", nullable = false)
    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
    @Column(name = "image", nullable = false)
@@ -39,6 +41,7 @@ class Cat {
    @Column(name = "euthanized_date")
    private LocalDate euthanizeDate;
 
+   @Min(1) // breed > 0;
    @Column(name = "breed")
    private int breed;
 

@@ -19,15 +19,16 @@ class OtherAnimalController {
   OtherAnimalService service;
 
   private final OtherAnimalRepository repository;
+  private Integer pageSize;
 
   OtherAnimalController(OtherAnimalRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   @PostMapping("/otheranimal/all")
-  List<OtherAnimal> all(@RequestParam(defaultValue = "0") Integer pageNumber,
-      @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "id") String sortBy) {
-    return service.getAllOtherAnimals(pageNumber, pageSize, sortBy);
+  List<OtherAnimal> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    return service.getAllOtherAnimals(pageNumber, pageSize);
   }
 
   // TODO: Stub method.

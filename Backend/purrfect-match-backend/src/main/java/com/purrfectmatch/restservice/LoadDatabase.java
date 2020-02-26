@@ -33,20 +33,20 @@ class LoadDatabase {
                          * Species.dog)));
                          */
                         log.info("Preloading " + successStoryRepository.save(new SuccessStory("cutedog.png", "Fuzzles",
-                                        new Date(1998, 3, 14), 1, new Date(2019, 3, 24), Gender.female, "BYE")));
+                                        new Date(1998, 3, 14), 1, new Date(2019, 3, 24), Gender.FEMALE, "BYE")));
                         log.info("Preloading " + successStoryRepository
                                         .save(new SuccessStory("cutemaledog.png", "Phaedo", new Date(1998, 3, 24), 2,
-                                                        new Date(2019, 3, 24), Gender.male, "HIIII")));
+                                                        new Date(2019, 3, 24), Gender.MALE, "HIIII")));
                         log.info("Preloading " + shelterAccountRepository.save(new ShelterAccount("bob@google.com",
                                         "password", "hjhasjk", "Woods Humane society", "SLO", "Mill Street", "CA",
                                         93405, "4083487777", "www.google.com")));
                         log.info("Preloading " + recentlyAdoptedRepository.save(
-                                        new RecentlyAdopted("barack.png", "barack obama", null, 4, null, Gender.male)));
+                                        new RecentlyAdopted("barack.png", "barack obama", null, 4, null, Gender.MALE)));
                         int i = 0;
                         while (i < 25) {
                                 log.info("Preloading "
                                                 + recentlyAdoptedRepository.save(new RecentlyAdopted("barack.png",
-                                                                "barack obama", null, 4, null, Gender.male)));
+                                                                "barack obama", null, 4, null, Gender.MALE)));
                                 i++;
                         }
                 };

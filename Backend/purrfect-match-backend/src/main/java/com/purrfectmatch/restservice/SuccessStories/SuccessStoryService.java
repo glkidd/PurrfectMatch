@@ -13,8 +13,8 @@ public class SuccessStoryService {
   @Autowired
   SuccessStoryRepository repository;
 
-  public List<SuccessStory> getAllSuccessStories(Integer pageNumber, Integer pageSize, String sortBy) {
-    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy));
+  public List<SuccessStory> getAllSuccessStories(Integer pageNumber, Integer pageSize) {
+    Pageable paging = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
     Page<SuccessStory> pagedResult = repository.findAll(paging);
 
