@@ -31,12 +31,6 @@ class DogController {
     return service.getAllDogs(pageNumber, pageSize);
   }
 
-  // TODO: Stub method.
-  @PostMapping("/dog/new")
-  Dog newRecentlyAdoptedPet(@RequestBody Dog newDog) {
-    return repository.save(newDog);
-  }
-
   @PostMapping("/dog/get/{id}")
   Dog get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new DogNotFoundException(id));

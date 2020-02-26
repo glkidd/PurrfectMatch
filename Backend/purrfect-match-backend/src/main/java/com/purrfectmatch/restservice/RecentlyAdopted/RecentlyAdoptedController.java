@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @CrossOrigin(origins = "*")
 class RecentlyAdoptedController {
-  @Autowired
-  RecentlyAdoptedService service;
-
   private final RecentlyAdoptedRepository repository;
   private Integer pageSize;
 

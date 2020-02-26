@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @CrossOrigin(origins = "*")
 class OtherAnimalController {
-  @Autowired
-  OtherAnimalService service;
-
   private final OtherAnimalRepository repository;
   private Integer pageSize;
 
@@ -29,12 +26,6 @@ class OtherAnimalController {
   @PostMapping("/otheranimal/all")
   List<OtherAnimal> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
     return service.getAllOtherAnimals(pageNumber, pageSize);
-  }
-
-  // TODO: Stub method.
-  @PostMapping("/otheranimal/new")
-  OtherAnimal newRecentlyAdoptedPet(@RequestBody OtherAnimal newOtherAnimal) {
-    return repository.save(newOtherAnimal);
   }
 
   @PostMapping("/otheranimal/get/{id}")
