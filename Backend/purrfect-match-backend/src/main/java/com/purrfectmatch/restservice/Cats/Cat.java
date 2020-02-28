@@ -41,7 +41,6 @@ class Cat {
    @Column(name = "euthanized_date")
    private LocalDate euthanizeDate;
 
-   @Min(1) // breed > 0;
    @Column(name = "breed")
    private int breed;
 

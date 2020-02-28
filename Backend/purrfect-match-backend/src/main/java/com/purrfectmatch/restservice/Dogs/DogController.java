@@ -26,17 +26,26 @@ class DogController {
     this.pageSize = 10;
   }
 
-  @PostMapping("/dog/all")
+  @PostMapping("/dogs/all")
   List<Dog> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    try {
+      if (pageNumber < 0) {
+        throw new NegativePageNumberException(pageNumber);
+      }
+    } catch (Exception e) {
+      System.out.println("Exiting program...");
+      System.exit(1);
+    }
+
     return service.getAllDogs(pageNumber, pageSize);
   }
 
-  @PostMapping("/dog/get/{id}")
+  @PostMapping("/dogs/get/{id}")
   Dog get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new DogNotFoundException(id));
   }
 
-  @PostMapping("/dog/delete/{id}")
+  @PostMapping("/dogs/delete/{id}")
   void deleteDog(@PathVariable Long id) {
     repository.deleteById(id);
   }

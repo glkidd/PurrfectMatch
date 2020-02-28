@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @CrossOrigin(origins = "*")
 class OtherAnimalController {
+  @Autowired
+  OtherAnimalService service;
+
   private final OtherAnimalRepository repository;
   private Integer pageSize;
 
@@ -23,17 +26,26 @@ class OtherAnimalController {
     this.pageSize = 10;
   }
 
-  @PostMapping("/otheranimal/all")
+  @PostMapping("/other_animal/all")
   List<OtherAnimal> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    try {
+      if (pageNumber < 0) {
+        throw new NegativePageNumberException(pageNumber);
+      }
+    } catch (Exception e) {
+      System.out.println("Exiting program...");
+      System.exit(1);
+    }
+
     return service.getAllOtherAnimals(pageNumber, pageSize);
   }
 
-  @PostMapping("/otheranimal/get/{id}")
+  @PostMapping("/other_animal/get/{id}")
   OtherAnimal get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new OtherAnimalNotFoundException(id));
   }
 
-  @PostMapping("/otheranimal/delete/{id}")
+  @PostMapping("/other_animal/delete/{id}")
   void deleteOtherAnimal(@PathVariable Long id) {
     repository.deleteById(id);
   }

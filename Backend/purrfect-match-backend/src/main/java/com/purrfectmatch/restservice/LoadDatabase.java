@@ -16,22 +16,22 @@ class LoadDatabase {
                         SuccessStoryRepository successStoryRepository,
                         RecentlyAdoptedRepository recentlyAdoptedRepository, BreedRepository bRepo) {
                 return args -> {
-                        /*
-                         * log.info("Preloading " + bRepo.save(new Breed("spaniel", Species.dog)));
-                         * log.info("Preloading " + bRepo.save(new Breed("german shepherd",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new Breed("dachshund",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new
-                         * Breed("saint bernard", Species.dog))); log.info("Preloading " +
-                         * bRepo.save(new Breed("husky", Species.dog))); log.info("Preloading " +
-                         * bRepo.save(new Breed("golden retriever", Species.dog)));
-                         * log.info("Preloading " + bRepo.save(new Breed("pug", Species.dog)));
-                         * log.info("Preloading " + bRepo.save(new Breed("french bulldog",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new Breed("pitbull",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new Breed("chihuahua",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new Breed("great dane",
-                         * Species.dog))); log.info("Preloading " + bRepo.save(new Breed("pomerian",
-                         * Species.dog)));
-                         */
+                        shelterAccountRepository.deleteAll();
+                        successStoryRepository.deleteAll();
+                        bRepo.deleteAll();
+                        recentlyAdoptedRepository.deleteAll();
+                        log.info("Preloading " + bRepo.save(new Breed("spaniel", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("german shepherd", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("dachshund", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("saint bernard", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("husky", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("golden retriever", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("pug", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("french bulldog", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("pitbull", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("chihuahua", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("great dane", Species.DOG)));
+                        log.info("Preloading " + bRepo.save(new Breed("pomerian", Species.DOG)));
                         log.info("Preloading " + successStoryRepository.save(new SuccessStory("cutedog.png", "Fuzzles",
                                         new Date(1998, 3, 14), 1, new Date(2019, 3, 24), Gender.FEMALE, "BYE")));
                         log.info("Preloading " + successStoryRepository
@@ -49,6 +49,7 @@ class LoadDatabase {
                                                                 "barack obama", null, 4, null, Gender.MALE)));
                                 i++;
                         }
+                        log.info("Preloading " + bRepo.save(new Breed("taxa", Species.DOG)));
                 };
         }
 

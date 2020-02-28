@@ -26,12 +26,21 @@ class CatController {
     this.pageSize = 10;
   }
 
-  @PostMapping("/cat/all")
+  @PostMapping("/cats/all")
   List<Cat> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    try {
+      if (pageNumber < 0) {
+        throw new NegativePageNumberException(pageNumber);
+      }
+    } catch (Exception e) {
+      System.out.println("Exiting program...");
+      System.exit(1);
+    }
+
     return service.getAllCats(pageNumber, pageSize);
   }
 
-  @PostMapping("/cat/get/{id}")
+  @PostMapping("/cats/get/{id}")
   Cat get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new CatNotFoundException(id));
   }

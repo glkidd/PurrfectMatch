@@ -1,6 +1,7 @@
 package com.purrfectmatch.restservice;
 
 import java.util.List;
+import com.purrfectmatch.restservice.RecentlyAdoptedService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @CrossOrigin(origins = "*")
 class RecentlyAdoptedController {
+  @Autowired
+  RecentlyAdoptedService service;
+
   private final RecentlyAdoptedRepository repository;
   private Integer pageSize;
 
@@ -25,6 +29,15 @@ class RecentlyAdoptedController {
 
   @PostMapping("/recently_adopted/all")
   List<RecentlyAdopted> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
+    try {
+      if (pageNumber < 0) {
+        throw new NegativePageNumberException(pageNumber);
+      }
+    } catch (Exception e) {
+      System.out.println("Exiting program...");
+      System.exit(1);
+    }
+
     return service.getAllRecentlyAdopted(pageNumber, pageSize);
   }
 
