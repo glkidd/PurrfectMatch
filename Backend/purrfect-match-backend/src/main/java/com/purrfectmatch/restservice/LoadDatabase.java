@@ -1,18 +1,19 @@
 package com.purrfectmatch.restservice;
 
+import com.purrfectmatch.restservice.Breeds.Breed;
+import com.purrfectmatch.restservice.Breeds.BreedRepository;
+import com.purrfectmatch.restservice.RecentlyAdopted.RecentlyAdopted;
+import com.purrfectmatch.restservice.RecentlyAdopted.RecentlyAdoptedRepository;
+import com.purrfectmatch.restservice.ShelterAccounts.ShelterAccount;
+import com.purrfectmatch.restservice.ShelterAccounts.ShelterAccountRepository;
+import com.purrfectmatch.restservice.SuccessStories.SuccessStory;
+import com.purrfectmatch.restservice.SuccessStories.SuccessStoryRepository;
 import lombok.extern.slf4j.Slf4j;
-
-import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.purrfectmatch.restservice.ShelterAccounts.*;
-import com.purrfectmatch.restservice.SuccessStories.*;
-import com.purrfectmatch.restservice.RecentlyAdopted.*;
-import com.purrfectmatch.restservice.OtherAnimal.*;
-import com.purrfectmatch.restservice.Dogs.*;
-import com.purrfectmatch.restservice.Breeds.*;
-import com.purrfectmatch.restservice.Cats.*;
+
+import java.time.LocalDate;
 
 @Configuration
 @Slf4j

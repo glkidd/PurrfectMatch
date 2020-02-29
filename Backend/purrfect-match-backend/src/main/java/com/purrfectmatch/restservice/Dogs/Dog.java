@@ -1,15 +1,11 @@
 package com.purrfectmatch.restservice.Dogs;
 
-import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import com.purrfectmatch.restservice.FurLength;
 import com.purrfectmatch.restservice.Gender;
 import com.purrfectmatch.restservice.Size;
+import lombok.Data;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
