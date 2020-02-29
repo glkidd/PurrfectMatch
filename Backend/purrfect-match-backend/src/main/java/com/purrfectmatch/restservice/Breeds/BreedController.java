@@ -1,12 +1,11 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Breeds;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
+import com.purrfectmatch.restservice.NegativePageNumberException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +13,14 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins = "*")
-class BreedController {
+public class BreedController {
   @Autowired
   BreedService service;
 
   private final BreedRepository repository;
   private Integer pageSize;
 
-  BreedController(BreedRepository repository) {
+  public BreedController(BreedRepository repository) {
     this.repository = repository;
     this.pageSize = 10;
   }

@@ -1,4 +1,4 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Cats;
 
 import lombok.Data;
 import javax.persistence.Column;
@@ -7,8 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
-
 import com.purrfectmatch.restservice.FurLength;
 import com.purrfectmatch.restservice.Gender;
 import java.time.LocalDate;
@@ -16,7 +14,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "cats")
-class Cat {
+public class Cat {
    @Column(name = "id", nullable = false)
    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 

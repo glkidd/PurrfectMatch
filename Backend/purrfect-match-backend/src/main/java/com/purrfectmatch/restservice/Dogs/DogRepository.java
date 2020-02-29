@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Dogs;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface DogRepository extends JpaRepository<Dog, Long> {
+public interface DogRepository extends JpaRepository<Dog, Long> {
 
 }

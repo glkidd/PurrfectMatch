@@ -1,8 +1,8 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.RecentlyAdopted;
 
-class RecentlyAdoptedNotFoundException extends RuntimeException {
+public class RecentlyAdoptedNotFoundException extends RuntimeException {
 
-  RecentlyAdoptedNotFoundException(Long id) {
+  public RecentlyAdoptedNotFoundException(Long id) {
     super("Could not find recently adopted " + id);
   }
 }

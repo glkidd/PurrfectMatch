@@ -1,6 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Dogs;
 
 import java.util.List;
+import com.purrfectmatch.restservice.NegativePageNumberException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,14 +15,14 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins = "*")
-class DogController {
+public class DogController {
   @Autowired
   DogService service;
 
   private final DogRepository repository;
   private Integer pageSize;
 
-  DogController(DogRepository repository) {
+  public DogController(DogRepository repository) {
     this.repository = repository;
     this.pageSize = 10;
   }

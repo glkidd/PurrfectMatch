@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.OtherAnimal;
 
 public class OtherAnimalNotFoundException extends RuntimeException {
-   OtherAnimalNotFoundException(Long id) {
+   public OtherAnimalNotFoundException(Long id) {
     super("Could not find other animal " + id);
   }
 }

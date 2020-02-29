@@ -1,8 +1,8 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.SuccessStories;
 
-class SuccessStoryNotFoundException extends RuntimeException {
+public class SuccessStoryNotFoundException extends RuntimeException {
 
-  SuccessStoryNotFoundException(Long id) {
+  public SuccessStoryNotFoundException(Long id) {
     super("Could not find success story " + id);
   }
 }

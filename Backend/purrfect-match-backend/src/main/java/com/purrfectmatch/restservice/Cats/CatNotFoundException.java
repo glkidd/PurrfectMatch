@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Cats;
 
 public class CatNotFoundException extends RuntimeException {
-  CatNotFoundException(Long id) {
+  public CatNotFoundException(Long id) {
     super("Could not find cat " + id);
   }
 }

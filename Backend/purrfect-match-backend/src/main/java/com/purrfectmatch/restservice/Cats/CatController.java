@@ -1,6 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Cats;
 
 import java.util.List;
+import com.purrfectmatch.restservice.NegativePageNumberException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,14 +15,14 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins = "*")
-class CatController {
+public class CatController {
   @Autowired
   CatService service;
 
   private final CatRepository repository;
   private Integer pageSize;
 
-  CatController(CatRepository repository) {
+  public CatController(CatRepository repository) {
     this.repository = repository;
     this.pageSize = 10;
   }

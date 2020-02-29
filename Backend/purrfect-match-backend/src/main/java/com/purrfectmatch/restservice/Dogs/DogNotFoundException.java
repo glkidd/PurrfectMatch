@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Dogs;
 
 public class DogNotFoundException extends RuntimeException {
-  DogNotFoundException(Long id) {
+  public DogNotFoundException(Long id) {
     super("Could not find dog " + id);
   }
 }

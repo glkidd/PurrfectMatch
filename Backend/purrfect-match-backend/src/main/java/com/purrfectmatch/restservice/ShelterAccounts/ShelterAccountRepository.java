@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.ShelterAccounts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface ShelterAccountRepository extends JpaRepository<ShelterAccount, Long> {
+public interface ShelterAccountRepository extends JpaRepository<ShelterAccount, Long> {
 
 }

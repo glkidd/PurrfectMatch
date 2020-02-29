@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.RecentlyAdopted;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface RecentlyAdoptedRepository extends JpaRepository<RecentlyAdopted, Long> {
+public interface RecentlyAdoptedRepository extends JpaRepository<RecentlyAdopted, Long> {
 
 }

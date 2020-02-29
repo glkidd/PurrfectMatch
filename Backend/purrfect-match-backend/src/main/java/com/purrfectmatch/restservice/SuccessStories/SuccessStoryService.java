@@ -1,4 +1,4 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.SuccessStories;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;

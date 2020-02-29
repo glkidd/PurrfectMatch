@@ -1,4 +1,4 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.OtherAnimal;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-class OtherAnimalNotFoundAdvice {
+public class OtherAnimalNotFoundAdvice {
   @ResponseBody
   @ExceptionHandler(OtherAnimalNotFoundException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)

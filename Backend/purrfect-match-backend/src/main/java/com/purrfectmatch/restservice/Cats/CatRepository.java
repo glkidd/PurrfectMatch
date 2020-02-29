@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.Cats;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface CatRepository extends JpaRepository<Cat, Long> {
+public interface CatRepository extends JpaRepository<Cat, Long> {
 
 }

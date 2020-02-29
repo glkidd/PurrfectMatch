@@ -1,8 +1,8 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.ShelterAccounts;
 
-class ShelterAccountNotFoundException extends RuntimeException {
+public class ShelterAccountNotFoundException extends RuntimeException {
 
-  ShelterAccountNotFoundException(Long id) {
+  public ShelterAccountNotFoundException(Long id) {
     super("Could not find shelter account " + id);
   }
 }

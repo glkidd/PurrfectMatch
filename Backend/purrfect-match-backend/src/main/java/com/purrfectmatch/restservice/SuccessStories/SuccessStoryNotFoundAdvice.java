@@ -1,4 +1,4 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.SuccessStories;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-class SuccessStoryNotFoundAdvice {
+public class SuccessStoryNotFoundAdvice {
 
   @ResponseBody
   @ExceptionHandler(SuccessStoryNotFoundException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)
-  String successStoryNotFoundHandler(SuccessStoryNotFoundException ex) {
+  public String successStoryNotFoundHandler(SuccessStoryNotFoundException ex) {
     return ex.getMessage();
   }
 }

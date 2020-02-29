@@ -1,7 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.SuccessStories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface SuccessStoryRepository extends JpaRepository<SuccessStory, Long> {
+public interface SuccessStoryRepository extends JpaRepository<SuccessStory, Long> {
 
 }

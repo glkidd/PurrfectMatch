@@ -2,11 +2,17 @@ package com.purrfectmatch.restservice;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.sql.Date;
-
+import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.purrfectmatch.restservice.ShelterAccounts.*;
+import com.purrfectmatch.restservice.SuccessStories.*;
+import com.purrfectmatch.restservice.RecentlyAdopted.*;
+import com.purrfectmatch.restservice.OtherAnimal.*;
+import com.purrfectmatch.restservice.Dogs.*;
+import com.purrfectmatch.restservice.Breeds.*;
+import com.purrfectmatch.restservice.Cats.*;
 
 @Configuration
 @Slf4j
@@ -32,11 +38,12 @@ class LoadDatabase {
                         log.info("Preloading " + bRepo.save(new Breed("chihuahua", Species.DOG)));
                         log.info("Preloading " + bRepo.save(new Breed("great dane", Species.DOG)));
                         log.info("Preloading " + bRepo.save(new Breed("pomerian", Species.DOG)));
-                        log.info("Preloading " + successStoryRepository.save(new SuccessStory("cutedog.png", "Fuzzles",
-                                        new Date(1998, 3, 14), 1, new Date(2019, 3, 24), Gender.FEMALE, "BYE")));
                         log.info("Preloading " + successStoryRepository
-                                        .save(new SuccessStory("cutemaledog.png", "Phaedo", new Date(1998, 3, 24), 2,
-                                                        new Date(2019, 3, 24), Gender.MALE, "HIIII")));
+                                        .save(new SuccessStory("cutedog.png", "Fuzzles", LocalDate.of(1998, 3, 14), 1,
+                                                        LocalDate.of(2019, 3, 24), Gender.FEMALE, "BYE")));
+                        log.info("Preloading " + successStoryRepository
+                                        .save(new SuccessStory("cutemaledog.png", "Phaedo", LocalDate.of(1998, 3, 24),
+                                                        2, LocalDate.of(2019, 3, 24), Gender.MALE, "HIIII")));
                         log.info("Preloading " + shelterAccountRepository.save(new ShelterAccount("bob@google.com",
                                         "password", "hjhasjk", "Woods Humane society", "SLO", "Mill Street", "CA",
                                         93405, "4083487777", "www.google.com")));
@@ -54,7 +61,3 @@ class LoadDatabase {
         }
 
 }
-
-// public Breed(String breedName, Species species) {
-// RecentlyAdopted(String image, String name, Date birthday, int breed, Date
-// dateAdopted, Gender gender) {

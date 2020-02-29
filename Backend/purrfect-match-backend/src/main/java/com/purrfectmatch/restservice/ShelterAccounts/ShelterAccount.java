@@ -1,4 +1,5 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.ShelterAccounts;
+
 
 import lombok.Data;
 
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "shelter_accounts")
-class ShelterAccount {
+public class ShelterAccount {
 	@Column(name = "id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
@@ -46,17 +47,17 @@ class ShelterAccount {
 	@Column(name = "website")
 	private String website;
 
-	ShelterAccount() {
+	public ShelterAccount() {
 	}
 
 	// this is temporary just for testing purposes.
 	// TODO: REMOVE
-	ShelterAccount(String email, String shelterName) {
+	public ShelterAccount(String email, String shelterName) {
 		this.email = email;
 		this.shelterName = shelterName;
 	}
 
-	ShelterAccount(String email, String passwordHash, String passwordSalt, String shelterName, String city, String street,
+	public ShelterAccount(String email, String passwordHash, String passwordSalt, String shelterName, String city, String street,
 			String state, int zipCode, String phoneNumber, String website) {
 		this.email = email;
 		this.passwordHash = passwordHash;

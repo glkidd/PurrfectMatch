@@ -1,8 +1,7 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.SuccessStories;
 
 import java.util.List;
-
-import com.purrfectmatch.restservice.SuccessStoryService;
+import com.purrfectmatch.restservice.NegativePageNumberException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,14 +15,14 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins = "*")
-class SuccessStoryController {
+public class SuccessStoryController {
   @Autowired
   SuccessStoryService service;
 
   private final SuccessStoryRepository repository;
   private Integer pageSize;
 
-  SuccessStoryController(SuccessStoryRepository repository) {
+  public SuccessStoryController(SuccessStoryRepository repository) {
     this.repository = repository;
   }
 

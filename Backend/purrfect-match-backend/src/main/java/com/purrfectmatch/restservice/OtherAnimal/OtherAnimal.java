@@ -1,4 +1,4 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.OtherAnimal;
 
 import lombok.Data;
 import javax.persistence.Column;
@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "other_animals")
-class OtherAnimal {
+public class OtherAnimal {
    @Column(name = "id")
    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 

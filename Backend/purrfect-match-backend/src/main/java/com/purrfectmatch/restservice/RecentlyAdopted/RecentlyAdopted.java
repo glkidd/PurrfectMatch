@@ -1,9 +1,8 @@
-package com.purrfectmatch.restservice;
+package com.purrfectmatch.restservice.RecentlyAdopted;
 
 import lombok.Data;
 
-import java.sql.Date;
-
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -18,7 +17,7 @@ import com.purrfectmatch.restservice.Gender;
 @Data
 @Entity
 @Table(name = "recently_adopted")
-class RecentlyAdopted {
+public class RecentlyAdopted {
   @Column(name = "id")
   private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
@@ -29,22 +28,23 @@ class RecentlyAdopted {
   private String name;
 
   @Column(name = "birthday")
-  private Date birthday;
+  private LocalDate birthday;
 
   @Column(name = "breed")
   private int breed;
 
   @Column(name = "date_adopted")
-  private Date dateAdopted;
+  private LocalDate dateAdopted;
 
   @Column(name = "gender")
   @Enumerated(EnumType.STRING)
   private Gender gender;
 
-  RecentlyAdopted() {
+  public RecentlyAdopted() {
   }
 
-  RecentlyAdopted(String image, String name, Date birthday, int breed, Date dateAdopted, Gender gender) {
+  public RecentlyAdopted(String image, String name, LocalDate birthday, int breed, LocalDate dateAdopted,
+      Gender gender) {
     this.image = image;
     this.name = name;
     this.birthday = birthday;
