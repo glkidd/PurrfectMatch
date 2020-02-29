@@ -25,7 +25,7 @@ public class BreedController {
     this.pageSize = 10;
   }
 
-  @GetMapping("/breeds/all")
+  @PostMapping("/breeds/all")
   List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
     try {
       if (pageNumber < 0) {
