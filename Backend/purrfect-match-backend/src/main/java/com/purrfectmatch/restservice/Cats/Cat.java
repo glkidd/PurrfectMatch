@@ -30,7 +30,7 @@ class Cat {
    private String bio;
 
    @Column(name = "shelter_id")
-   private long shelterId;
+   private Long shelterId;
 
    @Column(name = "birthday")
    private LocalDate bday;

@@ -37,7 +37,7 @@ class OtherAnimal {
    private String bio;
 
    @Column(name = "shelter_id")
-   private long shelterId;
+   private Long shelterId;
 
    @Column(name = "date_arrived")
    private LocalDate dateArrived;

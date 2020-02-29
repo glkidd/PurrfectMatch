@@ -44,7 +44,7 @@ class Dog {
    private LocalDate dateArrived;
 
    @Column(name = "shelter_id")
-   private long shelterId;
+   private Long shelterId;
 
    @Column(name = "euthanized_date")
    private LocalDate euthanizeDate;
