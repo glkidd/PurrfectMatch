@@ -7,7 +7,7 @@ interface BodyProps {
 interface BodyState {
 };
 
-export default class Body extends React.Component<BodyProps, BodyState> {
+export class Body extends React.Component<BodyProps, BodyState> {
   constructor(props: any) {
     super(props);
 
