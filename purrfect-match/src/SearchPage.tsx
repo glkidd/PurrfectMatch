@@ -164,6 +164,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                     bio={result.bio}
                     daysLeft={result.daysLeft}
                     photo={result.photo}
+                    shelterName={result.shelterName}
                     /> </li> ) } ) } 
                 </ul>;
         };

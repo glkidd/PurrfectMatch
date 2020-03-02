@@ -460,3 +460,7 @@ li {
   max-width: 18em;
   align-content: right;
 }
+
+.redText {
+  color: red;
+}

@@ -20,6 +20,7 @@ export interface SearchPageResults {
     bio: string;
     daysInShelter: number;
     daysLeft: number | undefined;
+    shelterName: string;
     photo: string;
 };
 
@@ -43,6 +44,18 @@ export interface RecentlyAdoptedInfo {
     adoptionDate: string;
     owner: String;
 };
+
+export interface ShelterAccountInfo {
+    email: string;
+    shelterName: string;
+    street: string;
+    city: string;
+    state: string;
+    zipCode: number;
+    phoneNumber: number;
+    website: string; 
+    id: number;
+}
 
 export let SUCCESS_STORY_PAGE_SIZE: number = 10;
 

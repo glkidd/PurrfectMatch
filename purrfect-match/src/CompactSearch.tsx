@@ -10,6 +10,7 @@ interface compactSearchProps {
     bio: string;
     daysLeft: number | undefined;
     photo: string;
+    shelterName: string;
 };
 
 interface compactSearchState {
@@ -56,6 +57,9 @@ export class CompactSearch extends React.Component<compactSearchProps, compactSe
                             <br />Age: {this.props.age}
                             <br />Breed: {this.props.breed}
                             <br />Gender: {this.props.gender}
+                            <br />
+                            <br />Shelter: {this.props.shelterName}
+                            <br  /> <div className="redText" > {this.props.daysLeft ? "At risk for euthanasia!" : ""} </div>
                             <br />
                             <br />
                             About {this.props.name}:

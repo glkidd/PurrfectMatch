@@ -1,6 +1,7 @@
 import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
 import { SearchPageResults } from "./Definitions";
+import { ShelterAccountInfo } from "./Definitions";
 
 /*
     This class is used for whenever we need to get data from the server. 
@@ -23,8 +24,8 @@ export class Api {
         return Api.safeFetch(endpoint, 'PUT', body);
     }
      
-     // this will be used anytime data needs to be retrieved from the backend (idempotent)
-     // body would normally be empty
+    // this will be used anytime data needs to be retrieved from the backend (idempotent)
+    // body would normally be empty
     private static get = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, 'GET', body);
     }
@@ -33,6 +34,25 @@ export class Api {
     // body would normally be empty
     private static del = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, "DELETE", body);
+    }
+
+    public static getShelterAccountInfo = (idNum: number) : Promise<ShelterAccountInfo[]> => {
+
+        const ACCOUNT_RESULTS: ShelterAccountInfo[] = [
+            {
+                email: "example@email.com",
+                shelterName: "Woods Humane Society",
+                street: "123 Street Ave",
+                city: "San Luis Obispo",
+                state: "CA",
+                zipCode: 93405,
+                phoneNumber: 1233456789,
+                website: "website.com",
+                id: idNum
+            }
+        ];
+
+        return Promise.resolve(ACCOUNT_RESULTS); // need to use GET to retrieve data from database
     }
     
     //should eventually connect up to safeFetch via Api.get
@@ -49,6 +69,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 1,
                 daysLeft: 30,
+                shelterName: "Woods Humane Society",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -58,6 +79,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 5,
                 daysLeft: undefined,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -67,6 +89,7 @@ export class Api {
                 bio:"insert bio here",
                 daysInShelter: 36,
                 daysLeft: 20,
+                shelterName: "Woods Humane Society",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -77,6 +100,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 25,
                 daysLeft: 40,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -87,6 +111,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 0,
                 daysLeft: 105,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -97,6 +122,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 4,
                 daysLeft: undefined,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -107,6 +133,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 3,
                 daysLeft: undefined,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
@@ -117,6 +144,7 @@ export class Api {
                 bio: "insert bio here",
                 daysInShelter: 32,
                 daysLeft: 2,
+                shelterName: "Cal Poly Cat Program",
                 photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             }
         ];
@@ -224,4 +252,5 @@ export class Api {
         // Normally, we'd actually submit to the backend and resolve or reject the promise based off of the response (was there an error submitting?)
         return Promise.resolve();
     }
+
 }

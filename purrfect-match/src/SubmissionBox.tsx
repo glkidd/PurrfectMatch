@@ -46,6 +46,8 @@ export class SubmissionBox extends React.Component<submissionBoxProps, submissio
                             <Input prompt="Gender:"></Input>
                             <Input prompt="Date of adoption:"></Input>
                             <Message prompt="Share your story:"></Message>
+                            <br />
+                            <button className="submissionBoxButton" onClick={() => {}} > <div> Send </div> </button>
                         </div>
                     </div>
 
