@@ -6,6 +6,7 @@ import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
 import Footer from "Footer/Footer";
+import UnderConstruction from "UnderConstruction/UnderConstruction";
 
 interface AppState {
     page: JSX.Element | null;
@@ -33,6 +34,9 @@ export class App extends React.Component<{}, AppState> {
                     </Route>
                     <Route path="/search">
                         <SearchPage />
+                    </Route>
+                    <Route path="/under">
+                        <UnderConstruction />
                     </Route>
                     <Route path="/">
                         <HomePage />

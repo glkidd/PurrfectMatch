@@ -4,9 +4,6 @@ import { Input, Select, Message, Send } from './inputBoxes';
 import { Api } from "Api";
 import { Modal } from "Modal";
 
-
-
-
 interface ContactPageProps {
 };
 
@@ -39,7 +36,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
             modalMessage: ""
         };
     }
-    
+
     fillAndValidateField = (field: keyof ContactPageState): boolean => {
         if (this.state[field] === undefined) {
             this.setState({
@@ -50,8 +47,6 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
             return this.state[field] != "";
         }
     }
-    
-  
 
     handleSubmit = ()  => {
         let formValid = true;
@@ -68,7 +63,6 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     modalMessage: "Submitted request successfully!",
                     modalOpen: true
                 });
-             
             }).catch((error: Error) => {
                 this.setState({
                     modalMessage: "Error in submission: " + error.message,
@@ -84,7 +78,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
         return undefined;
     }
-    
+
     public render() {
         return (
             <div className="contactPage">
@@ -108,7 +102,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     />
                     <Input
                         prompt="Email Address:"
-                        error={this.checkField(this.state.email, "Provide a valid email")}
+                        error={this.checkField(this.state.email, "Provide your email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input
