@@ -25,8 +25,8 @@ exports[`Renders correctly 1`] = `
               Dog
             </h1>
             <Link
-              to="dog"           
-            >   
+              to="dog"
+            >
               <Card
                 image="test-file-stub"
               />
