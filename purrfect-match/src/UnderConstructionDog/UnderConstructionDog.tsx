@@ -9,7 +9,7 @@ function UnderConstructionDog() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Under Construction 
+          Under Construction
         </p>
       </header>
     </div>
