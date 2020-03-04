@@ -28,7 +28,7 @@ exports[`Renders correctly 1`] = `
       <UnderConstructionDog />
     </Route>
     <Route
-    path="/other"
+      path="/other"
     >
       <UnderConstructionOther />
     </Route>
