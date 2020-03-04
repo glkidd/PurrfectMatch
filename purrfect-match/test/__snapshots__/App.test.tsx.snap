@@ -21,14 +21,14 @@ exports[`Renders correctly 1`] = `
       path="/cat"
     >
       <SearchPage />
-      </Route>
+    </Route>
     <Route
       path="/dog"
     >
-     <UnderConstructionDog />
+      <UnderConstructionDog />
     </Route>
     <Route
-     path="/other"
+    path="/other"
     >
       <UnderConstructionOther />
     </Route>

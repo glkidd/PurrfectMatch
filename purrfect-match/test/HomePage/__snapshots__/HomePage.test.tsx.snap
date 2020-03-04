@@ -26,35 +26,34 @@ exports[`Renders correctly 1`] = `
             </h1>
             <Link
               to="dog"
-        >    
-            <Card
-          image="test-file-stub"
-            />
-          </Link>
+            >   
+              <Card
+                image="test-file-stub"
+              />
+            </Link>
           </div>
           <div>
-
             <h1>
               Cat
             </h1>
-             <Link
+            <Link
               to="cat"
             >
-          <Card
-            image="test-file-stub"
-                  />
+              <Card
+                image="test-file-stub"
+              />
             </Link>
           </div>
           <div>
             <h1>
               Other
             </h1>
-             <Link
-                to="other"
-                >
-          <Card
-              image="test-file-stub"
-                />
+            <Link
+              to="other"
+            >
+              <Card
+                image="test-file-stub"
+              />
             </Link>
           </div>
         </div>
