@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from 'pictures/doglogo.png';
-import './UnderConstruction.css';
+import logo from '../pictures/other-animal-homepage.jpg';
+import './UnderConstructionOther.css';
 
 
-function UnderConstruction() {
+function UnderConstructionOther() {
   return (
     <div className="App">
       <header className="App-header">
@@ -16,4 +16,4 @@ function UnderConstruction() {
   );
 }
 
-export default UnderConstruction;
+export default UnderConstructionOther;

@@ -6,7 +6,8 @@ import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
 import Footer from "Footer/Footer";
-import UnderConstruction from "UnderConstruction/UnderConstruction";
+import UnderConstructionDog from "UnderConstructionDog/UnderConstructionDog";
+import UnderConstructionOther from "UnderConstructionOther/UnderConstructionOther";
 
 interface AppState {
     page: JSX.Element | null;
@@ -32,11 +33,14 @@ export class App extends React.Component<{}, AppState> {
                     <Route path="/success">
                         <SuccessStoryPage />
                     </Route>
-                    <Route path="/search">
+                    <Route path="/cat">
                         <SearchPage />
                     </Route>
-                    <Route path="/under">
-                        <UnderConstruction />
+                    <Route path="/dog">
+                        <UnderConstructionDog />
+                    </Route>
+                    <Route path="/other">
+                        <UnderConstructionOther />
                     </Route>
                     <Route path="/">
                         <HomePage />

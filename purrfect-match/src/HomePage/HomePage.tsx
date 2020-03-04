@@ -29,7 +29,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                             <div className="CardGroup">
                                 <div>
                                     <h1>Dog</h1>
-                                    <Link to="under">
+                                    <Link to="dog">
                                         <Card image={require('../pictures/dog-homepage.jpg')} />
                                     </Link>
                                     
@@ -37,7 +37,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                 <div>
 
                                     <h1>Cat</h1>
-                                    <Link to="search">
+                                    <Link to="cat">
                                         <Card image={require('../pictures/cat-homepage.jpg')} />
                                     </Link>
 
@@ -45,7 +45,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                 </div>
                                 <div>
                                     <h1>Other</h1>
-                                    <Link to="under">
+                                    <Link to="other">
                                         <Card image={require('../pictures/other-animal-homepage.jpg')} />
                                     </Link>
                                     
