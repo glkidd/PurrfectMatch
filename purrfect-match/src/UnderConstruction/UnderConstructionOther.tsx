@@ -16,6 +16,7 @@ export class UnderConstructionOther extends React.Component{
         </p>
         </header>
       </div>
+      //
     );
   }
 }
