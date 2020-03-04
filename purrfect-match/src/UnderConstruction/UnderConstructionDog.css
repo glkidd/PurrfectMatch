@@ -1,25 +1,21 @@
-.App {
+.UnderConstruction {
   text-align: center;
 }
 
-.App-logo {
+.UnderConstruction-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+.UnderConstruction-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(30px + 2vmin);
+  font-size: calc(7vh + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-  
-}
 
