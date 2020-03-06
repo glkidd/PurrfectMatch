@@ -3,6 +3,9 @@ node_modules/
 coverage/
 .DS_Store
 /TDD\ Assignment
+.vscode/
+.idea/
+
 
 ### Gradle ###
 .gradle
