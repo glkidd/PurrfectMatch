@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
 import { Card } from './Card';
+import { Link } from "react-router-dom";
 
 
 interface HomePageProps {
@@ -28,16 +29,26 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                             <div className="CardGroup">
                                 <div>
                                     <h1>Dog</h1>
-                                    <Card image={require('../pictures/dog-homepage.jpg')} />
+                                    <Link to="dog">
+                                        <Card image={require('../pictures/dog-homepage.jpg')} />
+                                    </Link>
+                                    
                                 </div>
                                 <div>
 
                                     <h1>Cat</h1>
-                                    <Card image={require('../pictures/cat-homepage.jpg')} />
+                                    <Link to="cat">
+                                        <Card image={require('../pictures/cat-homepage.jpg')} />
+                                    </Link>
+
+
                                 </div>
                                 <div>
                                     <h1>Other</h1>
-                                    <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                    <Link to="other">
+                                        <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>
