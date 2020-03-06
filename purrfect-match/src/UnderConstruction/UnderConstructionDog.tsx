@@ -5,6 +5,7 @@ import './UnderConstructionDog.css';
 export class UnderConstructionDog extends React.Component{
 
   public render() {
+    //
     return (
       <div className="UnderConstruction">
         <header className="UnderConstruction-header">
