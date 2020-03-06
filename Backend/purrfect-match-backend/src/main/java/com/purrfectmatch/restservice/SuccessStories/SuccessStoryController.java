@@ -17,19 +17,15 @@ public class SuccessStoryController {
 
   public SuccessStoryController(SuccessStoryRepository repository) {
     this.repository = repository;
+    this.pageSize = 10;
   }
 
   // Aggregate root
 
   @PostMapping("/success_stories/all")
   List<SuccessStory> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
-    try {
-      if (pageNumber < 0) {
-        throw new NegativePageNumberException(pageNumber);
-      }
-    } catch (Exception e) {
-      System.out.println("Exiting program...");
-      System.exit(1);
+    if (pageNumber < 0) {
+      throw new NegativePageNumberException(pageNumber);
     }
 
     return service.getAllSuccessStories(pageNumber, pageSize);

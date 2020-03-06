@@ -22,13 +22,8 @@ public class BreedController {
 
   @PostMapping("/breeds/all")
   List<Breed> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
-    try {
-      if (pageNumber < 0) {
-        throw new NegativePageNumberException(pageNumber);
-      }
-    } catch (Exception e) {
-      System.out.println("Exiting program...");
-      System.exit(1);
+    if (pageNumber < 0) {
+      throw new NegativePageNumberException(pageNumber);
     }
 
     return service.getAllBreeds(pageNumber, pageSize);

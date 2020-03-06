@@ -22,13 +22,8 @@ public class DogController {
 
   @PostMapping("/dogs/all")
   List<Dog> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
-    try {
-      if (pageNumber < 0) {
-        throw new NegativePageNumberException(pageNumber);
-      }
-    } catch (Exception e) {
-      System.out.println("Exiting program...");
-      System.exit(1);
+    if (pageNumber < 0) {
+      throw new NegativePageNumberException(pageNumber);
     }
 
     return service.getAllDogs(pageNumber, pageSize);
@@ -37,10 +32,5 @@ public class DogController {
   @PostMapping("/dogs/get/{id}")
   Dog get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new DogNotFoundException(id));
-  }
-
-  @PostMapping("/dogs/delete/{id}")
-  void deleteDog(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

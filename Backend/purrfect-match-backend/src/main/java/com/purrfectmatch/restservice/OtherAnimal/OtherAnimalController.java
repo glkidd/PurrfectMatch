@@ -22,13 +22,8 @@ public class OtherAnimalController {
 
   @PostMapping("/other_animal/all")
   List<OtherAnimal> all(@RequestParam(defaultValue = "0") Integer pageNumber) {
-    try {
-      if (pageNumber < 0) {
-        throw new NegativePageNumberException(pageNumber);
-      }
-    } catch (Exception e) {
-      System.out.println("Exiting program...");
-      System.exit(1);
+    if (pageNumber < 0) {
+      throw new NegativePageNumberException(pageNumber);
     }
 
     return service.getAllOtherAnimals(pageNumber, pageSize);
@@ -37,10 +32,5 @@ public class OtherAnimalController {
   @PostMapping("/other_animal/get/{id}")
   OtherAnimal get(@PathVariable Long id) {
     return repository.findById(id).orElseThrow(() -> new OtherAnimalNotFoundException(id));
-  }
-
-  @PostMapping("/other_animal/delete/{id}")
-  void deleteOtherAnimal(@PathVariable Long id) {
-    repository.deleteById(id);
   }
 }

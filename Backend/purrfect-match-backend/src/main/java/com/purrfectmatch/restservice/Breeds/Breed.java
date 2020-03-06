@@ -27,5 +27,4 @@ public class Breed {
       this.breedName = breedName;
       this.species = species;
    }
-
 }
