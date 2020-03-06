@@ -5,7 +5,6 @@ import { SearchPageResults } from "./Definitions";
 /*
     This class is used for whenever we need to get data from the server. 
 */
-
         
 export class Api {
 
