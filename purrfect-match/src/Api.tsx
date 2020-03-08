@@ -5,21 +5,12 @@ import { SearchPageResults } from "./Definitions";
 /*
     This class is used for whenever we need to get data from the server. 
 */
-
- 
         
 export class Api {
 
-
-
     // will initialize and either resolve or reject a promise depending on the status code returned by the server
     private static safeFetch = (endpoint: string, method: string, body: JSON) : Promise<Object> => {
-        //insert safeFetch function here
-        // will use regular "fetch" function, plus BASE_URL
-        // since our front end runs on 3000, let's use 3001 for our backend while running locally
-        //const BASE_URL = "http://localhost:3001/";
-        
-        return Promise.resolve({}); //temporary value, will either reject with an error or resolve with the proper data
+        return Promise.resolve({});
     }
 
     // this will be used anytime data needs to be added to the backend (not idempotent)
@@ -57,7 +48,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 1,
-                daysLeft: 30
+                daysLeft: 30,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Meowasaurus",
@@ -65,7 +57,8 @@ export class Api {
                 age: "3.5 years", gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 5,
-                daysLeft: Infinity
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Fuzzles",
@@ -73,7 +66,8 @@ export class Api {
                 age: "4 years", gender:"Female",
                 bio:"insert bio here",
                 daysInShelter: 36,
-                daysLeft: 20
+                daysLeft: 20,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Mr. Meef",
@@ -82,7 +76,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 25,
-                daysLeft: 40
+                daysLeft: 40,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Poof",
@@ -91,7 +86,8 @@ export class Api {
                 gender: "Female",
                 bio: "insert bio here",
                 daysInShelter: 0,
-                daysLeft: 105
+                daysLeft: 105,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Rex",
@@ -100,7 +96,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 4,
-                daysLeft: Infinity
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Socks",
@@ -109,7 +106,8 @@ export class Api {
                 gender: "Male",
                 bio: "insert bio here",
                 daysInShelter: 3,
-                daysLeft: Infinity
+                daysLeft: undefined,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             },
             {
                 name: "Midnight",
@@ -118,7 +116,8 @@ export class Api {
                 gender: "Female",
                 bio: "insert bio here",
                 daysInShelter: 32,
-                daysLeft: 2
+                daysLeft: 2,
+                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
             }
         ];
 
