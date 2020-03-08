@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
 import { Card } from './Card';
-import Footer from 'Footer/Footer';
 import axios from "axios";
 
 
