@@ -1,7 +1,7 @@
 import React from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { Card } from './Card';
-import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 interface HomePageProps {
@@ -16,6 +16,25 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
 
         this.state = {
         };
+    }
+
+    // TODO: remove. This is purely for testing purposes.
+    private clickHandler = async () => {
+        axios({
+            method: "post",
+            url: "http://localhost:8080/shelter_accounts/new",
+            data: {
+
+            }
+        }).then((response) => {
+            console.log("\n\nfinished request.");
+            console.log(response.data);
+            console.log("\n\n");
+        }).catch((e) => {
+            console.log("\n\nerror request.");
+            console.log(e.response);
+            console.log("\n\n");
+        });
     }
 
     public render() {
@@ -57,6 +76,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                 <div className="heroSpacer" />
             </div>
         );
+        
     }
 }
 
