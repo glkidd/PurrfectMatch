@@ -5,12 +5,30 @@ import { SearchPageResults } from "./Definitions";
 /*
     This class is used for whenever we need to get data from the server. 
 */
+
+ const GOOD_STATUS = 200;
+ const BASE_URL = "http://localhost:3001/";
         
 export class Api {
 
     // will initialize and either resolve or reject a promise depending on the status code returned by the server
     private static safeFetch = (endpoint: string, method: string, body: JSON) : Promise<Object> => {
-        return Promise.resolve({});
+
+        return fetch(BASE_URL + endpoint, {
+            method: method,
+            body: JSON.stringify(body)
+        })
+        .then(res => {
+            return (new Promise((resolve, reject) => {
+                if (res.status != GOOD_STATUS) {
+                    return res.text().then(res => res ? JSON.parse(res) : {})
+                     .then(json => reject(json));
+                }
+                else {
+                    return resolve(res.json); //  test out this way + with just res.json to see what happens *shrug*
+                }
+            }))
+        })
     }
 
     // this will be used anytime data needs to be added to the backend (not idempotent)

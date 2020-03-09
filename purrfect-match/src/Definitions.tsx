@@ -23,6 +23,19 @@ export interface SearchPageResults {
     photo: string;
 };
 
+export interface ShelterPetInfo {
+    name: string;
+    breed: string;
+    age: string;
+    gender: number; // will map to an enum
+    furLength: number; // will map to an enum
+    bio: string;
+    dateArrived: Date;
+    euthanizeDate: Date | undefined;
+    photo: string;
+    spayNeut: boolean;
+};
+
 export interface SuccessStoryInfo {
     image: string;
     name: string;

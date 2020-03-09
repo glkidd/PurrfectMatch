@@ -460,3 +460,20 @@ li {
   max-width: 18em;
   align-content: right;
 }
+
+.centered {
+  justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newAnimalButton {
+  border: none;
+  border-radius: 5px;
+  background-color: #9f5cfd;
+  position: relative;
+  width: 13em;
+  height: 3em;
+  margin: 30px;
+  font-size: 20px;
+}
