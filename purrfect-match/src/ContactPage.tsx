@@ -69,12 +69,13 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     modalOpen: true
                 });
              
-            }).catch((error: Error) => {
+            }).catch((error: any) => {
                 this.setState({
-                    modalMessage: "Error in submission: " + error.message,
+                    modalMessage: "Error in submission: " + error.response.data,
                     modalOpen: true
                 });
             });
+
         }
     }
 

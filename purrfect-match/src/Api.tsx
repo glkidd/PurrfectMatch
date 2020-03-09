@@ -233,9 +233,6 @@ export class Api {
               shelterEmployee: shelterEmployee,
               message: message
             }
-          }).catch((e: { message: any; })=>{
-              console.log("Hello");
-              console.log(e.message);
-          });
+          })
     }
 }

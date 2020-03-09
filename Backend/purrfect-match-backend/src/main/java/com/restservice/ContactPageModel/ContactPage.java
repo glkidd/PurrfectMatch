@@ -30,7 +30,6 @@ public class ContactPage {
     }
 
     public void setFirstName(String name) {
-        ;
         this.firstName = name;
     }
 
