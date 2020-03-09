@@ -68,10 +68,10 @@
     "resetMocks": true,
     "coverageThreshold": {
       "global": {
-        "statements": 73,
+        "statements": 72,
         "branches": 51,
-        "lines": 70,
-        "functions": 62
+        "lines": 69,
+        "functions": 61
       }
     }
   }

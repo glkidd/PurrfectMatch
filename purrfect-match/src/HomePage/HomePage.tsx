@@ -4,7 +4,6 @@ import { Card } from './Card';
 import { Body } from 'HomePage/Body';
 import axios from "axios";
 
-
 interface HomePageProps {
 };
 
