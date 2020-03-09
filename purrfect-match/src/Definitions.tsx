@@ -20,8 +20,21 @@ export interface SearchPageResults {
     bio: string;
     daysInShelter: number;
     daysLeft: number | undefined;
-    shelterName: string;
     photo: string;
+    shelterName: string;
+};
+
+export interface ShelterPetInfo {
+    name: string;
+    breed: string;
+    age: string;
+    gender: number; // will map to an enum
+    furLength: number; // will map to an enum
+    bio: string;
+    dateArrived: Date;
+    euthanizeDate: Date | undefined;
+    photo: string;
+    spayNeut: boolean;
 };
 
 export interface SuccessStoryInfo {
@@ -53,7 +66,7 @@ export interface ShelterAccountInfo {
     state: string;
     zipCode: number;
     phoneNumber: number;
-    website: string; 
+    website: string;
     id: number;
 }
 

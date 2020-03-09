@@ -127,6 +127,7 @@ exports[`Snapshot test 1`] = `
               gender="Male"
               name="Ollie"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Woods Humane Society"
             />
              
           </li>
@@ -139,6 +140,7 @@ exports[`Snapshot test 1`] = `
               gender="Male"
               name="Meowasaurus"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
@@ -152,6 +154,7 @@ exports[`Snapshot test 1`] = `
               gender="Female"
               name="Fuzzles"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Woods Humane Society"
             />
              
           </li>
@@ -165,6 +168,7 @@ exports[`Snapshot test 1`] = `
               gender="Male"
               name="Mr. Meef"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
@@ -178,6 +182,7 @@ exports[`Snapshot test 1`] = `
               gender="Female"
               name="Poof"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
@@ -190,6 +195,7 @@ exports[`Snapshot test 1`] = `
               gender="Male"
               name="Rex"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
@@ -202,6 +208,7 @@ exports[`Snapshot test 1`] = `
               gender="Male"
               name="Socks"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
@@ -215,6 +222,7 @@ exports[`Snapshot test 1`] = `
               gender="Female"
               name="Midnight"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterName="Cal Poly Cat Program"
             />
              
           </li>
