@@ -30,6 +30,8 @@ CREATE TABLE `shelter_accounts` (
   `zip_code` int(11) NOT NULL,
   `phone_number` varchar(11) NOT NULL,
   `website` varchar(256) NOT NULL,
+  `auth_token` varchar(256) NOT NULL,
+  `auth_timeout` bigint(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
 

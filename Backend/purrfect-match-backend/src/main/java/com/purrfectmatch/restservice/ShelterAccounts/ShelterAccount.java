@@ -42,6 +42,13 @@ public class ShelterAccount {
 	@Column(name = "website")
 	private String website;
 
+	@Column(name = "auth_token")
+	private String authToken;
+	   
+	@Column(name = "auth_timeout")
+	private Long authIssued; // When the auth token was issued, in seconds past the epoch.
+
+	   
 	public ShelterAccount() {
 	}
 
@@ -53,7 +60,7 @@ public class ShelterAccount {
 	}
 
 	public ShelterAccount(String email, String passwordHash, String passwordSalt, String shelterName, String city, String street,
-			String state, int zipCode, String phoneNumber, String website) {
+			String state, int zipCode, String phoneNumber, String website, String authToken, Long authIssued) {
 		this.email = email;
 		this.passwordHash = passwordHash;
 		this.passwordSalt = passwordSalt;
@@ -64,5 +71,13 @@ public class ShelterAccount {
 		this.zipCode = zipCode;
 		this.phoneNumber = phoneNumber;
 		this.website = website;
+		this.authToken = authToken;
+		this.authIssued = authIssued;
+	}
+	
+	// Constructor that doesn't require authToken/authIssued.
+	public ShelterAccount(String email, String passwordHash, String passwordSalt, String name, String city, String street,
+            String state, int zip, String phone, String website) {
+	    this(email, passwordHash, passwordSalt, name, city, street, state, zip, phone, website, "", 0L);
 	}
 }
