@@ -17,6 +17,7 @@ interface optionProps {
 }
 
 interface SubmitProps {
+    id: string;
     className?: string | undefined;
     onclick?: () => void;
 }
@@ -136,7 +137,7 @@ export class Send extends React.Component<SubmitProps, {}> {
 
     public render() {
         return (
-            <div className="inputElem">
+            <div className="inputElem" id={this.props.id}>
                 <button onClick={this.handleSubmit} className={this.props.className}>
                     Submit
                 </button>

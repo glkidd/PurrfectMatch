@@ -134,7 +134,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                         />
                     </div>
                 </div>
-                <Send className="contactPageButton" onclick={this.handleSubmit} />
+                <Send id="submitButton" className="contactPageButton" onclick={this.handleSubmit} />
                 <Modal display={this.state.modalOpen} onClose={() => { this.setState({ modalOpen: false }) }}><div className="modalSpacer">{this.state.modalMessage}</div></Modal>
             </div>
         );
