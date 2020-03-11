@@ -2,12 +2,14 @@ import React from 'react';
 import "./ContactPage.css"
 
 interface inputProps {
+    id: string;
     prompt: string;
     error?: string;
     onchange?: (newVal: string) => void;
 }
 
 interface optionProps {
+    id: string;
     prompt: string;
     options: string[];
     error?: string;
@@ -43,9 +45,9 @@ export class Input extends React.Component<inputProps, {}> {
         return (
             <div className="inputElem">
                 <div className="label">
-                    {this.props.prompt} 
+                    {this.props.prompt}
                 </div>
-                <div className="inputField">
+                <div className="inputField" id={this.props.id}>
                     <input type="text" name="fname" className="textBox" onChange={this.handleChange} />
                 </div>
                 {errorDiv}
@@ -56,7 +58,7 @@ export class Input extends React.Component<inputProps, {}> {
 
 export class Select extends React.Component<optionProps, {}> {
 
-    constructor(props : any) {
+    constructor(props: any) {
         super(props);
     }
 
@@ -75,9 +77,9 @@ export class Select extends React.Component<optionProps, {}> {
         let errorDiv = this.props.error ? <div className="inputError">{this.props.error}</div> : <div />;
 
         return (
-            <div className="inputElem">
+            <div className="inputElem" id={this.props.id}>
                 <div className="label">
-                    {this.props.prompt} 
+                    {this.props.prompt}
                 </div>
                 <select style={{ width: "150px", height: "1.5em" }} onChange={this.handleChange} >
                     <option disabled selected> Select an option </option>
@@ -108,7 +110,7 @@ export class Message extends React.Component<inputProps, {}> {
                 <div className="label">
                     {this.props.prompt}
                 </div>
-                <div className="inputField">
+                <div className="inputField" id={this.props.id}>
                     <textarea rows={20} cols={60} className="textBox message" placeholder="Type your message here..." onChange={this.handleChange} />
                 </div>
                 {errorDiv}
@@ -135,7 +137,7 @@ export class Send extends React.Component<SubmitProps, {}> {
     public render() {
         return (
             <div className="inputElem">
-                <button onClick={this.handleSubmit} className={this.props.className}> 
+                <button onClick={this.handleSubmit} className={this.props.className}>
                     Submit
                 </button>
             </div>

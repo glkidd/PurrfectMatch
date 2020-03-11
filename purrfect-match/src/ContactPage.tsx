@@ -22,7 +22,7 @@ const OPTION_ARRAY = ["Yes", "No"];
 
 export class ContactPage extends React.Component<ContactPageProps, ContactPageState> {
 
-    constructor(props : any) {
+    constructor(props: any) {
         super(props);
 
         this.state = {
@@ -48,7 +48,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
     }
 
-    handleSubmit = ()  => {
+    handleSubmit = () => {
         let formValid = true;
         // Validate all fields filled
         for (let elem of ["firstName", "lastName", "subject", "email", "shelterEmployee", "message"]) {
@@ -85,27 +85,32 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                 <h2 className="header">Contact Us!</h2>
                 <div className="contactBoxes">
                     <Input
+                        id="firstNameField"
                         prompt="First Name:"
                         error={this.checkField(this.state.firstName, "Provide your first name.")}
                         onchange={(newValue: string) => this.setState({ firstName: newValue })}
                     />
                     <Input
+                        id="lastNameField"
                         prompt="Last Name:"
                         error={this.checkField(this.state.lastName, "Provide your last name.")}
                         onchange={(newValue: string) => this.setState({ lastName: newValue })}
                     />
                     <Select
+                        id="shelterEmployeeSelectionBox"
                         prompt="Are you a shelter employee?"
                         options={OPTION_ARRAY}
                         error={this.checkField(this.state.shelterEmployee, "Choose an option.")}
                         onchange={(newValue: any) => this.setState({ shelterEmployee: newValue })}
                     />
                     <Input
+                        id="emailAddressField"
                         prompt="Email Address:"
                         error={this.checkField(this.state.email, "Provide your email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input
+                        id="subjectField"
                         prompt="Subject:"
                         error={this.checkField(this.state.subject, "Provide a subject.")}
                         onchange={(newValue: string) => this.setState({ subject: newValue })}
@@ -122,6 +127,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     </div>
                     <div className="contactBoxes">
                         <Message
+                            id="messageField"
                             prompt="Message:"
                             error={this.checkField(this.state.message, "Please write a message.")}
                             onchange={(newValue: string) => this.setState({ message: newValue })}
