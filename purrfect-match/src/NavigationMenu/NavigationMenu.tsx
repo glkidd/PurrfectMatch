@@ -36,7 +36,7 @@ export class NavigationMenu extends React.Component<MenuProps, MenuState> {
                         <div><p className="purrfectMatch">Purrfect&nbsp;Match</p></div>
                     </Link>
                     <button>
-                        <Link to="success">Success&nbsp;Stories</Link>
+                        <Link id="successStoriesLink" to="success">Success&nbsp;Stories</Link>
                     </button>
                     <button>
                         <Link id="contactLink" to="contact">Contact&nbsp;Us</Link>

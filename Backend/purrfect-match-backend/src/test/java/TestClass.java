@@ -37,13 +37,52 @@ public class TestClass {
         // Click the submit button.
         driver.findElement(By.id("submitButton")).findElement(By.xpath("./button")).click();
 
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+        }
+
         // Click the close modal button.
         driver.findElement(By.className("modal-close")).click();
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+
+        driver.close();
+    }
+
+    @Test
+    public void TestSuccessStoriesPage() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("localhost:3000");
+
+        // Navigate to success stories page
+        driver.findElement(By.id("successStoriesLink")).click();
 
         try {
             Thread.sleep(5000);
         } catch (Exception e) {
         }
+
+        // Click a button with class name "compactView."
+        driver.findElement(By.className("compactView")).click();
+
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+        }
+
+        // Click the close modal button.
+        driver.findElement(By.className("modal-close")).click();
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+
+        driver.close();
     }
 
 }
