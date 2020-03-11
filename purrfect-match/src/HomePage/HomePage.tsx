@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { Card } from './Card';
 import axios from "axios";
 
@@ -48,12 +48,15 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                             <div className="CardGroup" onClick={this.clickHandler}>
                                 <div>
                                     <h1>Dog</h1>
-                                    <Card image={require('../pictures/dog-homepage.jpg')} />
+                                    <Link to="dog">
+                                        <Card image={require('../pictures/dog-homepage.jpg')} />
+                                    </Link>
                                 </div>
                                 <div>
-
                                     <h1>Cat</h1>
-                                    <Card image={require('../pictures/cat-homepage.jpg')} />
+                                    <Link id="searchLink" to="search">
+                                        <Card image={require('../pictures/cat-homepage.jpg')} />
+                                    </Link>
                                 </div>
                                 <div>
                                     <h1>Other</h1>

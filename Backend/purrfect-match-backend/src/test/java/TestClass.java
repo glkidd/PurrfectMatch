@@ -11,6 +11,11 @@ public class TestClass {
         WebDriver driver = new ChromeDriver();
         driver.get("localhost:3000");
 
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
+
         // Navigate to contact page
         driver.findElement(By.id("contactLink")).click();
 
@@ -20,7 +25,7 @@ public class TestClass {
         // Type name "Lincoln" into element w/id lastNameField
         driver.findElement(By.id("lastNameField")).findElement(By.xpath("./input")).sendKeys("Lincoln");
 
-        // Select "yes" for
+        // Select "yes" for new
         new Select(driver.findElement(By.id("shelterEmployeeSelectionBox")).findElement(By.xpath("./select")))
                 .selectByIndex(1);
 
@@ -33,6 +38,11 @@ public class TestClass {
         // Type subject message into element w/id messageField
         driver.findElement(By.id("messageField")).findElement(By.xpath("./textarea"))
                 .sendKeys("I ran into a bug on the success stories page when I tried to click on one of the animals.");
+
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+        }
 
         // Click the submit button.
         driver.findElement(By.id("submitButton")).findElement(By.xpath("./button")).click();
@@ -58,6 +68,11 @@ public class TestClass {
         WebDriver driver = new ChromeDriver();
         driver.get("localhost:3000");
 
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
+
         // Navigate to success stories page
         driver.findElement(By.id("successStoriesLink")).click();
 
@@ -68,6 +83,43 @@ public class TestClass {
 
         // Click a button with class name "compactView."
         driver.findElement(By.className("compactView")).click();
+
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+        }
+
+        // Click the close modal button.
+        driver.findElement(By.className("modal-close")).click();
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+
+        driver.close();
+    }
+
+    @Test
+    public void TestSearchResultsPage() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("localhost:3000");
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+
+        // Navigate to search page, hacky way to do it, but works.
+        driver.get(driver.findElement(By.id("searchLink")).getAttribute("href"));
+
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+        }
+
+        // Click a button with class name "compactView."
+        driver.findElement(By.className("compactSearch")).click();
 
         try {
             Thread.sleep(5000);
