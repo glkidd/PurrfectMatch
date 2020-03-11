@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect, Link} from "react-router-dom";
 import { Card } from './Card';
+import { Body } from 'HomePage/Body';
 import axios from "axios";
-
 
 interface HomePageProps {
 };
@@ -54,7 +54,6 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                     
                                 </div>
                                 <div>
-
                                     <h1>Cat</h1>
                                     <Link to="cat">
                                         <Card image={require('../pictures/cat-homepage.jpg')} />
@@ -74,6 +73,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                     </div>
                 </div>
                 <div className="heroSpacer" />
+                <Body />
             </div>
         );
         

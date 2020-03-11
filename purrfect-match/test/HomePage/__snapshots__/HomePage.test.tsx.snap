@@ -64,5 +64,6 @@ exports[`Renders correctly 1`] = `
   <div
     className="heroSpacer"
   />
+  <Body />
 </div>
 `;
