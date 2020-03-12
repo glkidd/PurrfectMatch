@@ -62,7 +62,7 @@ CREATE TABLE `success_stories` (
   CONSTRAINT `success_stories_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
 );
 
-CREATE TABLE `DOGs` (
+CREATE TABLE `dogs` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
   `image` varchar(256) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -79,11 +79,11 @@ CREATE TABLE `DOGs` (
   PRIMARY KEY (`id`),
   KEY `shelter_id` (`shelter_id`),
   KEY `breed` (`breed`),
-  CONSTRAINT `DOGs_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
-  CONSTRAINT `DOGs_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+  CONSTRAINT `dogs_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `dogs_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
 );
 
-CREATE TABLE `CATs` (
+CREATE TABLE `cats` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
   `image` varchar(256) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -99,11 +99,11 @@ CREATE TABLE `CATs` (
   PRIMARY KEY (`id`),
   KEY `shelter_id` (`shelter_id`),
   KEY `breed` (`breed`),
-  CONSTRAINT `CATs_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
-  CONSTRAINT `CATs_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
+  CONSTRAINT `cats_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `cats_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
 );
 
-CREATE TABLE `OTHER_animals` (
+CREATE TABLE `other_animals` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
   `image` varchar(256) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -118,6 +118,6 @@ CREATE TABLE `OTHER_animals` (
   PRIMARY KEY (`id`),
   KEY `shelter_id` (`shelter_id`),
   KEY `species` (`species`),
-  CONSTRAINT `OTHER_animals_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
-  CONSTRAINT `OTHER_animals_species_fk` FOREIGN KEY (`species`) REFERENCES `breeds` (`id`)
+  CONSTRAINT `other_animals_shelter_id_fk` FOREIGN KEY (`shelter_id`) REFERENCES `shelter_accounts` (`id`),
+  CONSTRAINT `other_animals_species_fk` FOREIGN KEY (`species`) REFERENCES `breeds` (`id`)
 ); 

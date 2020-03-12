@@ -25,12 +25,16 @@ exports[`Renders correctly 1`] = `
     <Route
       path="/dog"
     >
-      <UnderConstructionDog />
+      <UnderConstruction
+        logo="test-file-stub"
+      />
     </Route>
     <Route
       path="/other"
     >
-      <UnderConstructionOther />
+      <UnderConstruction
+        logo="test-file-stub"
+      />
     </Route>
     <Route
       path="/"
