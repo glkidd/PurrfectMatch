@@ -6,8 +6,8 @@ import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
 import Footer from "Footer/Footer";
-import {UnderConstructionDog} from "UnderConstruction/UnderConstructionDog";
-import {UnderConstructionOther} from "UnderConstruction/UnderConstructionOther";
+import {UnderConstructionDog, UnderConstructionOther} from "UnderConstruction/UnderConstruction";
+
 
 interface AppState {
     page: JSX.Element | null;
