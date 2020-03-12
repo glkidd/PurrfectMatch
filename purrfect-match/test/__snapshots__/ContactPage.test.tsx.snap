@@ -113,7 +113,7 @@ exports[`Renders correctly 2`] = `
       prompt="Are you a shelter employee?"
     />
     <Input
-      error="Provide your email."
+      error="Provide a valid email."
       onchange={[Function]}
       prompt="Email Address:"
     />
