@@ -231,7 +231,7 @@ export class Api {
               lastName: lastName,
               subject: subject,
               email: email,
-              shelterEmployee: shelterEmployee,
+              shelterEmployee: shelterEmployee.toUpperCase(),
               message: message
             }
           })
