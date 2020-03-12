@@ -1,8 +1,14 @@
 import React from 'react';
 import logo from '../pictures/dog-homepage.jpg';
-import './UnderConstructionDog.css';
+import logos from '../pictures/other-animal-homepage.jpg';
+import './UnderConstruction.css';
 
-export class UnderConstructionDog extends React.Component{
+interface compactViewProps {
+  logo: any;
+}
+
+
+export class UnderConstruction extends React.Component<compactViewProps>{
 
   public render() {
     return (
