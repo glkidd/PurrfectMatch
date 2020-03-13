@@ -5,11 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-<<<<<<< HEAD
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.domain.Sort.NullHandling;
-=======
->>>>>>> a913d6d1557f147f3d3bf5eb5685bca1ae679514
 import org.springframework.stereotype.Service;
 
 import com.purrfectmatch.restservice.Cats.CatRepository;
