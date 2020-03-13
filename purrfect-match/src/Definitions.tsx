@@ -21,7 +21,7 @@ export interface SearchPageResults {
     daysInShelter: number;
     daysLeft: number | undefined;
     photo: string;
-    shelterName: string;
+    shelterId: number;
 };
 
 export interface ShelterPetInfo {

@@ -164,9 +164,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                     bio={result.bio}
                     daysLeft={result.daysLeft}
                     photo={result.photo}
-                    shelterName={result.shelterName}
-                    /> </li> ) } ) } 
-                </ul>;
+                    shelterId={result.shelterId}
+                /> </li> ) } ) } 
+            </ul>;
         };
 
         return (
@@ -184,23 +184,23 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                         </li>
 
                         <li>
-                        <Select
-                            prompt="Age"
-                            options={AGE_OPTION_ARRAY}
-                            onchange={(newValue: any) => this.filterByAge(newValue)}
-                        />
+                            <Select
+                                prompt="Age"
+                                options={AGE_OPTION_ARRAY}
+                                onchange={(newValue: any) => this.filterByAge(newValue)}
+                            />
                         </li>
                         <li>
-                        <Select
-                            prompt="Gender"
-                            options={GENDER_OPTION_ARRAY}
-                            onchange={(newValue: any) => this.filterByGender(newValue)}
-                        />
+                            <Select
+                                prompt="Gender"
+                                options={GENDER_OPTION_ARRAY}
+                                onchange={(newValue: any) => this.filterByGender(newValue)}
+                            />
                         </li>
                         <li>
                             <Input
-                            prompt="Location:"
-                            onchange={(newValue: string) => this.filterByLocation(newValue)}/>
+                                prompt="Location:"
+                                onchange={(newValue: string) => this.filterByLocation(newValue)}/>
                         </li>
                     </ul>
                 </div>
