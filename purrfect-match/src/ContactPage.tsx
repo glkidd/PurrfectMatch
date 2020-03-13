@@ -22,7 +22,7 @@ const OPTION_ARRAY = ["Yes", "No"];
 
 export class ContactPage extends React.Component<ContactPageProps, ContactPageState> {
 
-    constructor(props : any) {
+    constructor(props: any) {
         super(props);
 
         this.state = {
@@ -48,7 +48,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
         }
     }
 
-    handleSubmit = ()  => {
+    handleSubmit = () => {
         let formValid = true;
         // Validate all fields filled
         for (let elem of ["firstName", "lastName", "subject", "email", "shelterEmployee", "message"]) {
@@ -63,12 +63,14 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     modalMessage: "Submitted request successfully!",
                     modalOpen: true
                 });
-            }).catch((error: Error) => {
+
+            }).catch((error: any) => {
                 this.setState({
-                    modalMessage: "Error in submission: " + error.message,
+                    modalMessage: "Error in submission: " + error.response.data,
                     modalOpen: true
                 });
             });
+
         }
     }
 
@@ -102,7 +104,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     />
                     <Input
                         prompt="Email Address:"
-                        error={this.checkField(this.state.email, "Provide your email.")}
+                        error={this.checkField(this.state.email, "Provide a valid email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input

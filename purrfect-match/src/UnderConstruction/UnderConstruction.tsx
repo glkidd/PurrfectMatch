@@ -1,14 +1,18 @@
 import React from 'react';
-import logo from '../pictures/dog-homepage.jpg';
-import './UnderConstructionDog.css';
+import './UnderConstruction.css';
 
-export class UnderConstructionDog extends React.Component{
+interface compactViewProps {
+  logo: any;
+}
+
+
+export class UnderConstruction extends React.Component<compactViewProps>{
 
   public render() {
     return (
       <div className="UnderConstruction">
         <header className="UnderConstruction-header">
-          <img src={logo} className="UnderConstruction-logo" alt="logo" />
+          <img src={this.props.logo} className="UnderConstruction-logo" alt="logo" />
           <p>
             Under Construction
         </p>
