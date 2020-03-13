@@ -1,7 +1,7 @@
 CREATE TABLE `breeds` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `breed_name` varchar(100) NOT NULL,
-  `species` enum('dog','cat','other') DEFAULT NULL,
+  `species` enum('DOG','CAT','OTHER') DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `breed_name_UNIQUE` (`breed_name`)
 );
@@ -30,6 +30,8 @@ CREATE TABLE `shelter_accounts` (
   `zip_code` int(11) NOT NULL,
   `phone_number` varchar(11) NOT NULL,
   `website` varchar(256) NOT NULL,
+  `auth_token` varchar(256) NOT NULL,
+  `auth_timeout` bigint(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -40,11 +42,11 @@ CREATE TABLE `recently_adopted` (
   `birthday` datetime DEFAULT NULL,
   `breed` int(11) NOT NULL,
   `date_adopted` datetime DEFAULT NULL,
-  `gender` enum('male','female','other') NOT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') NOT NULL,
   PRIMARY KEY (`id`),
   KEY `breed` (`breed`),
   CONSTRAINT `recently_adopted_breed_fk` FOREIGN KEY (`breed`) REFERENCES `breeds` (`id`)
-); 
+);
 
 CREATE TABLE `success_stories` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
@@ -53,7 +55,7 @@ CREATE TABLE `success_stories` (
   `birthday` datetime DEFAULT NULL,
   `breed` int(11) NOT NULL,
   `date_adopted` datetime NOT NULL,
-  `gender` enum('male','female','other') NOT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') NOT NULL,
   `message` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `breed` (`breed`),
@@ -66,14 +68,14 @@ CREATE TABLE `dogs` (
   `name` varchar(50) NOT NULL,
   `birthday` datetime DEFAULT NULL,
   `breed` int(11) NOT NULL,
-  `gender` enum('male','female','other') NOT NULL,
-  `fur_length` enum('no hair','short','medium','long') NOT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') NOT NULL,
+  `fur_length` enum('NOHAIR','SHORT','MEDIUM','LONG') NOT NULL,
   `bio` varchar(1000) NOT NULL,
   `shelter_id` bigint(255) NOT NULL,
   `date_arrived` datetime NOT NULL,
   `euthanized_date` datetime DEFAULT NULL,
   `spayed/neutured` tinyint(1) NOT NULL,
-  `size` enum('small','medium','large','x-large') NOT NULL,
+  `size` enum('SMALL','MEDIUM','LARGE','XLARGE') NOT NULL,
   PRIMARY KEY (`id`),
   KEY `shelter_id` (`shelter_id`),
   KEY `breed` (`breed`),
@@ -87,8 +89,8 @@ CREATE TABLE `cats` (
   `name` varchar(50) NOT NULL,
   `birthday` datetime DEFAULT NULL,
   `breed` int(11) NOT NULL,
-  `gender` enum('male','female','other') NOT NULL,
-  `fur_length` enum('no hair','short','medium','long') NOT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') NOT NULL,
+  `fur_length` enum('NOHAIR','SHORT','MEDIUM','LONG') NOT NULL,
   `bio` varchar(1000) NOT NULL,
   `shelter_id` bigint(255) NOT NULL,
   `date_arrived` datetime NOT NULL,
@@ -107,7 +109,7 @@ CREATE TABLE `other_animals` (
   `name` varchar(50) NOT NULL,
   `birthday` datetime DEFAULT NULL,
   `species` int(11) NOT NULL,
-  `gender` enum('male','female','other') NOT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') NOT NULL,
   `bio` varchar(1000) NOT NULL,
   `shelter_id` bigint(255) NOT NULL,
   `date_arrived` datetime NOT NULL,

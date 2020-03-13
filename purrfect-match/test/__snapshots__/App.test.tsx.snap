@@ -18,9 +18,23 @@ exports[`Renders correctly 1`] = `
       <SuccessStoryPage />
     </Route>
     <Route
-      path="/search"
+      path="/cat"
     >
       <SearchPage />
+    </Route>
+    <Route
+      path="/dog"
+    >
+      <UnderConstruction
+        logo="test-file-stub"
+      />
+    </Route>
+    <Route
+      path="/other"
+    >
+      <UnderConstruction
+        logo="test-file-stub"
+      />
     </Route>
     <Route
       path="/"
