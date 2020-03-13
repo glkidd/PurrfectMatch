@@ -1,8 +1,8 @@
 import React from 'react';
-import { Redirect, Link} from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { Card } from './Card';
+import { Body } from 'HomePage/Body';
 import axios from "axios";
-
 
 interface HomePageProps {
 };
@@ -45,38 +45,36 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                         <div className="Cards">
                             <h2>Find your perfect companion from the comfort of your own home.</h2>
                             <h2>Choose which type of animal you would like to start with:</h2>
-                            <div className="CardGroup" onClick={this.clickHandler}>
+                            <div className="CardGroup">
                                 <div>
                                     <h1>Dog</h1>
                                     <Link to="dog">
                                         <Card image={require('../pictures/dog-homepage.jpg')} />
                                     </Link>
-                                    
+
                                 </div>
                                 <div>
-
                                     <h1>Cat</h1>
                                     <Link to="cat">
                                         <Card image={require('../pictures/cat-homepage.jpg')} />
                                     </Link>
-
-
                                 </div>
                                 <div>
                                     <h1>Other</h1>
                                     <Link to="other">
                                         <Card image={require('../pictures/other-animal-homepage.jpg')} />
                                     </Link>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="heroSpacer" />
+                <Body />
             </div>
         );
-        
+
     }
 }
 

@@ -85,6 +85,7 @@ class LoadDatabase {
                         log.info("Preloading " + successStoryRepository
                                         .save(new SuccessStory("cutemaledog.png", "Phaedo", LocalDate.of(1998, 3, 24),
                                                         tempBreed.getId().intValue(), LocalDate.of(2019, 3, 24), Gender.MALE, "HIIII")));
+
                         log.info("Preloading " + recentlyAdoptedRepository.save(
                                         new RecentlyAdopted("barack.png", "barack obama", null, tempBreed.getId().intValue(), null, Gender.MALE)));
                         int i = 0;
@@ -94,8 +95,6 @@ class LoadDatabase {
                                                                 "barack obama", null, tempBreed.getId().intValue(), null, Gender.MALE)));
                                 i++;
                         }
-                        
-                         
                 };
         }
 

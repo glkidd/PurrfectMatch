@@ -19,7 +19,6 @@ exports[`Renders correctly 1`] = `
         </h2>
         <div
           className="CardGroup"
-          onClick={[Function]}
         >
           <div>
             <h1>
@@ -64,5 +63,6 @@ exports[`Renders correctly 1`] = `
   <div
     className="heroSpacer"
   />
+  <Body />
 </div>
 `;

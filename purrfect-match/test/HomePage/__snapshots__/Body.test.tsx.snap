@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div
+    className="body-wrapper"
+  >
+    <div>
+      <h1
+        className="feature-header"
+      >
+        1. Find your perfect pet!
+      </h1>
+      <p
+        className="paragraph-header"
+      >
+        We've partnered with hundreds of animal shelters to help you with the process.
+      </p>
+    </div>
+    <div>
+      <h1
+        className="feature-header"
+      >
+        2. Contact the shelter.
+      </h1>
+      <p
+        className="paragraph-header"
+      >
+        Each pet should have contact information for its respective shelter.
+      </p>
+    </div>
+    <div>
+      <h1
+        className="feature-header"
+      >
+        3. Pick up your companion.
+      </h1>
+      <p
+        className="paragraph-header"
+      >
+        Once you pick up your companion you can leave a success story and be featured on the site.
+      </p>
+    </div>
+  </div>
+</div>
+`;
