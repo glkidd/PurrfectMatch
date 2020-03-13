@@ -26,6 +26,7 @@ public class OtherAnimal {
    private int species;
 
    @Column(name = "gender")
+   @Enumerated(EnumType.STRING)
    private Gender gender;
 
    @Column(name = "bio")
@@ -40,7 +41,7 @@ public class OtherAnimal {
    @Column(name = "euthanized_date")
    private LocalDate euthanizeDate;
 
-   @Column(name = "spayed/neutured")
+   @Column(name = "spayed_neutured")
    private boolean spayedNeutured;
 
    public OtherAnimal() {
