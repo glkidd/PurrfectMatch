@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "shelter_accounts")
 public class ShelterAccount {
-	@Column(name = "id")
+	@Column(name = "id", nullable = false)
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
 	@Column(name = "email")

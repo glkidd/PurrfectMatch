@@ -28,9 +28,11 @@ public class Dog {
    private int breed;
 
    @Column(name = "gender")
+   @Enumerated(EnumType.STRING)   
    private Gender gender;
 
    @Column(name = "fur_length")
+   @Enumerated(EnumType.STRING)
    private FurLength furLength;
 
    @Column(name = "bio")
@@ -45,7 +47,7 @@ public class Dog {
    @Column(name = "euthanized_date")
    private LocalDate euthanizeDate;
 
-   @Column(name = "spayed/neutured")
+   @Column(name = "spayed_neutured")
    private boolean spayedNeutured;
 
    @Column(name = "size")
