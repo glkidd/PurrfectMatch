@@ -64,7 +64,7 @@ describe("Message tests", () => {
 describe("Send tests", () => {
     let wrapper: ShallowWrapper<any, any, any>;
     beforeEach(() => {
-        wrapper = shallow(<Send onclick={jest.fn()} />);
+        wrapper = shallow(<Send id="mockId" onclick={jest.fn()} />);
     });
 
     test("Snapshot test", () => {

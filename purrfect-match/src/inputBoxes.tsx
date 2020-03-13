@@ -2,14 +2,14 @@ import React from 'react';
 import "./ContactPage.css"
 
 interface inputProps {
-    id: string;
+    id?: string;
     prompt: string;
     error?: string;
     onchange?: (newVal: string) => void;
 }
 
 interface optionProps {
-    id: string;
+    id?: string;
     prompt: string;
     options: string[];
     error?: string;
@@ -17,7 +17,7 @@ interface optionProps {
 }
 
 interface SubmitProps {
-    id: string;
+    id?: string;
     className?: string | undefined;
     onclick?: () => void;
 }
