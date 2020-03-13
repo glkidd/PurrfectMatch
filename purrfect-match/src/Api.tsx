@@ -1,11 +1,15 @@
 import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
-import { SearchPageResults } from "./Definitions";
+import { SearchPageResults, Filters } from './Definitions';
 import axios from 'axios';
 
 /*
     This class is used for whenever we need to get data from the server. 
 */
+// Purposefully not exported
+let cache: any = {
+    "breeds": {}
+};
         
 export class Api {
 
@@ -35,94 +39,67 @@ export class Api {
     private static del = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, "DELETE", body);
     }
-    
+
+    public static getBreed = (id: number): Promise<string> => {
+        return axios({
+            method: "post",
+            url: "http://localhost:8080/breeds/get/" + id.toString()
+        }).then((data: any) => {
+            console.log(data);
+            return data.data.breedName;
+        });
+    }
+
     //should eventually connect up to safeFetch via Api.get
-    public static getSearchResults = (filter: Object, sort: string) : Promise<SearchPageResults[]> => {
-        //temporary values for sake of front end, but would normally call Api.get --> safeFetch will handle promises
-        //would use input filter and sort info for "getting" the search results/will get sorted/filtered info from backend
+    public static getSearchResults = (species: string, filter: Filters, sort: string): Promise<SearchPageResults[]> => {
+        let sortMapping: any = {
+            "": { sort: "RISK", dir: "ASC" },
+            "risk": { sort: "RISK", dir: "ASC" },
+            "time": { sort: "DAYS", dir: "ASC" },
+            "ageAsc": { sort: "AGE", dir: "ASC" },
+            "ageDesc": { sort: "AGE", dir: "DESC" }
+        }
 
-        const SEARCH_RESULTS: SearchPageResults[] = [
-            {
-                name:"Ollie",
-                breed: "American Shorthair",
-                age: "5 years",
-                gender: "Male",
-                bio: "insert bio here",
-                daysInShelter: 1,
-                daysLeft: 30,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Meowasaurus",
-                breed: "American Shorthair",
-                age: "3.5 years", gender: "Male",
-                bio: "insert bio here",
-                daysInShelter: 5,
-                daysLeft: undefined,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Fuzzles",
-                breed:"American Shorthair",
-                age: "4 years", gender:"Female",
-                bio:"insert bio here",
-                daysInShelter: 36,
-                daysLeft: 20,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Mr. Meef",
-                breed: "American Shorthair",
-                age: "5 months",
-                gender: "Male",
-                bio: "insert bio here",
-                daysInShelter: 25,
-                daysLeft: 40,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Poof",
-                breed: "American Shorthair",
-                age:"6 years",
-                gender: "Female",
-                bio: "insert bio here",
-                daysInShelter: 0,
-                daysLeft: 105,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Rex",
-                breed: "American Shorthair",
-                age: "1 year",
-                gender: "Male",
-                bio: "insert bio here",
-                daysInShelter: 4,
-                daysLeft: undefined,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Socks",
-                breed: "American Shorthair",
-                age: "8 years",
-                gender: "Male",
-                bio: "insert bio here",
-                daysInShelter: 3,
-                daysLeft: undefined,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            },
-            {
-                name: "Midnight",
-                breed: "American Shorthair",
-                age: "8 months",
-                gender: "Female",
-                bio: "insert bio here",
-                daysInShelter: 32,
-                daysLeft: 2,
-                photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+        return axios({
+            method: 'post',
+            url: 'http://localhost:8080/search',
+            data: {
+                species: species,
+                filterRisk: filter.risk,
+                filterAge: filter.age,
+                filterGender: filter.gender == "" ? "UNSET" : filter.gender.toUpperCase(),
+                filterLocation: filter.location,
+                sortBy: sortMapping[sort].sort,
+                sortDirection: sortMapping[sort].dir,
+                page: 0
             }
-        ];
+        }).then((data) => {
+            return data.data.body;
+        }).then((data) => {
+            // Check that we have all breeds cached, and fetch any we're missing
+            let promises: Promise<any>[] =[];
+            data.forEach((item : any) => {
+                if (cache["breeds"][item.breed] === undefined) {
+                    cache["breeds"][item.breed] = "";
+                    promises.push(Api.getBreed(item.breed).then((breed : string) => { cache["breeds"][item.breed] = breed; }));
+                }
+            });
 
-        return Promise.resolve(SEARCH_RESULTS); // in actuality, will be returning resolve or reject from safeFetch via Api.get
+            return Promise.all(promises).then(() => { return data; });
+        }).then((data) => { 
+            return data.map((value : any) => {
+                return {
+                    name: value.name,
+                    breed: cache["breeds"][value.breed],
+                    age: value.bday.toString(),
+                    gender: value.gender.toLowerCase(),
+                    bio: value.bio,
+                    daysInShelter: value.dateArrived,
+                    daysLeft: value.euthanizeDate,
+                    photo: value.imageName
+                };
+            });
+        });
 
     }
 
@@ -227,13 +204,13 @@ export class Api {
             method: 'post',
             url: 'http://localhost:8080/contact',
             data: {
-              firstName: firstName,
-              lastName: lastName,
-              subject: subject,
-              email: email,
-              shelterEmployee: shelterEmployee.toUpperCase(),
-              message: message
+                firstName: firstName,
+                lastName: lastName,
+                subject: subject,
+                email: email,
+                shelterEmployee: shelterEmployee.toUpperCase(),
+                message: message
             }
-          })
+        });
     }
 }

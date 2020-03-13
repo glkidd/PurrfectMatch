@@ -23,16 +23,16 @@ public class Cat {
    @Column(name = "bio")
    private String bio;
 
-   @Column(name = "shelter_id")
+   @Column(name = "shelterid")
    private Long shelterId;
 
-   @Column(name = "birthday")
+   @Column(name = "bday")
    private LocalDate bday;
 
-   @Column(name = "date_arrived")
+   @Column(name = "datearrived")
    private LocalDate dateArrived;
 
-   @Column(name = "euthanized_date")
+   @Column(name = "euthanizedate")
    private LocalDate euthanizeDate;
 
    @Column(name = "breed")
@@ -42,11 +42,11 @@ public class Cat {
    @Enumerated(EnumType.STRING)
    private Gender gender;
 
-   @Column(name = "fur_length")
+   @Column(name = "furlength")
    @Enumerated(EnumType.STRING)
    private FurLength furLength;
 
-   @Column(name = "spayed_neutured")
+   @Column(name = "spayedneutured")
    private boolean spayedNeutured;
 
    public Cat() {

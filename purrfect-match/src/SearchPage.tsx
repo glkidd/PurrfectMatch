@@ -3,7 +3,7 @@ import { CompactSearch } from "./CompactSearch"
 import { TipsSideBar } from "./TipsSideBar";
 import { Api } from "./Api";
 import { Select, Input } from './FilterInputs';
-import { SearchPageResults, Filters, Sorter } from './Definitions';
+import { SearchPageResults, Filters } from './Definitions';
 import { Spinner } from './Spinner';
 
 const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla.";
@@ -41,8 +41,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         };
     }
 
-    private getSearchResults(filter: Object, sort: string) {
-        Api.getSearchResults(filter, sort).then((searchResults: SearchPageResults[]) => {
+    private getSearchResults(filter: Filters, sort: string) {
+        Api.getSearchResults("CAT", filter, sort).then((searchResults: SearchPageResults[]) => {
             this.setState( { searchResults: searchResults } ); 
         });
     }
@@ -129,7 +129,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
             filter.gender = "";
         }
         else {
-            filter.age = gender;
+            filter.gender = gender;
         }
         this.getSearchResults(filter, this.state.sort);
         this.setState({filter: filter});

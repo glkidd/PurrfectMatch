@@ -17,7 +17,7 @@ class SearchValidator {
     
     public static void validateLocationFilter(String filter) throws ValidationException {
         // match strings of exactly 5 digits, note that \A is start of input and \z is end of input.
-        if (!filter.matches("\\A[0-9]{5}\\z")) {
+        if (!filter.matches("\\A[0-9]{5}\\z") && !filter.isEmpty()) {
             throw new ValidationException("Zip code is invalid: " + filter);
         }
     }

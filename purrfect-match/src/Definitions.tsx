@@ -1,10 +1,3 @@
-export interface Sorter {
-    risk: boolean,
-    time: boolean,
-    ageAsc: boolean,
-    ageDesc: boolean
-}
-
 export interface Filters {
     risk: boolean,
     age: string,
