@@ -121,12 +121,13 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="5 years"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               daysLeft={30}
               gender="Male"
               name="Ollie"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://www.rd.com/wp-content/uploads/2019/11/cat-10-e1573844975155-1200x1200.jpg"
+              shelterId={1}
             />
              
           </li>
@@ -134,11 +135,12 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="3.5 years"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               gender="Male"
               name="Meowasaurus"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://www.thesprucepets.com/thmb/49Mgi7EXkywd5aRMYnG4mhc4lHI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/28153808_150772342209712_8095208665067290624_n-5a949ebcc673350037abdbdc.jpg"
+              shelterId={2}
             />
              
           </li>
@@ -146,12 +148,13 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="4 years"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               daysLeft={20}
               gender="Female"
               name="Fuzzles"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://kittenrescue.org/wp-content/uploads/2019/08/KittenRescue_TinyPanda4-570x570.jpg"
+              shelterId={3}
             />
              
           </li>
@@ -159,12 +162,13 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="5 months"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               daysLeft={40}
               gender="Male"
               name="Mr. Meef"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://nationaltoday.com/wp-content/uploads/2019/04/national-siamese-cat-day.jpg"
+              shelterId={4}
             />
              
           </li>
@@ -172,12 +176,13 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="6 years"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               daysLeft={105}
               gender="Female"
               name="Poof"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/June_odd-eyed-cat_cropped.jpg/712px-June_odd-eyed-cat_cropped.jpg"
+              shelterId={5}
             />
              
           </li>
@@ -185,11 +190,12 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="1 year"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               gender="Male"
               name="Rex"
               photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              shelterId={6}
             />
              
           </li>
@@ -197,11 +203,12 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="8 years"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               gender="Male"
               name="Socks"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://felineengineering.com/wp-content/uploads/2019/04/innocent-kitten-e1556584502399-1024x1024.jpg"
+              shelterId={7}
             />
              
           </li>
@@ -209,12 +216,13 @@ exports[`Snapshot test 1`] = `
              
             <CompactSearch
               age="8 months"
-              bio="insert bio here"
+              bio=""
               breed="American Shorthair"
               daysLeft={2}
               gender="Female"
               name="Midnight"
-              photo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              photo="https://www.thesprucepets.com/thmb/mnQh4QB3JmRmck_Ky3Pzo66Jp24=/3744x3744/smart/filters:no_upscale()/bombay-cat-black-cat-584192512-5808f21c3df78c2c730fe3c1.jpg"
+              shelterId={8}
             />
              
           </li>

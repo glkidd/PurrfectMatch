@@ -38,7 +38,7 @@ export class SubmissionBox extends React.Component<submissionBoxProps, submissio
 
                         </div>
 
-                        <div id="submissionBoxInputs">
+                        <div id="submissionBoxInputs">                            
                             <Input id="nameField" prompt="Name:"></Input>
                             <Input id="petNameField" prompt="Pet's name:"></Input>
                             <Input id="breedField" prompt="Breed:"></Input>
@@ -46,6 +46,8 @@ export class SubmissionBox extends React.Component<submissionBoxProps, submissio
                             <Input id="genderField" prompt="Gender:"></Input>
                             <Input id="dateOfAdoptionField" prompt="Date of adoption:"></Input>
                             <Message id="storyField" prompt="Share your story:"></Message>
+                            <br /> 
+                            <button className="submissionBoxButton" onClick={() => {}} > <div> Send </div> </button>
                         </div>
                     </div>
 
