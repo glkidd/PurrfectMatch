@@ -158,7 +158,6 @@ class LoadDatabase {
                                                                 "barack obama", null, tempBreed.getId().intValue(), null, Gender.MALE)));
                                 i++;
                         }
-                        
                 };
         }
 

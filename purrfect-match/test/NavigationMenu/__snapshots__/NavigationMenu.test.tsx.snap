@@ -27,6 +27,7 @@ exports[`Renders correctly 1`] = `
     </Link>
     <button>
       <Link
+        id="successStoriesLink"
         to="success"
       >
         Success Stories
@@ -34,6 +35,7 @@ exports[`Renders correctly 1`] = `
     </button>
     <button>
       <Link
+        id="contactLink"
         to="contact"
       >
         Contact Us
@@ -70,6 +72,7 @@ exports[`Renders correctly 2`] = `
     </Link>
     <button>
       <Link
+        id="successStoriesLink"
         to="success"
       >
         Success Stories
@@ -77,6 +80,7 @@ exports[`Renders correctly 2`] = `
     </button>
     <button>
       <Link
+        id="contactLink"
         to="contact"
       >
         Contact Us

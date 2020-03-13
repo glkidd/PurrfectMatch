@@ -8,7 +8,7 @@ CREATE TABLE `breeds` (
 
 CREATE TABLE `shelter_accounts` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT,
-  `email` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL, 
   `password_hash` varchar(256) NOT NULL,
   `password_salt` varchar(256) NOT NULL,
   `shelter_name` varchar(256) NOT NULL,
@@ -30,6 +30,8 @@ CREATE TABLE `shelter_accounts` (
   `zip_code` int(11) NOT NULL,
   `phone_number` varchar(11) NOT NULL,
   `website` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY 'email_UNIQUE' ('email')
   `auth_token` varchar(256) NOT NULL,
   `auth_timeout` bigint(255) NOT NULL,
   PRIMARY KEY (`id`)

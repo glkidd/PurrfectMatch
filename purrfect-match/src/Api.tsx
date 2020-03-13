@@ -1,6 +1,6 @@
 import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
-import { SearchPageResults, Filters } from './Definitions';
+import { SearchPageResults, Filters, ShelterAccountInfo } from './Definitions';
 import axios from 'axios';
 
 /*
@@ -28,8 +28,8 @@ export class Api {
         return Api.safeFetch(endpoint, 'PUT', body);
     }
      
-     // this will be used anytime data needs to be retrieved from the backend (idempotent)
-     // body would normally be empty
+    // this will be used anytime data needs to be retrieved from the backend (idempotent)
+    // body would normally be empty
     private static get = (endpoint: string, body: JSON) : Promise<Object> => {
         return Api.safeFetch(endpoint, 'GET', body);
     }
@@ -49,8 +49,24 @@ export class Api {
             return data.data.breedName;
         });
     }
+    public static getShelterAccountInfo = (idNum: number) : Promise<ShelterAccountInfo> => {
 
-    //should eventually connect up to safeFetch via Api.get
+        const ACCOUNT_RESULTS: ShelterAccountInfo = 
+            {
+                email: "example@email.com",
+                shelterName: "Woods Humane Society",
+                street: "123 Street Ave",
+                city: "San Luis Obispo",
+                state: "CA",
+                zipCode: 93405,
+                phoneNumber: 1233456789,
+                website: "website.com",
+                id: idNum
+            };
+
+        return Promise.resolve(ACCOUNT_RESULTS); // need to use GET to retrieve data from database
+    }
+    
     public static getSearchResults = (species: string, filter: Filters, sort: string): Promise<SearchPageResults[]> => {
         let sortMapping: any = {
             "": { sort: "RISK", dir: "ASC" },
@@ -96,7 +112,8 @@ export class Api {
                     bio: value.bio,
                     daysInShelter: value.dateArrived,
                     daysLeft: value.euthanizeDate,
-                    photo: value.imageName
+                    photo: value.imageName,
+                    shelterId: value.id
                 };
             });
         });
@@ -213,4 +230,5 @@ export class Api {
             }
         });
     }
+
 }

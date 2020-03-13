@@ -5,8 +5,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+<<<<<<< HEAD
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.domain.Sort.NullHandling;
+=======
+>>>>>>> a913d6d1557f147f3d3bf5eb5685bca1ae679514
 import org.springframework.stereotype.Service;
 
 import com.purrfectmatch.restservice.Cats.CatRepository;
@@ -34,7 +37,6 @@ public class SearchService {
     public static final int PAGE_SIZE = 25;
     
     public List<Cat> getCats(SearchRequest req) {
-        
         Specification<Cat> filters = SearchSpecifications.nop();
         
         // Force filter by risk if sort by risk chosen, as apparently we can't put nulls last?
@@ -95,12 +97,10 @@ public class SearchService {
             default:
                 sortColumn = "No sort provided (somehow)? Oops!";
         }
-
         Order sorter = (new Order(req.getSortDirection() == SearchRequest.SortDir.ASC ? Sort.Direction.ASC : Sort.Direction.DESC,
                            sortColumn)).nullsLast();
         
-        Pageable paging = PageRequest.of(req.getPage(), PAGE_SIZE, Sort.by(sorter));
-        
+        Pageable paging = PageRequest.of(req.getPage(), PAGE_SIZE, Sort.by(sorter));        
         Page<Cat> pagedResult = cats.findAll(filters, paging);
         return pagedResult.getContent();
         
