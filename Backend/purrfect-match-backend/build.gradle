@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.example'
+group = 'com.purrfectmatch'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -13,12 +13,17 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
 	testCompile 'com.jayway.jsonpath:json-path'
+	compile 'org.springframework:spring-context-support'
 	compile group: 'org.seleniumhq.selenium', name: 'selenium-java'
 	compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver'
+	compile group: 'javax.mail', name: 'mail', version: '1.4'
+ 	compile group: 'javax.activation', name: 'activation', version: '1.1.1'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
