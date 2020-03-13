@@ -87,27 +87,32 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                 <h2 className="header">Contact Us!</h2>
                 <div className="contactBoxes">
                     <Input
+                        id="firstNameField"
                         prompt="First Name:"
                         error={this.checkField(this.state.firstName, "Provide your first name.")}
                         onchange={(newValue: string) => this.setState({ firstName: newValue })}
                     />
                     <Input
+                        id="lastNameField"
                         prompt="Last Name:"
                         error={this.checkField(this.state.lastName, "Provide your last name.")}
                         onchange={(newValue: string) => this.setState({ lastName: newValue })}
                     />
                     <Select
+                        id="shelterEmployeeSelectionBox"
                         prompt="Are you a shelter employee?"
                         options={OPTION_ARRAY}
                         error={this.checkField(this.state.shelterEmployee, "Choose an option.")}
                         onchange={(newValue: any) => this.setState({ shelterEmployee: newValue })}
                     />
                     <Input
+                        id="emailAddressField"
                         prompt="Email Address:"
                         error={this.checkField(this.state.email, "Provide a valid email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input
+                        id="subjectField"
                         prompt="Subject:"
                         error={this.checkField(this.state.subject, "Provide a subject.")}
                         onchange={(newValue: string) => this.setState({ subject: newValue })}
@@ -124,13 +129,14 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     </div>
                     <div className="contactBoxes">
                         <Message
+                            id="messageField"
                             prompt="Message:"
                             error={this.checkField(this.state.message, "Please write a message.")}
                             onchange={(newValue: string) => this.setState({ message: newValue })}
                         />
                     </div>
                 </div>
-                <Send className="contactPageButton" onclick={this.handleSubmit} />
+                <Send id="submitButton" className="contactPageButton" onclick={this.handleSubmit} />
                 <Modal display={this.state.modalOpen} onClose={() => { this.setState({ modalOpen: false }) }}><div className="modalSpacer">{this.state.modalMessage}</div></Modal>
             </div>
         );
