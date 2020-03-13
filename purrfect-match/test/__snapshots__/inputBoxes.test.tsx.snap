@@ -179,6 +179,7 @@ exports[`Select tests Snapshot test 2`] = `
 exports[`Send tests Snapshot test 1`] = `
 <div
   className="inputElem"
+  id="mockId"
 >
   <button
     onClick={[Function]}
@@ -191,6 +192,7 @@ exports[`Send tests Snapshot test 1`] = `
 exports[`Send tests Snapshot test 2`] = `
 <div
   className="inputElem"
+  id="mockId"
 >
   <button
     onClick={[Function]}

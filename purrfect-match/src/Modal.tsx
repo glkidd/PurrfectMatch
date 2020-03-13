@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ModalProps {
     display: boolean;
-    onClose: () => void
+    onClose: () => void;
 };
 
 interface ModalState {
