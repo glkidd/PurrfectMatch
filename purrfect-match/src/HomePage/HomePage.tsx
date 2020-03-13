@@ -1,8 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Redirect, Link } from "react-router-dom";
+=======
+import { Redirect, Link} from "react-router-dom";
+>>>>>>> b27bed87cabea9adda2978ce79941e0c7202e80f
 import { Card } from './Card';
+import { Body } from 'HomePage/Body';
 import axios from "axios";
-
 
 interface HomePageProps {
 };
@@ -45,7 +49,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                         <div className="Cards">
                             <h2>Find your perfect companion from the comfort of your own home.</h2>
                             <h2>Choose which type of animal you would like to start with:</h2>
-                            <div className="CardGroup" onClick={this.clickHandler}>
+                            <div className="CardGroup">
                                 <div>
                                     <h1>Dog</h1>
                                     <Link to="dog">
@@ -54,21 +58,26 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                 </div>
                                 <div>
                                     <h1>Cat</h1>
-                                    <Link id="searchLink" to="search">
+                                    <Link to="cat">
                                         <Card image={require('../pictures/cat-homepage.jpg')} />
                                     </Link>
                                 </div>
                                 <div>
                                     <h1>Other</h1>
-                                    <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                    <Link to="other">
+                                        <Card image={require('../pictures/other-animal-homepage.jpg')} />
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="heroSpacer" />
+                <Body />
             </div>
         );
+
     }
 }
 

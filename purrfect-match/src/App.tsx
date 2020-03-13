@@ -6,6 +6,10 @@ import { HomePage } from "HomePage/HomePage";
 import { SearchPage } from "SearchPage";
 import { NavigationMenu } from "NavigationMenu/NavigationMenu";
 import Footer from "Footer/Footer";
+import {UnderConstruction} from "UnderConstruction/UnderConstruction";
+import dog from 'pictures/dog-homepage.jpg';
+import other from 'pictures/other-animal-homepage.jpg';
+
 
 interface AppState {
     page: JSX.Element | null;
@@ -31,8 +35,14 @@ export class App extends React.Component<{}, AppState> {
                     <Route path="/success">
                         <SuccessStoryPage />
                     </Route>
-                    <Route path="/search">
+                    <Route path="/cat">
                         <SearchPage />
+                    </Route>
+                    <Route path="/dog">
+                        <UnderConstruction logo = {dog}/>
+                    </Route>
+                    <Route path="/other">
+                        <UnderConstruction logo ={other} />
                     </Route>
                     <Route path="/">
                         <HomePage />

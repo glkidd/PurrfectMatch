@@ -1,6 +1,7 @@
 import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
 import { SearchPageResults } from "./Definitions";
+import axios from 'axios';
 
 /*
     This class is used for whenever we need to get data from the server. 
@@ -220,8 +221,19 @@ export class Api {
     }
 
     //should eventually connect up to Api.post
-    public static submitContactInfo = (firstName: string, lastName: string, subject: string, email: string, shelterEmployee: string, message: string): Promise<void> => {
+    public static submitContactInfo = (firstName: string, lastName: string, subject: string, email: string, shelterEmployee: string, message: string): Promise<any> => {
         // Normally, we'd actually submit to the backend and resolve or reject the promise based off of the response (was there an error submitting?)
-        return Promise.resolve();
+        return axios({
+            method: 'post',
+            url: 'http://localhost:8080/contact',
+            data: {
+              firstName: firstName,
+              lastName: lastName,
+              subject: subject,
+              email: email,
+              shelterEmployee: shelterEmployee.toUpperCase(),
+              message: message
+            }
+          })
     }
 }

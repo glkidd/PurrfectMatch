@@ -63,12 +63,14 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     modalMessage: "Submitted request successfully!",
                     modalOpen: true
                 });
-            }).catch((error: Error) => {
+
+            }).catch((error: any) => {
                 this.setState({
-                    modalMessage: "Error in submission: " + error.message,
+                    modalMessage: "Error in submission: " + error.response.data,
                     modalOpen: true
                 });
             });
+
         }
     }
 
@@ -106,7 +108,7 @@ export class ContactPage extends React.Component<ContactPageProps, ContactPageSt
                     <Input
                         id="emailAddressField"
                         prompt="Email Address:"
-                        error={this.checkField(this.state.email, "Provide your email.")}
+                        error={this.checkField(this.state.email, "Provide a valid email.")}
                         onchange={(newValue: string) => this.setState({ email: newValue })}
                     />
                     <Input
