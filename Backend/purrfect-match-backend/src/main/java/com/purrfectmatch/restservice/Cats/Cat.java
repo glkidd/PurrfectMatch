@@ -39,26 +39,29 @@ public class Cat {
    private int breed;
 
    @Column(name = "gender")
+   @Enumerated(EnumType.STRING)
    private Gender gender;
 
    @Column(name = "fur_length")
+   @Enumerated(EnumType.STRING)
    private FurLength furLength;
 
-   @Column(name = "spayed/neutured")
+   @Column(name = "spayed_neutured")
    private boolean spayedNeutured;
 
    public Cat() {
 
    }
 
-   public Cat(String imageName, String name, LocalDate bday, int breed, Gender gender, FurLength furLength, String bio,
+   public Cat(String imageName, String name, LocalDate bday, Long breed, Gender gender, FurLength furLength, String bio,
          LocalDate dateArrived, LocalDate euthanizeDate, boolean spayedNeutured, long shelterId) {
       this.imageName = imageName;
       this.name = name;
       this.bday = bday;
-      this.breed = breed;
+      this.breed = breed.intValue();
       this.gender = gender;
       this.furLength = furLength;
+      this.bio = bio;
       this.dateArrived = dateArrived;
       this.euthanizeDate = euthanizeDate;
       this.spayedNeutured = spayedNeutured;
