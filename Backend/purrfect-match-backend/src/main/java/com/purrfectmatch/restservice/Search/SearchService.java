@@ -84,6 +84,7 @@ public class SearchService {
                 break;
             case AGE:
                 sortColumn = "birthday";
+                break;
             case DAYS:
                 sortColumn = "date_arrived";
                 break;
