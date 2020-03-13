@@ -46,13 +46,13 @@ export class SuccessStoryPage extends React.Component<SuccessStoryPageProps, Suc
         if (this.state.stories !== undefined) {
             successStories = <ul> { this.state.stories.map( (story: SuccessStoryInfo) => {
                 return ( <li> <CompactView info={story}/> </li> ) } ) } 
-                </ul>;
+            </ul>;
         }
 
         if (this.state.recentAdopt !== undefined) {
             recentlyAdopted = <ul id="recentAdoptList" > { this.state.recentAdopt.map( (animal: RecentlyAdoptedInfo) => {
                 return ( <li> <CompactViewRecent info={animal} /> </li> ) } ) }
-                </ul>;
+            </ul>;
         }
 
         return (

@@ -21,6 +21,20 @@ export interface SearchPageResults {
     daysInShelter: number;
     daysLeft: number | undefined;
     photo: string;
+    shelterId: number;
+};
+
+export interface ShelterPetInfo {
+    name: string;
+    breed: string;
+    age: string;
+    gender: number; // will map to an enum
+    furLength: number; // will map to an enum
+    bio: string;
+    dateArrived: Date;
+    euthanizeDate: Date | undefined;
+    photo: string;
+    spayNeut: boolean;
 };
 
 export interface SuccessStoryInfo {
@@ -43,6 +57,18 @@ export interface RecentlyAdoptedInfo {
     adoptionDate: string;
     owner: String;
 };
+
+export interface ShelterAccountInfo {
+    email: string;
+    shelterName: string;
+    street: string;
+    city: string;
+    state: string;
+    zipCode: number;
+    phoneNumber: number;
+    website: string;
+    id: number;
+}
 
 export let SUCCESS_STORY_PAGE_SIZE: number = 10;
 

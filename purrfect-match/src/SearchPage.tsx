@@ -6,7 +6,9 @@ import { Select, Input } from './FilterInputs';
 import { SearchPageResults, Filters, Sorter } from './Definitions';
 import { Spinner } from './Spinner';
 
-const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla.";
+const aboutCats = "Cats make great pets. They’re nowhere near as loud as dogs and they can curl up in your lap, helping you to relax after a hard day.";
+
+const interestedIn = "Litter boxes, cat food, toys, cat nip, string, and more!";
 
 const AGE_OPTION_ARRAY = ["< 1 year", "1-3 years", "4 years", "any"];
 
@@ -164,8 +166,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                     bio={result.bio}
                     daysLeft={result.daysLeft}
                     photo={result.photo}
-                    /> </li> ) } ) } 
-                </ul>;
+                    shelterId={result.shelterId}
+                /> </li> ) } ) } 
+            </ul>;
         };
 
         return (
@@ -183,23 +186,23 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                         </li>
 
                         <li>
-                        <Select
-                            prompt="Age"
-                            options={AGE_OPTION_ARRAY}
-                            onchange={(newValue: any) => this.filterByAge(newValue)}
-                        />
+                            <Select
+                                prompt="Age"
+                                options={AGE_OPTION_ARRAY}
+                                onchange={(newValue: any) => this.filterByAge(newValue)}
+                            />
                         </li>
                         <li>
-                        <Select
-                            prompt="Gender"
-                            options={GENDER_OPTION_ARRAY}
-                            onchange={(newValue: any) => this.filterByGender(newValue)}
-                        />
+                            <Select
+                                prompt="Gender"
+                                options={GENDER_OPTION_ARRAY}
+                                onchange={(newValue: any) => this.filterByGender(newValue)}
+                            />
                         </li>
                         <li>
                             <Input
-                            prompt="Location:"
-                            onchange={(newValue: string) => this.filterByLocation(newValue)}/>
+                                prompt="Location:"
+                                onchange={(newValue: string) => this.filterByLocation(newValue)}/>
                         </li>
                     </ul>
                 </div>
@@ -240,10 +243,10 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
                         </div>
                         <ul>
                             <li>
-                                <TipsSideBar title="What to Know About Cats" content={loremIpsum}></TipsSideBar>
+                                <TipsSideBar title="What to Know About Cats" content={aboutCats}></TipsSideBar>
                             </li>
                             <li>
-                                <TipsSideBar title="You might be interested in..." content={loremIpsum}></TipsSideBar>
+                                <TipsSideBar title="You might be interested in..." content={interestedIn}></TipsSideBar>
                             </li>
                         </ul>
                     </div>
