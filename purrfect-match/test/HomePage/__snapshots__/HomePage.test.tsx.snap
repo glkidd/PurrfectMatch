@@ -25,6 +25,7 @@ exports[`Renders correctly 1`] = `
               Dog
             </h1>
             <Link
+              id="dogLink"
               to="dog"
             >
               <Card
@@ -37,6 +38,7 @@ exports[`Renders correctly 1`] = `
               Cat
             </h1>
             <Link
+              id="catLink"
               to="cat"
             >
               <Card
@@ -49,6 +51,7 @@ exports[`Renders correctly 1`] = `
               Other
             </h1>
             <Link
+              id="otherLink"
               to="other"
             >
               <Card
