@@ -240,13 +240,13 @@ exports[`Snapshot test 1`] = `
       <ul>
         <li>
           <TipsSideBar
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla."
+            content="Cats make great pets. They’re nowhere near as loud as dogs and they can curl up in your lap, helping you to relax after a hard day."
             title="What to Know About Cats"
           />
         </li>
         <li>
           <TipsSideBar
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu varius nulla."
+            content="Litter boxes, cat food, toys, cat nip, string, and more!"
             title="You might be interested in..."
           />
         </li>
