@@ -45,7 +45,7 @@ Updates the Jest snapshot tests.
 
 ### Other Links:
 
-Static Source Code Analysis Report:
+Static Source Code Analysis Report: https://sonarcloud.io/dashboard?id=fuzzything44_PurrfectMatch
 
 Testing Strategy Document: https://docs.google.com/document/d/1z0P4YRyq59UNlns6R-Qfw-GGfIXZKqM5RGmSV4rejWk/edit
 
