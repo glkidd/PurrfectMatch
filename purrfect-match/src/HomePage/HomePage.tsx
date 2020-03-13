@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Link} from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { Card } from './Card';
 import { Body } from 'HomePage/Body';
 import axios from "axios";
@@ -51,22 +51,20 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                                     <Link to="dog">
                                         <Card image={require('../pictures/dog-homepage.jpg')} />
                                     </Link>
-                                    
+
                                 </div>
                                 <div>
                                     <h1>Cat</h1>
                                     <Link to="cat">
                                         <Card image={require('../pictures/cat-homepage.jpg')} />
                                     </Link>
-
-
                                 </div>
                                 <div>
                                     <h1>Other</h1>
                                     <Link to="other">
                                         <Card image={require('../pictures/other-animal-homepage.jpg')} />
                                     </Link>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -76,7 +74,7 @@ export class HomePage extends React.Component<HomePageProps, HomePageState> {
                 <Body />
             </div>
         );
-        
+
     }
 }
 

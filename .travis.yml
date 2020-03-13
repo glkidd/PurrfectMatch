@@ -3,4 +3,11 @@ node_js:
   - node
 before_install:
   - cd purrfect-match
-script: npm test
+addons:
+  sonarcloud:
+    organization: "fuzzything44"
+    token:
+      secure: "b0d259b2307b6f223d3af382d49ea2a68e5cdd12"
+script: 
+  - npm test
+  - sonar-scanner
