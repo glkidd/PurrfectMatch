@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Redirect, Link } from "react-router-dom";
-=======
-import { Redirect, Link} from "react-router-dom";
->>>>>>> b27bed87cabea9adda2978ce79941e0c7202e80f
 import { Card } from './Card';
 import { Body } from 'HomePage/Body';
 import axios from "axios";
