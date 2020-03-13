@@ -2,8 +2,6 @@ import { SuccessStoryInfo, SUCCESS_STORY_PAGE_SIZE } from "./Definitions";
 import { RecentlyAdoptedInfo, NUM_RECENTLY_ADOPTED } from "./Definitions";
 import { SearchPageResults } from "./Definitions";
 import { ShelterAccountInfo } from "./Definitions";
-import cat1 from "./pictures/dummyDataCat1.jpg";
-
 import axios from 'axios';
 
 /*
